@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Gifted Pantry - Get a Free Quote</title>
+  <meta name="description" content="Request a free quote for any gourmet gift basket — personal orders, custom baskets, or bulk corporate programs. Fast response guaranteed from The Gifted Pantry team.">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="index.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              light: '#fdf8ef', dark: '#1a1207',
+              primary: '#c8892a', primaryHover: '#a36d1a',
+              secondary: '#2d6a4f', secondaryHover: '#1f4f3a',
+              accent: '#e0a84a', navy: '#1a3a2a',
+            },
+            slate: {
+              50: '#faf8f3', 100: '#f5f0e6', 200: '#e8ddc5',
+              300: '#d9c89f', 400: '#c4a96e', 500: '#a8883d',
+              600: '#896724', 700: '#664d17', 800: '#46330d',
+              850: '#352606', 900: '#221800', 950: '#1a1207',
+            }
+          },
+          fontFamily: { sans: ['Inter', 'sans-serif'], outfit: ['Outfit', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 min-h-screen flex flex-col">
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="glass-nav fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center space-x-2 rtl:space-x-reverse group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-primary to-brand-accent flex items-center justify-center text-white shadow-md shadow-amber-500/20 animate-bounce">
+            <i data-lucide="gift" class="w-6 h-6"></i>
+          </div>
+          <span class="font-outfit text-2xl font-bold tracking-tight text-slate-900 dark:text-white">
+            The<span class="text-brand-primary"> Gifted Pantry</span>
+          </span>
+        </a>
+        <div class="hidden lg:flex items-center space-x-1 rtl:space-x-reverse">
+          <a href="index.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Home</a>
+          <a href="home2.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Home 2</a>
+          <a href="services.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Our Baskets</a>
+          <a href="gallery.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Corporate Gifting</a>
+          <a href="blog.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Customization</a>
+          <a href="about.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-amber-400 transition-colors">About Us</a>
+          <a href="contact.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Contact</a>
+        </div>
+        <div class="hidden lg:flex items-center space-x-4 rtl:space-x-reverse">
+          <button class="rtl-toggle w-10 h-10 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center" aria-label="Toggle Direction">
+            <i data-lucide="arrow-left-right" class="w-4 h-4"></i>
+          </button>
+          <button class="theme-toggle w-10 h-10 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center" aria-label="Toggle Theme">
+            <i data-lucide="sun" class="sun-icon w-5 h-5 hidden"></i>
+            <i data-lucide="moon" class="moon-icon w-5 h-5"></i>
+          </button>
+          <a href="quote.html" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-primary to-brand-accent text-white text-sm font-semibold hover:shadow-lg hover:shadow-amber-500/25 transition-all transform hover:-translate-y-0.5">Get a Quote</a>
+        </div>
+        <div class="flex items-center space-x-3 lg:hidden rtl:space-x-reverse">
+          <button id="mobile-menu-btn" class="p-2 rounded-lg border border-slate-200 dark:border-slate-800 text-slate-650 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="Open Menu">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden absolute top-20 left-0 right-0 glass-nav shadow-lg flex-col px-4 pt-4 pb-6 space-y-3 transition-all duration-300 transform opacity-0 -translate-y-4">
+      <a href="index.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-655 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Home</a>
+      <a href="home2.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-655 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Home 2</a>
+      <a href="services.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-655 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Our Baskets</a>
+      <a href="gallery.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-655 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Corporate Gifting</a>
+      <a href="blog.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-655 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Customization</a>
+      <a href="about.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-655 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">About Us</a>
+      <a href="contact.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-655 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Contact</a>
+      <div class="h-[1px] bg-slate-200 dark:bg-slate-800 my-2"></div>
+      <div class="flex items-center justify-between space-x-3 rtl:space-x-reverse pt-1 pb-2">
+        <button class="rtl-toggle flex-1 h-10 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-650 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center bg-white dark:bg-slate-900" aria-label="Toggle Direction">
+          <i data-lucide="arrow-left-right" class="w-4 h-4"></i>
+        </button>
+        <button class="theme-toggle flex-1 h-10 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-655 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center space-x-2 bg-white dark:bg-slate-900" aria-label="Toggle Theme">
+          <i data-lucide="sun" class="sun-icon w-4 h-4 hidden"></i>
+          <i data-lucide="moon" class="moon-icon w-4 h-4"></i>
+          <span class="text-xs font-bold tracking-wider dark:hidden">Dark Mode</span>
+          <span class="text-xs font-bold tracking-wider hidden dark:inline">Light Mode</span>
+        </button>
+      </div>
+      <div class="flex flex-col space-y-2.5">
+        <a href="quote.html" class="text-center px-4 py-2.5 rounded-xl bg-gradient-to-r from-brand-primary to-brand-accent text-white text-sm font-semibold shadow-md shadow-amber-500/20">Get a Quote</a>
+      </div>
+      <button id="mobile-menu-close" class="absolute top-2 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-white">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="flex-grow pt-20">
+
+    <!-- 1. Hero -->
+    <section class="relative py-20 md:py-28 overflow-hidden text-white bg-slate-950 page-hero">
+      <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&q=80&w=1600"
+           alt="Gourmet Gift Baskets Get a Quote"
+           class="absolute inset-0 w-full h-full object-cover opacity-55">
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/55 to-slate-900/20 z-0"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4 relative z-10 animate-fade-in-up">
+        <span class="text-amber-300 font-semibold uppercase tracking-wider text-xs sm:text-sm">Free, No-Obligation</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-outfit text-white leading-tight">
+          Get a Free Quote
+        </h1>
+        <p class="text-slate-200 max-w-xl mx-auto text-xs sm:text-sm md:text-base font-normal leading-relaxed">
+          Tell us about your gifting needs — we'll put together a tailored proposal with pricing, recommendations, and available options within 1 business day.
+        </p>
+      </div>
+    </section>
+
+    <!-- 2. Quote Form Section -->
+    <section class="py-16 bg-white dark:bg-slate-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-start">
+
+          <!-- Left: Quote Form -->
+          <div class="lg:col-span-7">
+            <div class="bg-white dark:bg-slate-900 rounded-3xl shadow-xl border border-slate-100 dark:border-slate-800 p-8 space-y-6">
+
+              <div class="space-y-2">
+                <h2 class="text-2xl font-bold font-outfit text-slate-900 dark:text-white">Request Your Free Quote</h2>
+                <p class="text-sm text-slate-500 dark:text-slate-400 font-normal">Share your requirements and we'll craft a personalized quote tailored to your occasion, quantity, and budget.</p>
+              </div>
+
+              <form id="quote-form" class="space-y-5" novalidate>
+
+                <!-- Name / Company -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div class="space-y-1.5">
+                    <label for="q-name" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider">Full Name *</label>
+                    <input type="text" id="q-name" name="name" autocomplete="name" placeholder="Jane Smith"
+                      class="w-full px-4 py-3 text-sm rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 transition-all" required>
+                  </div>
+                  <div class="space-y-1.5">
+                    <label for="q-company" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider">Company</label>
+                    <input type="text" id="q-company" name="company" autocomplete="organization" placeholder="Optional"
+                      class="w-full px-4 py-3 text-sm rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 transition-all">
+                  </div>
+                </div>
+
+                <!-- Email / Phone -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div class="space-y-1.5">
+                    <label for="q-email" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider">Email Address *</label>
+                    <input type="email" id="q-email" name="email" autocomplete="email" placeholder="jane@example.com"
+                      class="w-full px-4 py-3 text-sm rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 transition-all" required>
+                  </div>
+                  <div class="space-y-1.5">
+                    <label for="q-phone" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider">Phone</label>
+                    <input type="tel" id="q-phone" name="phone" autocomplete="tel" placeholder="+1 (212) 555-0000"
+                      class="w-full px-4 py-3 text-sm rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 transition-all">
+                  </div>
+                </div>
+
+                <!-- Basket Type -->
+                <div class="space-y-1.5">
+                  <label for="q-type" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider">Type of Basket *</label>
+                  <select id="q-type" name="basket-type"
+                    class="w-full px-4 py-3 text-sm rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-slate-100 focus:outline-none focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 transition-all" required>
+                    <option value="" disabled selected>Select basket type</option>
+                    <option value="cheese">Cheese &amp; Charcuterie</option>
+                    <option value="chocolate">Chocolates &amp; Confections</option>
+                    <option value="wine">Wine &amp; Gourmet Pairing</option>
+                    <option value="wellness">Wellness &amp; Tea</option>
+                    <option value="holiday">Holiday &amp; Seasonal</option>
+                    <option value="corporate">Corporate Gift Set</option>
+                    <option value="custom">Fully Custom / Bespoke</option>
+                    <option value="unsure">Not sure — advise me</option>
+                  </select>
+                </div>
+
+                <!-- Occasion / Quantity -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div class="space-y-1.5">
+                    <label for="q-occasion" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider">Occasion</label>
+                    <select id="q-occasion" name="occasion"
+                      class="w-full px-4 py-3 text-sm rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-slate-100 focus:outline-none focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 transition-all">
+                      <option value="" disabled selected>Select occasion</option>
+                      <option>Birthday &amp; Celebration</option>
+                      <option>Wedding &amp; Anniversary</option>
+                      <option>Holiday &amp; Seasonal</option>
+                      <option>Corporate Client Gift</option>
+                      <option>Employee Recognition</option>
+                      <option>Thank You &amp; Appreciation</option>
+                      <option>Sympathy &amp; Condolences</option>
+                      <option>Conference &amp; Events</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                  <div class="space-y-1.5">
+                    <label for="q-qty" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider">Quantity Needed *</label>
+                    <select id="q-qty" name="quantity"
+                      class="w-full px-4 py-3 text-sm rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-slate-100 focus:outline-none focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 transition-all" required>
+                      <option value="" disabled selected>Select quantity</option>
+                      <option value="1">1 basket</option>
+                      <option value="2-5">2–5 baskets</option>
+                      <option value="6-9">6–9 baskets</option>
+                      <option value="10-24">10–24 baskets</option>
+                      <option value="25-49">25–49 baskets</option>
+                      <option value="50-99">50–99 baskets</option>
+                      <option value="100-499">100–499 baskets</option>
+                      <option value="500+">500+ baskets</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Budget / Delivery Date -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div class="space-y-1.5">
+                    <label for="q-budget" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider">Budget Per Basket</label>
+                    <select id="q-budget" name="budget"
+                      class="w-full px-4 py-3 text-sm rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-slate-100 focus:outline-none focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 transition-all">
+                      <option value="" disabled selected>Select budget</option>
+                      <option>Under $50</option>
+                      <option>$50 – $100</option>
+                      <option>$100 – $200</option>
+                      <option>$200 – $500</option>
+                      <option>$500+</option>
+                      <option>Flexible — advise me</option>
+                    </select>
+                  </div>
+                  <div class="space-y-1.5">
+                    <label for="q-date" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider">Required By Date</label>
+                    <input type="date" id="q-date" name="delivery-date"
+                      class="w-full px-4 py-3 text-sm rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-slate-100 focus:outline-none focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 transition-all">
+                  </div>
+                </div>
+
+                <!-- Special Requirements -->
+                <div class="space-y-1.5">
+                  <label for="q-notes" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider">Special Requirements or Notes</label>
+                  <textarea id="q-notes" name="notes" rows="4"
+                    placeholder="Dietary restrictions (vegan, gluten-free, nut-free, kosher, halal), preferred products, custom branding needs, delivery destination, or any other details..."
+                    class="w-full px-4 py-3 text-sm rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 transition-all resize-y"></textarea>
+                </div>
+
+                <!-- Consent -->
+                <div class="flex items-start space-x-3 rtl:space-x-reverse">
+                  <input type="checkbox" id="q-consent" name="consent" required class="rounded mt-0.5 flex-shrink-0">
+                  <label for="q-consent" class="text-xs text-slate-500 dark:text-slate-400 font-normal cursor-pointer leading-relaxed">
+                    I agree to The Gifted Pantry's <a href="#" class="text-brand-primary hover:underline font-semibold">Privacy Policy</a> and consent to being contacted with my quote.
+                  </label>
+                </div>
+
+                <!-- Submit -->
+                <button type="submit" id="quote-submit-btn"
+                  class="w-full px-8 py-4 rounded-xl bg-gradient-to-r from-brand-primary to-brand-accent text-white text-sm font-semibold hover:shadow-lg hover:shadow-amber-500/25 transition-all transform hover:-translate-y-0.5 flex items-center justify-center space-x-2 rtl:space-x-reverse">
+                  <i data-lucide="send" class="w-4 h-4"></i>
+                  <span>Request My Free Quote</span>
+                </button>
+
+                <!-- Success -->
+                <div id="quote-success" class="hidden p-4 bg-green-50 dark:bg-green-950/30 border border-green-200 dark:border-green-800 rounded-xl text-green-700 dark:text-green-300 text-sm text-center">
+                  <div class="flex items-center justify-center space-x-2 rtl:space-x-reverse font-semibold">
+                    <i data-lucide="check-circle" class="w-5 h-5 flex-shrink-0"></i>
+                    <span>Your quote request has been sent!</span>
+                  </div>
+                  <p class="mt-1 text-xs">We'll email you a tailored proposal within 1 business day.</p>
+                </div>
+
+              </form>
+            </div>
+          </div>
+
+          <!-- Right: Why get a quote + What's included -->
+          <div class="lg:col-span-5 space-y-6">
+
+            <!-- What's included in quote -->
+            <div class="glass-card rounded-3xl border border-slate-100 dark:border-slate-800 p-7 space-y-5">
+              <h3 class="text-lg font-bold font-outfit text-slate-900 dark:text-white">What's Included in Your Quote</h3>
+              <ul class="space-y-4">
+                <li class="flex items-start space-x-3 rtl:space-x-reverse">
+                  <div class="p-2 bg-amber-50 dark:bg-amber-950/30 text-brand-primary rounded-lg flex-shrink-0">
+                    <i data-lucide="file-text" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-slate-900 dark:text-white text-sm">Detailed Pricing Breakdown</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5 leading-relaxed">Per-basket cost, total program pricing, and any applicable bulk discounts clearly itemized.</p>
+                  </div>
+                </li>
+                <li class="flex items-start space-x-3 rtl:space-x-reverse">
+                  <div class="p-2 bg-green-50 dark:bg-green-950/30 text-brand-secondary rounded-lg flex-shrink-0">
+                    <i data-lucide="package" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-slate-900 dark:text-white text-sm">Curated Product Suggestions</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5 leading-relaxed">Tailored product recommendations based on your occasion, recipient profile, and dietary needs.</p>
+                  </div>
+                </li>
+                <li class="flex items-start space-x-3 rtl:space-x-reverse">
+                  <div class="p-2 bg-amber-50 dark:bg-amber-950/30 text-amber-600 rounded-lg flex-shrink-0">
+                    <i data-lucide="truck" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-slate-900 dark:text-white text-sm">Delivery Timeline &amp; Options</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5 leading-relaxed">Expected production and delivery times, shipping options, and any rush-order availability.</p>
+                  </div>
+                </li>
+                <li class="flex items-start space-x-3 rtl:space-x-reverse">
+                  <div class="p-2 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 rounded-lg flex-shrink-0">
+                    <i data-lucide="building-2" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-slate-900 dark:text-white text-sm">Branding &amp; Packaging Options</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5 leading-relaxed">For corporate orders, we'll outline all available branded packaging, ribbon, and insert options.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Response guarantee -->
+            <div class="glass-card rounded-3xl border border-amber-100 dark:border-amber-900/30 bg-amber-50/60 dark:bg-amber-950/10 p-7 flex items-start space-x-4 rtl:space-x-reverse">
+              <div class="p-3 bg-brand-primary text-white rounded-xl flex-shrink-0">
+                <i data-lucide="clock" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-slate-900 dark:text-white text-base">Response Within 1 Business Day</h3>
+                <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 leading-relaxed font-normal">
+                  We take every quote request seriously. Our gifting specialists review your requirements personally and respond with a tailored, detailed proposal — never a generic auto-reply.
+                </p>
+              </div>
+            </div>
+
+            <!-- Stats / Social proof -->
+            <div class="glass-card rounded-3xl border border-slate-100 dark:border-slate-800 p-7">
+              <h3 class="text-base font-bold text-slate-900 dark:text-white mb-5">Trusted by Hundreds of Businesses</h3>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="text-center p-4 bg-slate-50 dark:bg-slate-950 rounded-2xl border border-slate-100 dark:border-slate-800">
+                  <div class="text-2xl font-extrabold text-brand-primary font-outfit">500+</div>
+                  <div class="text-[11px] text-slate-400 font-semibold uppercase tracking-wider mt-1">Corporate clients</div>
+                </div>
+                <div class="text-center p-4 bg-slate-50 dark:bg-slate-950 rounded-2xl border border-slate-100 dark:border-slate-800">
+                  <div class="text-2xl font-extrabold text-brand-secondary font-outfit">12k+</div>
+                  <div class="text-[11px] text-slate-400 font-semibold uppercase tracking-wider mt-1">Baskets delivered</div>
+                </div>
+                <div class="text-center p-4 bg-slate-50 dark:bg-slate-950 rounded-2xl border border-slate-100 dark:border-slate-800">
+                  <div class="text-2xl font-extrabold text-amber-500 font-outfit">4.9★</div>
+                  <div class="text-[11px] text-slate-400 font-semibold uppercase tracking-wider mt-1">Average rating</div>
+                </div>
+                <div class="text-center p-4 bg-slate-50 dark:bg-slate-950 rounded-2xl border border-slate-100 dark:border-slate-800">
+                  <div class="text-2xl font-extrabold text-slate-700 dark:text-slate-200 font-outfit">&lt;24h</div>
+                  <div class="text-[11px] text-slate-400 font-semibold uppercase tracking-wider mt-1">Quote turnaround</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="glass-footer py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 mb-12">
+        <div class="md:col-span-1 lg:col-span-4 space-y-4 text-left rtl:text-right">
+          <a href="index.html" class="flex items-center space-x-2 rtl:space-x-reverse">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-primary to-brand-accent flex items-center justify-center text-white shadow-md shadow-amber-500/20">
+              <i data-lucide="gift" class="w-5 h-5"></i>
+            </div>
+            <span class="font-outfit text-2xl font-bold tracking-tight footer-brand-name">
+              The<span class="text-brand-primary"> Gifted Pantry</span>
+            </span>
+          </a>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-normal">
+            Premium gourmet food gift baskets for every occasion. Artisan cheeses, fine chocolates, curated wines, and seasonal delicacies, beautifully packaged and delivered with care.
+          </p>
+        </div>
+        <div class="md:col-span-1 lg:col-span-2 space-y-4 text-left rtl:text-right">
+          <h4 class="text-white font-bold text-sm uppercase tracking-wider">Collections</h4>
+          <ul class="space-y-2.5 text-sm font-medium">
+            <li><a href="services.html" class="hover:text-brand-primary transition-colors">Cheese &amp; Charcuterie</a></li>
+            <li><a href="services.html" class="hover:text-brand-primary transition-colors">Chocolates &amp; Sweets</a></li>
+            <li><a href="services.html" class="hover:text-brand-primary transition-colors">Wine &amp; Gourmet</a></li>
+            <li><a href="services.html" class="hover:text-brand-primary transition-colors">Seasonal &amp; Holiday</a></li>
+          </ul>
+        </div>
+        <div class="md:col-span-1 lg:col-span-2 space-y-4 text-left rtl:text-right">
+          <h4 class="text-white font-bold text-sm uppercase tracking-wider">Company</h4>
+          <ul class="space-y-2.5 text-sm font-medium">
+            <li><a href="index.html" class="hover:text-brand-primary transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-brand-primary transition-colors">About Us</a></li>
+            <li><a href="gallery.html" class="hover:text-brand-primary transition-colors">Corporate Gifting</a></li>
+            <li><a href="quote.html" class="hover:text-brand-primary transition-colors">Get a Quote</a></li>
+          </ul>
+        </div>
+        <div class="md:col-span-1 lg:col-span-4 space-y-4 text-left rtl:text-right">
+          <h4 class="text-white font-bold text-sm uppercase tracking-wider font-outfit">Contact Us</h4>
+          <ul class="space-y-2.5 text-sm font-medium">
+            <li class="flex items-center space-x-2.5 rtl:space-x-reverse">
+              <i data-lucide="phone" class="w-4 h-4 text-brand-primary flex-shrink-0"></i>
+              <span>+1 (800) 555-GIFT</span>
+            </li>
+            <li class="flex items-center space-x-2.5 rtl:space-x-reverse">
+              <i data-lucide="mail" class="w-4 h-4 text-brand-primary flex-shrink-0"></i>
+              <span class="break-all">hello@giftedpantry.com</span>
+            </li>
+            <li class="flex items-center space-x-2.5 rtl:space-x-reverse">
+              <i data-lucide="clock" class="w-4 h-4 text-brand-primary flex-shrink-0"></i>
+              <span>Mon - Fri: 9:00 AM - 6:00 PM</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-copyright pt-8 border-t flex flex-col sm:flex-row items-center justify-between text-xs sm:text-sm font-medium">
+        <p>&copy; 2026 The Gifted Pantry. All rights reserved.</p>
+        <div class="flex items-center space-x-4 rtl:space-x-reverse mt-4 sm:mt-0">
+          <a href="#" class="hover:text-slate-900 dark:text-white transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('quote-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const btn = document.getElementById('quote-submit-btn');
+      const success = document.getElementById('quote-success');
+      btn.disabled = true;
+      btn.innerHTML = '<svg class="animate-spin w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg><span>Sending...</span>';
+      setTimeout(() => {
+        btn.classList.add('hidden');
+        success.classList.remove('hidden');
+        lucide.createIcons();
+      }, 1500);
+    });
+  </script>
+  <script src="main.js"></script>
+</body>
+</html>

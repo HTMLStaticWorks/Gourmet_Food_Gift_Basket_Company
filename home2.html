@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Gifted Pantry - Luxury Gourmet Gift Baskets & Hampers V2</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="index.css">
+  
+  <!-- Tailwind CSS 3 CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              light: '#faf8f5',
+              dark: '#1a140e',
+              primary: '#c48b36',
+              primaryHover: '#a67227',
+              secondary: '#2c4f3a',
+              secondaryHover: '#1e3828',
+              accent: '#e0a84a',
+              navy: '#1a3a2a',
+            },
+            slate: {
+              50: '#faf8f3',
+              100: '#f5f0e6',
+              200: '#e8ddc5',
+              300: '#d9c89f',
+              400: '#c4a96e',
+              500: '#a8883d',
+              600: '#896724',
+              700: '#664d17',
+              800: '#46330d',
+              850: '#352606',
+              900: '#221800',
+              950: '#1a1207',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            outfit: ['Outfit', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 min-h-screen flex flex-col">
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="glass-nav fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center space-x-2 rtl:space-x-reverse group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-primary to-brand-accent flex items-center justify-center text-white shadow-md shadow-amber-500/20 animate-bounce">
+            <i data-lucide="gift" class="w-6 h-6"></i>
+          </div>
+          <span class="font-outfit text-2xl font-bold tracking-tight text-slate-900 dark:text-white">
+            The<span class="text-brand-primary"> Gifted Pantry</span>
+          </span>
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex items-center space-x-1 rtl:space-x-reverse">
+          <a href="index.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Home</a>
+          <a href="home2.html" class="px-3 py-2 rounded-lg text-sm font-semibold transition-colors text-brand-primary dark:text-amber-400">Home 2</a>
+          <a href="services.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Our Baskets</a>
+          <a href="gallery.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Corporate Gifting</a>
+          <a href="blog.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Customization</a>
+          <a href="about.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-amber-400 transition-colors">About Us</a>
+          <a href="contact.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Contact</a>
+        </div>
+
+        <!-- Desktop Utility Buttons -->
+        <div class="hidden lg:flex items-center space-x-4 rtl:space-x-reverse">
+          
+          <!-- RTL Toggle -->
+          <button class="rtl-toggle w-10 h-10 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center" aria-label="Toggle Direction">
+            <i data-lucide="arrow-left-right" class="w-4 h-4"></i>
+          </button>
+          
+          <!-- Theme Toggle -->
+          <button class="theme-toggle w-10 h-10 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center" aria-label="Toggle Theme">
+            <i data-lucide="sun" class="sun-icon w-5 h-5 hidden"></i>
+            <i data-lucide="moon" class="moon-icon w-5 h-5"></i>
+          </button>
+
+          <a href="quote.html" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-primary to-brand-accent text-white text-sm font-semibold hover:shadow-lg hover:shadow-amber-500/25 transition-all transform hover:-translate-y-0.5">Get a Quote</a>
+        </div>
+
+        <!-- Mobile Navigation Menu Toggle Button -->
+        <div class="flex items-center space-x-3 lg:hidden rtl:space-x-reverse">
+          <button id="mobile-menu-btn" class="p-2 rounded-lg border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="Open Menu">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Slide Down Menu -->
+    <div id="mobile-menu" class="hidden absolute top-20 left-0 right-0 glass-nav shadow-lg flex-col px-4 pt-4 pb-6 space-y-3 transition-all duration-300 transform opacity-0 -translate-y-4">
+      <a href="index.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-650 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Home</a>
+      <a href="home2.html" class="px-3 py-2 rounded-lg text-base font-semibold text-brand-primary bg-amber-50/50 dark:bg-amber-950/20">Home 2</a>
+      <a href="services.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-650 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Our Baskets</a>
+      <a href="gallery.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-650 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Corporate Gifting</a>
+      <a href="blog.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-650 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Customization</a>
+      <a href="about.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-650 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">About Us</a>
+      <a href="contact.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-650 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Contact</a>
+      <div class="h-[1px] bg-slate-200 dark:bg-slate-800 my-2"></div>
+      <div class="flex items-center justify-between space-x-3 rtl:space-x-reverse pt-1 pb-2">
+        <!-- Mobile RTL Toggle -->
+        <button class="rtl-toggle flex-1 h-10 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-650 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center bg-white dark:bg-slate-900" aria-label="Toggle Direction">
+          <i data-lucide="arrow-left-right" class="w-4 h-4"></i>
+        </button>
+        <!-- Mobile Theme Toggle -->
+        <button class="theme-toggle flex-1 h-10 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-655 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center space-x-2 bg-white dark:bg-slate-900" aria-label="Toggle Theme">
+          <i data-lucide="sun" class="sun-icon w-4 h-4 hidden"></i>
+          <i data-lucide="moon" class="moon-icon w-4 h-4"></i>
+          <span class="text-xs font-bold tracking-wider dark:hidden">Dark Mode</span>
+          <span class="text-xs font-bold tracking-wider hidden dark:inline">Light Mode</span>
+        </button>
+      </div>
+      <div class="flex flex-col space-y-2.5">
+        <a href="quote.html" class="text-center px-4 py-2.5 rounded-xl bg-gradient-to-r from-brand-primary to-brand-accent text-white text-sm font-semibold shadow-md shadow-amber-500/20">Get a Quote</a>
+      </div>
+      <button id="mobile-menu-close" class="absolute top-2 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-white">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="flex-grow pt-20">
+
+    <!-- 1. Split Hero Section -->
+    <section class="relative min-h-[90vh] flex items-center py-20 overflow-hidden bg-gradient-to-tr from-brand-light via-white to-white dark:from-brand-dark dark:via-slate-950 dark:to-slate-950 text-left">
+      <div class="bubble w-96 h-96 -top-12 -left-12 opacity-30"></div>
+      <div class="bubble w-80 h-80 bottom-12 right-12 opacity-20"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Left Text Column -->
+          <div class="lg:col-span-7 space-y-8 animate-fade-in-up">
+            <div class="inline-flex items-center space-x-2 rtl:space-x-reverse px-3.5 py-1.5 rounded-full bg-amber-50 dark:bg-amber-950/40 text-brand-primary font-bold text-xs tracking-wider uppercase">
+              <i data-lucide="sparkles" class="w-4 h-4 animate-pulse"></i>
+              <span>Artisanal Gourmet Gifting V2</span>
+            </div>
+            
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-950 dark:text-white leading-[1.12] font-outfit">
+              Handcrafted Hampers,<br>
+              <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-primary to-brand-accent font-black">
+                Curated for Every Celebration
+              </span>
+            </h1>
+            
+            <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-xl font-normal leading-relaxed">
+              Elevate your corporate and personal gifting with handcrafted gourmet food hampers filled with fine wines, artisanal cheeses, organic chocolates, and luxury pantry delicacies.
+            </p>
+            
+            <!-- Credentials row -->
+            <div class="flex flex-wrap gap-x-6 gap-y-3 font-medium text-xs sm:text-sm text-slate-500 dark:text-slate-400">
+              <span class="flex items-center gap-1.5"><i data-lucide="star" class="w-4 h-4 text-brand-accent fill-current"></i> 4.9/5 Rating</span>
+              <span class="flex items-center gap-1.5"><i data-lucide="award" class="w-4 h-4 text-brand-primary"></i> Award-Winning Artisans</span>
+              <span class="flex items-center gap-1.5"><i data-lucide="truck" class="w-4 h-4 text-brand-secondary"></i> Express Nationwide Delivery</span>
+            </div>
+
+            <!-- CTA Actions -->
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a href="#basket-builder" class="px-8 py-4 rounded-xl bg-brand-primary hover:bg-brand-primaryHover text-white text-center font-bold shadow-lg shadow-amber-500/25 hover:shadow-amber-500/35 transition-all transform hover:-translate-y-0.5 flex items-center justify-center space-x-2 rtl:space-x-reverse">
+                <i data-lucide="gift" class="w-4 h-4"></i>
+                <span>Build Custom Basket</span>
+              </a>
+              <a href="#weekly-specials" class="px-8 py-4 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-200 text-center font-bold hover:bg-slate-50 dark:hover:bg-slate-900 transition-all flex items-center justify-center space-x-2 rtl:space-x-reverse">
+                <i data-lucide="package" class="w-4 h-4 text-brand-primary"></i>
+                <span>Curated Hampers</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Visual Column (Floating Collage) -->
+          <div class="lg:col-span-5 relative mt-8 lg:mt-0 flex justify-center">
+            <div class="relative w-full max-w-[400px] h-[400px] md:h-[450px]">
+              
+              <!-- Background glowing circle -->
+              <div class="absolute inset-0 bg-gradient-to-tr from-brand-primary/20 to-brand-accent/20 rounded-full blur-3xl -z-10"></div>
+              
+              <!-- Main Card (Gourmet Wine & Cheese Basket) -->
+              <div class="absolute top-4 left-4 w-72 h-80 rounded-3xl overflow-hidden shadow-2xl border border-white/50 dark:border-slate-800/50 hover:scale-102 transition-transform duration-300 z-20">
+                <img src="https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&q=80&w=600" 
+                     alt="Grand Reserve Gourmet Basket" 
+                     class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                <div class="absolute bottom-5 left-5 text-white">
+                  <span class="text-xs font-bold text-brand-accent uppercase tracking-widest">#1 Best Seller</span>
+                  <h3 class="text-lg font-bold font-outfit mt-0.5">Sommelier Reserve</h3>
+                </div>
+              </div>
+
+              <!-- Overlapping Card (Artisanal Chocolate & Honey) -->
+              <div class="absolute bottom-4 right-2 w-52 h-60 rounded-3xl overflow-hidden shadow-xl border border-white/50 dark:border-slate-800/50 hover:scale-105 transition-transform duration-300 z-30 transform translate-y-4">
+                <img src="https://images.unsplash.com/photo-1549007994-cb92caebd54b?auto=format&fit=crop&q=80&w=600" 
+                     alt="Artisanal Chocolate & Truffles" 
+                     class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-transparent to-transparent"></div>
+                <div class="absolute bottom-4 left-4 text-white">
+                  <span class="text-[10px] font-bold text-amber-300 uppercase tracking-widest">Freshly Packed</span>
+                  <h4 class="text-sm font-bold font-outfit mt-0.5">Artisanal Truffle Hamper</h4>
+                </div>
+              </div>
+
+              <!-- Micro badge bubble -->
+              <div class="absolute top-28 right-0 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 p-3.5 rounded-2xl shadow-xl flex items-center space-x-2.5 rtl:space-x-reverse z-40 transform translate-x-4 animate-bounce">
+                <div class="w-8 h-8 rounded-full bg-brand-primary/20 flex items-center justify-center text-brand-primary font-bold text-sm">
+                  ★
+                </div>
+                <div>
+                  <h5 class="text-xs font-black text-slate-950 dark:text-white">100% Organic</h5>
+                  <p class="text-[10px] text-slate-400 font-medium">Local Farm Partners</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Interactive Custom Gift Basket Builder -->
+    <section id="basket-builder" class="py-24 bg-white dark:bg-slate-900 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+          <span class="text-brand-primary font-bold uppercase tracking-wider text-sm font-outfit">Interactive Workshop</span>
+          <h2 class="text-3xl md:text-4xl font-bold font-outfit text-slate-900 dark:text-white">
+            Custom Basket Builder: Craft Your Perfect Hamper
+          </h2>
+          <p class="text-slate-655 dark:text-slate-300 font-normal">
+            Choose your luxury container, select up to 3 gourmet food &amp; wine delicacies, and add signature finishing touches. Watch your estimate update live!
+          </p>
+        </div>
+
+        <!-- Builder Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          
+          <!-- Left Options Panel -->
+          <div class="lg:col-span-7 space-y-8">
+            
+            <!-- Step 1: Base Container selection -->
+            <div class="space-y-4">
+              <h3 class="text-lg font-bold font-outfit text-slate-950 dark:text-white flex items-center gap-2">
+                <span class="w-6 h-6 rounded-full bg-brand-primary text-white flex items-center justify-center text-xs font-bold">1</span>
+                Select Your Luxury Container
+              </h3>
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                
+                <!-- Base Option 1 -->
+                <label class="builder-base-card relative flex flex-col items-center p-4 rounded-2xl border-2 border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950 cursor-pointer hover:border-brand-primary dark:hover:border-amber-400 transition-all text-center select-none">
+                  <input type="radio" name="basket-base" value="Handwoven Willow Basket" data-price="15.00" class="sr-only" checked>
+                  <div class="w-12 h-12 rounded-xl bg-amber-100 dark:bg-amber-950/50 text-brand-primary flex items-center justify-center mb-3">
+                    <i data-lucide="shopping-bag" class="w-6 h-6"></i>
+                  </div>
+                  <span class="text-sm font-bold text-slate-900 dark:text-white">Willow Basket</span>
+                  <span class="text-xs text-slate-400 font-bold mt-1">$15.00</span>
+                </label>
+
+                <!-- Base Option 2 -->
+                <label class="builder-base-card relative flex flex-col items-center p-4 rounded-2xl border-2 border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950 cursor-pointer hover:border-brand-primary dark:hover:border-amber-400 transition-all text-center select-none">
+                  <input type="radio" name="basket-base" value="Rustic Wooden Crate" data-price="20.00" class="sr-only">
+                  <div class="w-12 h-12 rounded-xl bg-amber-100 dark:bg-amber-950/50 text-brand-accent flex items-center justify-center mb-3">
+                    <i data-lucide="box" class="w-6 h-6"></i>
+                  </div>
+                  <span class="text-sm font-bold text-slate-900 dark:text-white">Wooden Crate</span>
+                  <span class="text-xs text-slate-400 font-bold mt-1">$20.00</span>
+                </label>
+
+                <!-- Base Option 3 -->
+                <label class="builder-base-card relative flex flex-col items-center p-4 rounded-2xl border-2 border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950 cursor-pointer hover:border-brand-primary dark:hover:border-amber-400 transition-all text-center select-none">
+                  <input type="radio" name="basket-base" value="Velvet Gift Box" data-price="18.00" class="sr-only">
+                  <div class="w-12 h-12 rounded-xl bg-amber-100 dark:bg-amber-950/50 text-brand-primary flex items-center justify-center mb-3">
+                    <i data-lucide="gift" class="w-6 h-6"></i>
+                  </div>
+                  <span class="text-sm font-bold text-slate-900 dark:text-white">Velvet Box</span>
+                  <span class="text-xs text-slate-400 font-bold mt-1">$18.00</span>
+                </label>
+
+                <!-- Base Option 4 -->
+                <label class="builder-base-card relative flex flex-col items-center p-4 rounded-2xl border-2 border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950 cursor-pointer hover:border-brand-primary dark:hover:border-amber-400 transition-all text-center select-none">
+                  <input type="radio" name="basket-base" value="Leatherette Executive Chest" data-price="25.00" class="sr-only">
+                  <div class="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-950/50 text-brand-secondary flex items-center justify-center mb-3">
+                    <i data-lucide="briefcase" class="w-6 h-6"></i>
+                  </div>
+                  <span class="text-sm font-bold text-slate-900 dark:text-white">Executive Chest</span>
+                  <span class="text-xs text-slate-400 font-bold mt-1">$25.00</span>
+                </label>
+
+              </div>
+            </div>
+
+            <!-- Step 2: Gourmet Delicacies selection -->
+            <div class="space-y-4">
+              <div class="flex justify-between items-center">
+                <h3 class="text-lg font-bold font-outfit text-slate-950 dark:text-white flex items-center gap-2">
+                  <span class="w-6 h-6 rounded-full bg-brand-primary text-white flex items-center justify-center text-xs font-bold">2</span>
+                  Add Gourmet Items (Max 3)
+                </h3>
+                <span id="item-counter" class="text-xs font-bold text-brand-primary bg-amber-50 dark:bg-amber-900/30 px-2.5 py-1 rounded-full">0/3 Selected</span>
+              </div>
+              
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                
+                <!-- Aged Cheddar & Crackers -->
+                <label class="builder-item-card flex items-center justify-between p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900 cursor-pointer hover:bg-amber-50/20 hover:border-brand-primary transition-all select-none">
+                  <div class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <input type="checkbox" name="basket-item" value="Aged Vintage Cheddar" data-price="8.50" class="rounded text-brand-primary focus:ring-brand-primary border-slate-300 dark:border-slate-700 dark:bg-slate-900 w-4 h-4 cursor-pointer">
+                    <span class="text-sm font-bold text-slate-900 dark:text-white">Aged Cheddar</span>
+                  </div>
+                  <span class="text-xs font-bold text-brand-primary">+$8.50</span>
+                </label>
+
+                <!-- Dark Chocolate Truffles -->
+                <label class="builder-item-card flex items-center justify-between p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900 cursor-pointer hover:bg-amber-50/20 hover:border-brand-primary transition-all select-none">
+                  <div class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <input type="checkbox" name="basket-item" value="Dark Cocoa Truffles" data-price="9.00" class="rounded text-brand-primary focus:ring-brand-primary border-slate-300 dark:border-slate-700 dark:bg-slate-900 w-4 h-4 cursor-pointer">
+                    <span class="text-sm font-bold text-slate-900 dark:text-white">Dark Cocoa Truffles</span>
+                  </div>
+                  <span class="text-xs font-bold text-brand-primary">+$9.00</span>
+                </label>
+
+                <!-- Organic Olive Oil -->
+                <label class="builder-item-card flex items-center justify-between p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900 cursor-pointer hover:bg-amber-50/20 hover:border-brand-primary transition-all select-none">
+                  <div class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <input type="checkbox" name="basket-item" value="EVOO & Balsamic" data-price="12.00" class="rounded text-brand-primary focus:ring-brand-primary border-slate-300 dark:border-slate-700 dark:bg-slate-900 w-4 h-4 cursor-pointer">
+                    <span class="text-sm font-bold text-slate-900 dark:text-white">EVOO &amp; Balsamic</span>
+                  </div>
+                  <span class="text-xs font-bold text-brand-primary">+$12.00</span>
+                </label>
+
+                <!-- Truffle Almonds -->
+                <label class="builder-item-card flex items-center justify-between p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900 cursor-pointer hover:bg-amber-50/20 hover:border-brand-primary transition-all select-none">
+                  <div class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <input type="checkbox" name="basket-item" value="Truffle Roasted Almonds" data-price="7.50" class="rounded text-brand-primary focus:ring-brand-primary border-slate-300 dark:border-slate-700 dark:bg-slate-900 w-4 h-4 cursor-pointer">
+                    <span class="text-sm font-bold text-slate-900 dark:text-white">Truffle Almonds</span>
+                  </div>
+                  <span class="text-xs font-bold text-brand-primary">+$7.50</span>
+                </label>
+
+                <!-- Napa Cabernet Sauvignon -->
+                <label class="builder-item-card flex items-center justify-between p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900 cursor-pointer hover:bg-amber-50/20 hover:border-brand-primary transition-all select-none">
+                  <div class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <input type="checkbox" name="basket-item" value="Napa Cabernet Sauvignon" data-price="24.00" class="rounded text-brand-primary focus:ring-brand-primary border-slate-300 dark:border-slate-700 dark:bg-slate-900 w-4 h-4 cursor-pointer">
+                    <span class="text-sm font-bold text-slate-900 dark:text-white">Napa Cabernet</span>
+                  </div>
+                  <span class="text-xs font-bold text-brand-primary">+$24.00</span>
+                </label>
+
+                <!-- Wildflower Honey -->
+                <label class="builder-item-card flex items-center justify-between p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900 cursor-pointer hover:bg-amber-50/20 hover:border-brand-primary transition-all select-none">
+                  <div class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <input type="checkbox" name="basket-item" value="Organic Wildflower Honey" data-price="6.50" class="rounded text-brand-primary focus:ring-brand-primary border-slate-300 dark:border-slate-700 dark:bg-slate-900 w-4 h-4 cursor-pointer">
+                    <span class="text-sm font-bold text-slate-900 dark:text-white">Wildflower Honey</span>
+                  </div>
+                  <span class="text-xs font-bold text-brand-primary">+$6.50</span>
+                </label>
+
+              </div>
+            </div>
+
+            <!-- Step 3: Finishings selection -->
+            <div class="space-y-4">
+              <h3 class="text-lg font-bold font-outfit text-slate-950 dark:text-white flex items-center gap-2">
+                <span class="w-6 h-6 rounded-full bg-brand-primary text-white flex items-center justify-center text-xs font-bold">3</span>
+                Select Signature Finishing Touches
+              </h3>
+              
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                
+                <!-- Finishing 1 -->
+                <label class="flex items-center justify-between p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900 cursor-pointer hover:border-brand-primary transition-all select-none">
+                  <div class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <input type="checkbox" name="basket-finishing" value="Satin Ribbon & Wax Seal" data-price="2.50" class="rounded text-brand-primary focus:ring-brand-primary border-slate-300 dark:border-slate-700 dark:bg-slate-900 w-4 h-4 cursor-pointer">
+                    <span class="text-sm font-bold text-slate-900 dark:text-white">Satin Ribbon</span>
+                  </div>
+                  <span class="text-xs font-bold text-brand-primary">+$2.50</span>
+                </label>
+
+                <!-- Finishing 2 -->
+                <label class="flex items-center justify-between p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900 cursor-pointer hover:border-brand-primary transition-all select-none">
+                  <div class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <input type="checkbox" name="basket-finishing" value="Calligraphy Card" data-price="3.00" class="rounded text-brand-primary focus:ring-brand-primary border-slate-300 dark:border-slate-700 dark:bg-slate-900 w-4 h-4 cursor-pointer">
+                    <span class="text-sm font-bold text-slate-900 dark:text-white">Calligraphy Card</span>
+                  </div>
+                  <span class="text-xs font-bold text-brand-primary">+$3.00</span>
+                </label>
+
+                <!-- Finishing 3 -->
+                <label class="flex items-center justify-between p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900 cursor-pointer hover:border-brand-primary transition-all select-none">
+                  <div class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <input type="checkbox" name="basket-finishing" value="Dried Botanical Sprig" data-price="2.00" class="rounded text-brand-primary focus:ring-brand-primary border-slate-300 dark:border-slate-700 dark:bg-slate-900 w-4 h-4 cursor-pointer">
+                    <span class="text-sm font-bold text-slate-900 dark:text-white">Botanical Sprig</span>
+                  </div>
+                  <span class="text-xs font-bold text-brand-primary">+$2.00</span>
+                </label>
+
+                <!-- Finishing 4 -->
+                <label class="flex items-center justify-between p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900 cursor-pointer hover:border-brand-primary transition-all select-none">
+                  <div class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <input type="checkbox" name="basket-finishing" value="Custom Engraved Tag" data-price="5.00" class="rounded text-brand-primary focus:ring-brand-primary border-slate-300 dark:border-slate-700 dark:bg-slate-900 w-4 h-4 cursor-pointer">
+                    <span class="text-sm font-bold text-slate-900 dark:text-white">Engraved Tag</span>
+                  </div>
+                  <span class="text-xs font-bold text-brand-primary">+$5.00</span>
+                </label>
+
+                <!-- Finishing 5 -->
+                <label class="flex items-center justify-between p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900 cursor-pointer hover:border-brand-primary transition-all select-none">
+                  <div class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <input type="checkbox" name="basket-finishing" value="Eco Honeycomb Wrap" data-price="1.50" class="rounded text-brand-primary focus:ring-brand-primary border-slate-300 dark:border-slate-700 dark:bg-slate-900 w-4 h-4 cursor-pointer">
+                    <span class="text-sm font-bold text-slate-900 dark:text-white">Eco Wrap</span>
+                  </div>
+                  <span class="text-xs font-bold text-brand-primary">+$1.50</span>
+                </label>
+
+                <!-- Finishing 6 -->
+                <label class="flex items-center justify-between p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900 cursor-pointer hover:border-brand-primary transition-all select-none">
+                  <div class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <input type="checkbox" name="basket-finishing" value="Gold Foil Crest" data-price="4.00" class="rounded text-brand-primary focus:ring-brand-primary border-slate-300 dark:border-slate-700 dark:bg-slate-900 w-4 h-4 cursor-pointer">
+                    <span class="text-sm font-bold text-slate-900 dark:text-white">Gold Crest</span>
+                  </div>
+                  <span class="text-xs font-bold text-brand-primary">+$4.00</span>
+                </label>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Custom Visual Summary Card -->
+          <div class="lg:col-span-5 lg:sticky lg:top-28">
+            <div class="glass-card p-8 rounded-3xl shadow-2xl border border-slate-200/50 dark:border-slate-800/50 flex flex-col text-left ltr:text-left rtl:text-right relative">
+              <div class="absolute top-0 right-0 w-24 h-24 bg-brand-primary/10 rounded-full blur-xl"></div>
+              
+              <h3 class="text-xl font-bold font-outfit text-slate-950 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-4 mb-6">
+                Your Custom Hamper
+              </h3>
+
+              <!-- Summary details -->
+              <div class="space-y-5 flex-grow">
+                
+                <!-- Base -->
+                <div>
+                  <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1.5">Container</h4>
+                  <div id="summary-base-val" class="font-bold text-slate-900 dark:text-white text-base">
+                    Handwoven Willow Basket ($15.00)
+                  </div>
+                </div>
+
+                <!-- Items -->
+                <div>
+                  <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Gourmet Selections</h4>
+                  <div id="summary-items-list" class="flex flex-wrap gap-2 text-slate-500 dark:text-slate-400 text-sm">
+                    <span class="italic">No items selected yet.</span>
+                  </div>
+                </div>
+
+                <!-- Finishings -->
+                <div>
+                  <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Finishing Touches</h4>
+                  <div id="summary-finishings-list" class="flex flex-wrap gap-2 text-slate-500 dark:text-slate-400 text-sm">
+                    <span class="italic">No finishing touches selected.</span>
+                  </div>
+                </div>
+
+                <!-- Estimated Price -->
+                <div class="border-t border-slate-100 dark:border-slate-800 pt-5 mt-6 flex justify-between items-baseline">
+                  <span class="font-bold text-slate-950 dark:text-white text-sm">Estimated Total</span>
+                  <div class="text-3xl font-black text-brand-primary font-outfit">
+                    $<span id="summary-total-price">15.00</span>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Action buttons -->
+              <div class="mt-8 space-y-3">
+                <a href="quote.html" id="order-custom-btn" class="w-full py-4 rounded-xl bg-brand-primary hover:bg-brand-primaryHover text-white text-center font-bold shadow-lg shadow-amber-500/25 transition-all flex items-center justify-center space-x-2 rtl:space-x-reverse">
+                  <i data-lucide="file-text" class="w-5 h-5"></i>
+                  <span>Request Custom Quote</span>
+                </a>
+                <p class="text-[11px] text-slate-400 font-medium text-center">
+                  * Final pricing may vary based on quantity and custom corporate branding.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. Weekly Specials Spotlight (Carousel) -->
+    <section id="weekly-specials" class="py-24 bg-slate-50 dark:bg-slate-950 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+          <span class="text-brand-secondary font-bold uppercase tracking-wider text-sm font-outfit">Curated Collections</span>
+          <h2 class="text-3xl md:text-4xl font-bold font-outfit text-slate-900 dark:text-white">
+            Chef’s Signature Gift Hampers
+          </h2>
+          <p class="text-slate-655 dark:text-slate-300 font-normal">
+            Hand-assembled gourmet gift hampers designed for corporate milestones, holidays, and grand personal celebrations.
+          </p>
+        </div>
+
+        <!-- Carousel Container -->
+        <div class="relative max-w-5xl mx-auto">
+          
+          <!-- Slide Container -->
+          <div class="relative overflow-hidden min-h-[690px] md:min-h-[380px] rounded-3xl shadow-xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800">
+            
+            <!-- Slide 1 (Sommelier Reserve) -->
+            <div class="weekly-special-slide opacity-100 duration-500 flex flex-col md:flex-row items-center w-full h-full absolute inset-0">
+              <div class="w-full md:w-1/2 h-[368px] md:h-full overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&q=80&w=600" 
+                     alt="Sommelier Reserve Hamper" 
+                     class="w-full h-full object-cover">
+              </div>
+              <div class="w-full md:w-1/2 p-8 sm:p-12 text-left ltr:text-left rtl:text-right space-y-4">
+                <div class="inline-block bg-amber-100 dark:bg-amber-900/40 text-brand-primary font-bold text-xs px-3 py-1 rounded-full uppercase tracking-wider">
+                  Chef's Top Choice
+                </div>
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white font-outfit">
+                  Sommelier’s Reserve Hamper
+                </h3>
+                <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed font-normal">
+                  A grand arrangement featuring vintage Napa Valley Cabernet Sauvignon, aged Dutch Gouda, truffle wildflower honey, dark chocolate truffles, and sea-salt crackers.
+                </p>
+                <div class="flex items-center justify-between border-t border-slate-100 dark:border-slate-800 pt-4 mt-2">
+                  <span class="text-xl font-bold font-outfit text-slate-900 dark:text-white">$149.99</span>
+                  <a href="quote.html" class="px-5 py-2.5 rounded-xl bg-brand-primary hover:bg-brand-primaryHover text-white text-xs sm:text-sm font-semibold shadow-md shadow-amber-500/20">Get a Quote</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 (Corporate Distinction) -->
+            <div class="weekly-special-slide opacity-0 duration-500 flex flex-col md:flex-row items-center w-full h-full absolute inset-0 pointer-events-none">
+              <div class="w-full md:w-1/2 h-[368px] md:h-full overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=600" 
+                     alt="Corporate Distinction Executive Basket" 
+                     class="w-full h-full object-cover">
+              </div>
+              <div class="w-full md:w-1/2 p-8 sm:p-12 text-left ltr:text-left rtl:text-right space-y-4">
+                <div class="inline-block bg-emerald-100 dark:bg-emerald-900/40 text-brand-secondary font-bold text-xs px-3 py-1 rounded-full uppercase tracking-wider">
+                  Corporate Favorite
+                </div>
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white font-outfit">
+                  Executive Distinction Chest
+                </h3>
+                <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed font-normal">
+                  Hand-crafted leatherette chest packed with artisanal single-origin roast coffee, wild smoked salmon, Belgian dark chocolate pralines, and roasted truffle macadamias.
+                </p>
+                <div class="flex items-center justify-between border-t border-slate-100 dark:border-slate-800 pt-4 mt-2">
+                  <span class="text-xl font-bold font-outfit text-slate-900 dark:text-white">$199.99</span>
+                  <a href="quote.html" class="px-5 py-2.5 rounded-xl bg-brand-primary hover:bg-brand-primaryHover text-white text-xs sm:text-sm font-semibold shadow-md shadow-amber-500/20">Get a Quote</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 (Harvest Celebration) -->
+            <div class="weekly-special-slide opacity-0 duration-500 flex flex-col md:flex-row items-center w-full h-full absolute inset-0 pointer-events-none">
+              <div class="w-full md:w-1/2 h-[368px] md:h-full overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&q=80&w=600" 
+                     alt="Artisanal Harvest Celebration Box" 
+                     class="w-full h-full object-cover">
+              </div>
+              <div class="w-full md:w-1/2 p-8 sm:p-12 text-left ltr:text-left rtl:text-right space-y-4">
+                <div class="inline-block bg-amber-100 dark:bg-amber-900/40 text-brand-accent font-bold text-xs px-3 py-1 rounded-full uppercase tracking-wider">
+                  Seasonal Harvest
+                </div>
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white font-outfit">
+                  Artisanal Harvest Crate
+                </h3>
+                <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed font-normal">
+                  Rustic wooden crate loaded with organic dried fruits, natural honeycomb, rosemary sea-salt flatbreads, and non-alcoholic sparkling apple-cider.
+                </p>
+                <div class="flex items-center justify-between border-t border-slate-100 dark:border-slate-800 pt-4 mt-2">
+                  <span class="text-xl font-bold font-outfit text-slate-900 dark:text-white">$119.99</span>
+                  <a href="quote.html" class="px-5 py-2.5 rounded-xl bg-brand-primary hover:bg-brand-primaryHover text-white text-xs sm:text-sm font-semibold shadow-md shadow-amber-500/20">Get a Quote</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Carousel Controls Buttons -->
+          <button id="prev-special-btn" class="absolute top-1/2 left-0 md:-left-6 transform -translate-y-1/2 w-12 h-12 rounded-xl bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 border border-slate-100 dark:border-slate-800 shadow-lg hover:bg-slate-50 flex items-center justify-center hover:scale-105 transition-all z-40" aria-label="Previous Slide">
+            <i data-lucide="chevron-left" class="w-6 h-6"></i>
+          </button>
+          <button id="next-special-btn" class="absolute top-1/2 right-0 md:-right-6 transform -translate-y-1/2 w-12 h-12 rounded-xl bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 border border-slate-100 dark:border-slate-800 shadow-lg hover:bg-slate-50 flex items-center justify-center hover:scale-105 transition-all z-40" aria-label="Next Slide">
+            <i data-lucide="chevron-right" class="w-6 h-6"></i>
+          </button>
+
+          <!-- Carousel Indicator Dots -->
+          <div class="flex justify-center items-center space-x-2 mt-6">
+            <button class="special-dot w-2.5 h-2.5 rounded-full bg-brand-primary" data-slide="0" aria-label="Slide 1"></button>
+            <button class="special-dot w-2.5 h-2.5 rounded-full bg-slate-300 dark:bg-slate-700" data-slide="1" aria-label="Slide 2"></button>
+            <button class="special-dot w-2.5 h-2.5 rounded-full bg-slate-300 dark:bg-slate-700" data-slide="2" aria-label="Slide 3"></button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. Corporate & VIP Gifting Tier -->
+    <section id="loyalty-club" class="py-24 bg-white dark:bg-slate-900 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto mb-20 space-y-4">
+          <span class="text-brand-primary font-bold uppercase tracking-wider text-sm font-outfit">Volume &amp; Business Orders</span>
+          <h2 class="text-3xl md:text-4xl font-bold font-outfit text-slate-900 dark:text-white">
+            Corporate Gifting &amp; Bulk Order Tiers
+          </h2>
+          <p class="text-slate-655 dark:text-slate-300 font-normal">
+            Tailored for enterprise clients, HR teams, and event coordinators. Receive volume discounts, custom logo branding, and white-glove concierge fulfillment.
+          </p>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Silver Tier -->
+          <div class="glass-card p-8 rounded-3xl border-2 border-amber-600/25 bg-amber-50/5 dark:bg-amber-900/5 shadow-xl text-left ltr:text-left rtl:text-right relative overflow-hidden flex flex-col justify-between">
+            <div class="absolute -top-12 -right-12 w-28 h-28 bg-amber-600/5 rounded-full blur-2xl"></div>
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <div>
+                  <span class="text-[10px] font-bold text-amber-600 dark:text-amber-400 uppercase tracking-widest">Tier 01</span>
+                  <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white font-outfit">Silver Corporate</h3>
+                </div>
+                <div class="w-12 h-12 rounded-xl bg-amber-100 dark:bg-amber-955/40 text-amber-600 flex items-center justify-center">
+                  <i data-lucide="package" class="w-6 h-6"></i>
+                </div>
+              </div>
+              <p class="text-xs text-slate-400 font-bold uppercase tracking-wider mb-2">Order Volume</p>
+              <div class="text-base font-black text-slate-900 dark:text-white mb-6">10 - 25 Baskets</div>
+              
+              <ul class="space-y-3 border-t border-slate-100 dark:border-slate-800 pt-6 text-sm text-slate-600 dark:text-slate-350">
+                <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4.5 h-4.5 text-amber-600 flex-shrink-0"></i><span>10% Volume Discount</span></li>
+                <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4.5 h-4.5 text-amber-600 flex-shrink-0"></i><span>Customized Handwritten Greeting Cards</span></li>
+                <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4.5 h-4.5 text-amber-600 flex-shrink-0"></i><span>Standard Freight Shipping</span></li>
+              </ul>
+            </div>
+            <div class="mt-8">
+              <a href="quote.html" class="block w-full text-center py-3.5 rounded-xl border border-slate-200 dark:border-slate-800 font-bold text-sm text-slate-800 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">Request Quote</a>
+            </div>
+          </div>
+
+          <!-- Gold Tier (Popular) -->
+          <div class="glass-card p-8 rounded-3xl border-2 border-brand-primary bg-amber-50/10 dark:bg-amber-900/10 shadow-2xl text-left ltr:text-left rtl:text-right relative flex flex-col justify-between transform -translate-y-2 lg:-translate-y-4">
+            <div class="absolute -top-12 -right-12 w-28 h-28 bg-brand-primary/10 rounded-full blur-2xl"></div>
+            <div class="absolute -top-3.5 right-6 bg-brand-primary text-white text-[9px] font-black tracking-widest px-4 py-1.5 rounded-full uppercase z-10 shadow-md">Most Popular</div>
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <div>
+                  <span class="text-[10px] font-bold text-brand-primary uppercase tracking-widest">Tier 02</span>
+                  <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white font-outfit">Gold Executive</h3>
+                </div>
+                <div class="w-12 h-12 rounded-xl bg-amber-100 dark:bg-amber-955/40 text-brand-primary flex items-center justify-center">
+                  <i data-lucide="award" class="w-6 h-6"></i>
+                </div>
+              </div>
+              <p class="text-xs text-slate-400 font-bold uppercase tracking-wider mb-2">Order Volume</p>
+              <div class="text-base font-black text-slate-900 dark:text-white mb-6">26 - 100 Baskets</div>
+              
+              <ul class="space-y-3 border-t border-slate-100 dark:border-slate-800 pt-6 text-sm text-slate-600 dark:text-slate-350">
+                <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4.5 h-4.5 text-brand-primary flex-shrink-0"></i><span>15% Volume Discount</span></li>
+                <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4.5 h-4.5 text-brand-primary flex-shrink-0"></i><span>Custom Logo Printed Ribbon &amp; Wax Seal</span></li>
+                <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4.5 h-4.5 text-brand-primary flex-shrink-0"></i><span>Priority Bulk Logistics</span></li>
+                <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4.5 h-4.5 text-brand-primary flex-shrink-0"></i><span>Complimentary Sample Hamper</span></li>
+              </ul>
+            </div>
+            <div class="mt-8">
+              <a href="quote.html" class="block w-full text-center py-3.5 rounded-xl bg-brand-primary hover:bg-brand-primaryHover text-white font-bold text-sm shadow-lg shadow-amber-500/25">Request Quote</a>
+            </div>
+          </div>
+
+          <!-- Diamond Tier -->
+          <div class="glass-card p-8 rounded-3xl border-2 border-brand-secondary/25 bg-emerald-50/5 dark:bg-emerald-900/5 shadow-xl text-left ltr:text-left rtl:text-right relative overflow-hidden flex flex-col justify-between md:col-span-2 lg:col-span-1">
+            <div class="absolute -top-12 -right-12 w-28 h-28 bg-brand-secondary/5 rounded-full blur-2xl"></div>
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <div>
+                  <span class="text-[10px] font-bold text-brand-secondary uppercase tracking-widest">Tier 03</span>
+                  <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white font-outfit">Diamond Enterprise</h3>
+                </div>
+                <div class="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-955/40 text-brand-secondary flex items-center justify-center">
+                  <i data-lucide="crown" class="w-6 h-6"></i>
+                </div>
+              </div>
+              <p class="text-xs text-slate-400 font-bold uppercase tracking-wider mb-2">Order Volume</p>
+              <div class="text-base font-black text-slate-900 dark:text-white mb-6">100+ Baskets</div>
+              
+              <ul class="space-y-3 border-t border-slate-100 dark:border-slate-800 pt-6 text-sm text-slate-600 dark:text-slate-350">
+                <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4.5 h-4.5 text-brand-secondary flex-shrink-0"></i><span>20% Volume Discount</span></li>
+                <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4.5 h-4.5 text-brand-secondary flex-shrink-0"></i><span>Custom Laser Engraved Wooden Crates</span></li>
+                <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4.5 h-4.5 text-brand-secondary flex-shrink-0"></i><span>Dedicated Account Gifting Concierge</span></li>
+                <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4.5 h-4.5 text-brand-secondary flex-shrink-0"></i><span>White-Glove Hand Delivery Service</span></li>
+              </ul>
+            </div>
+            <div class="mt-8">
+              <a href="quote.html" class="block w-full text-center py-3.5 rounded-xl border border-slate-200 dark:border-slate-800 font-bold text-sm text-slate-800 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">Request Enterprise Quote</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. Live Social Media Hub -->
+    <section id="social-hub" class="py-24 bg-slate-50 dark:bg-slate-950 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+          <span class="text-brand-secondary font-bold uppercase tracking-wider text-sm font-outfit">Customer Stories</span>
+          <h2 class="text-3xl md:text-4xl font-bold font-outfit text-slate-900 dark:text-white">
+            Unboxing Moments: #GiftedPantry
+          </h2>
+          <p class="text-slate-655 dark:text-slate-300 font-normal">
+            See how clients and corporate teams celebrate with our gourmet hampers. Tag your unboxing photos to be featured!
+          </p>
+        </div>
+
+        <!-- Instagram Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          
+          <!-- Post 1 -->
+          <div class="group relative aspect-square rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-md">
+            <img src="https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&q=80&w=300" alt="Executive Gift Basket" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-slate-950/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4 text-center text-white">
+              <i data-lucide="instagram" class="w-5 h-5 text-brand-primary mb-2"></i>
+              <p class="text-[10px] font-bold">@sarah_corporate</p>
+              <p class="text-[9px] text-slate-350 font-normal line-clamp-2 mt-1">"Best holiday gifts for our partners! 🍷"</p>
+              <div class="flex items-center space-x-2 mt-2 text-[9px] font-bold text-amber-350">
+                <span>♥ 234</span>
+                <span>💬 12</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Post 2 -->
+          <div class="group relative aspect-square rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-md">
+            <img src="https://images.unsplash.com/photo-1549007994-cb92caebd54b?auto=format&fit=crop&q=80&w=300" alt="Artisan Chocolates" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-slate-950/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4 text-center text-white">
+              <i data-lucide="instagram" class="w-5 h-5 text-brand-primary mb-2"></i>
+              <p class="text-[10px] font-bold">@david_gifts</p>
+              <p class="text-[9px] text-slate-350 font-normal line-clamp-2 mt-1">"The dark chocolate truffles are incredible 🍫"</p>
+              <div class="flex items-center space-x-2 mt-2 text-[9px] font-bold text-amber-350">
+                <span>♥ 188</span>
+                <span>💬 9</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Post 3 -->
+          <div class="group relative aspect-square rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-md">
+            <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=300" alt="Corporate Crate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-slate-950/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4 text-center text-white">
+              <i data-lucide="instagram" class="w-5 h-5 text-brand-primary mb-2"></i>
+              <p class="text-[10px] font-bold">@tech_hr_team</p>
+              <p class="text-[9px] text-slate-350 font-normal line-clamp-2 mt-1">"100 crates delivered right on time! 🎁"</p>
+              <div class="flex items-center space-x-2 mt-2 text-[9px] font-bold text-amber-350">
+                <span>♥ 312</span>
+                <span>💬 19</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Post 4 -->
+          <div class="group relative aspect-square rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-md">
+            <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&q=80&w=300" alt="Harvest Crate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-slate-950/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4 text-center text-white">
+              <i data-lucide="instagram" class="w-5 h-5 text-brand-primary mb-2"></i>
+              <p class="text-[10px] font-bold">@marcus_events</p>
+              <p class="text-[9px] text-slate-350 font-normal line-clamp-2 mt-1">"Custom engraved wooden boxes look stunning!"</p>
+              <div class="flex items-center space-x-2 mt-2 text-[9px] font-bold text-amber-350">
+                <span>♥ 145</span>
+                <span>💬 5</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Post 5 -->
+          <div class="group relative aspect-square rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-md">
+            <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&q=80&w=300" alt="Fine Wine Basket" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-slate-950/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4 text-center text-white">
+              <i data-lucide="instagram" class="w-5 h-5 text-brand-primary mb-2"></i>
+              <p class="text-[10px] font-bold">@luxury_lifestyle</p>
+              <p class="text-[9px] text-slate-350 font-normal line-clamp-2 mt-1">"Napa Cabernet &amp; Aged Cheddar pairing perfection."</p>
+              <div class="flex items-center space-x-2 mt-2 text-[9px] font-bold text-amber-350">
+                <span>♥ 209</span>
+                <span>💬 15</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Post 6 -->
+          <div class="group relative aspect-square rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-md">
+            <img src="https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&q=80&w=300" alt="Wedding Gifting Basket" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-slate-950/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4 text-center text-white">
+              <i data-lucide="instagram" class="w-5 h-5 text-brand-primary mb-2"></i>
+              <p class="text-[10px] font-bold">@wedding_joy</p>
+              <p class="text-[9px] text-slate-350 font-normal line-clamp-2 mt-1">"Thank you hampers for our bridal party ✨"</p>
+              <div class="flex items-center space-x-2 mt-2 text-[9px] font-bold text-amber-350">
+                <span>♥ 420</span>
+                <span>💬 31</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="glass-footer py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 mb-12">
+        
+        <!-- Brand Info -->
+        <div class="md:col-span-1 lg:col-span-4 space-y-4 text-left rtl:text-right">
+          <a href="index.html" class="flex items-center space-x-2 rtl:space-x-reverse">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-primary to-brand-accent flex items-center justify-center text-white shadow-md shadow-amber-500/20">
+              <i data-lucide="gift" class="w-5 h-5"></i>
+            </div>
+            <span class="font-outfit text-2xl font-bold tracking-tight text-slate-900 dark:text-white">
+              The<span class="text-brand-primary"> Gifted Pantry</span>
+            </span>
+          </a>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-normal">
+            Handcrafted luxury food gift baskets, fine wine hampers, artisanal cheese crates, and volume corporate gifting solution. Express nationwide delivery.
+          </p>
+          
+          <!-- Social Icons -->
+          <div class="flex items-center space-x-3 rtl:space-x-reverse pt-2">
+            <a href="#" class="w-9 h-9 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-brand-primary hover:text-white transition-all duration-300" aria-label="Facebook">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="#" class="w-9 h-9 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-brand-primary hover:text-white transition-all duration-300" aria-label="X (formerly Twitter)">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="w-9 h-9 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-brand-primary hover:text-white transition-all duration-300" aria-label="LinkedIn">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="#" class="w-9 h-9 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-brand-primary hover:text-white transition-all duration-300" aria-label="Instagram">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Menu Links -->
+        <div class="md:col-span-1 lg:col-span-2 space-y-4 text-left rtl:text-right">
+          <h4 class="text-white font-bold text-sm uppercase tracking-wider">Hampers</h4>
+          <ul class="space-y-2.5 text-sm font-medium">
+            <li><a href="services.html" class="hover:text-brand-primary transition-colors">Wine &amp; Cheese</a></li>
+            <li><a href="services.html" class="hover:text-brand-primary transition-colors">Artisanal Chocolates</a></li>
+            <li><a href="services.html" class="hover:text-brand-primary transition-colors">Corporate Hampers</a></li>
+            <li><a href="quote.html" class="hover:text-brand-primary transition-colors">Bulk Custom Quote</a></li>
+          </ul>
+        </div>
+
+        <!-- Company / Info Links -->
+        <div class="md:col-span-1 lg:col-span-2 space-y-4 text-left rtl:text-right">
+          <h4 class="text-white font-bold text-sm uppercase tracking-wider">Navigation</h4>
+          <ul class="space-y-2.5 text-sm font-medium">
+            <li><a href="index.html" class="hover:text-brand-primary transition-colors">Home V1</a></li>
+            <li><a href="home2.html" class="hover:text-brand-primary transition-colors text-brand-primary">Home V2</a></li>
+            <li><a href="about.html" class="hover:text-brand-primary transition-colors">Our Story</a></li>
+            <li><a href="gallery.html" class="hover:text-brand-primary transition-colors">Corporate Gifting</a></li>
+          </ul>
+        </div>
+
+        <!-- Contacts and Hours -->
+        <div class="md:col-span-1 lg:col-span-4 space-y-4 text-left rtl:text-right">
+          <h4 class="text-white font-bold text-sm uppercase tracking-wider font-outfit">Contact &amp; Showroom</h4>
+          <ul class="space-y-2.5 text-sm font-medium">
+            <li class="flex items-center space-x-2.5 rtl:space-x-reverse">
+              <i data-lucide="phone" class="w-4 h-4 text-brand-primary flex-shrink-0"></i>
+              <span>+1 (800) 555-GIFT</span>
+            </li>
+            <li class="flex items-center space-x-2.5 rtl:space-x-reverse">
+              <i data-lucide="mail" class="w-4 h-4 text-brand-primary flex-shrink-0"></i>
+              <span class="break-all">concierge@thegiftedpantry.com</span>
+            </li>
+            <li class="flex items-center space-x-2.5 rtl:space-x-reverse">
+              <i data-lucide="clock" class="w-4 h-4 text-brand-primary flex-shrink-0"></i>
+              <span>Mon - Sat: 9:00 AM - 7:00 PM EST</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Copyright row -->
+      <div class="footer-copyright pt-8 border-t flex flex-col sm:flex-row items-center justify-between text-xs sm:text-sm font-medium">
+        <p>&copy; 2026 The Gifted Pantry. All rights reserved.</p>
+        <div class="flex items-center space-x-4 rtl:space-x-reverse mt-4 sm:mt-0">
+          <a href="#" class="hover:text-slate-900 dark:text-white transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script src="main.js"></script>
+
+  <!-- Script for Interactive Custom Basket Builder & Specials Carousel -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initCustomBasketBuilder();
+      initSpecialsCarousel();
+    });
+
+    // --- Interactive Custom Basket Builder ---
+    function initCustomBasketBuilder() {
+      const baseRadios = document.querySelectorAll('input[name="basket-base"]');
+      const itemChecks = document.querySelectorAll('input[name="basket-item"]');
+      const finishingChecks = document.querySelectorAll('input[name="basket-finishing"]');
+      
+      const summaryBaseVal = document.getElementById('summary-base-val');
+      const summaryItemsList = document.getElementById('summary-items-list');
+      const summaryFinishingsList = document.getElementById('summary-finishings-list');
+      const summaryTotalPrice = document.getElementById('summary-total-price');
+      const itemCounter = document.getElementById('item-counter');
+
+      // Update callback
+      function updateSummary() {
+        let total = 0;
+
+        // 1. Get Base Container
+        let selectedBaseText = "Handwoven Willow Basket";
+        let basePrice = 15.00;
+        baseRadios.forEach(radio => {
+          if (radio.checked) {
+            selectedBaseText = radio.value;
+            basePrice = parseFloat(radio.dataset.price);
+          }
+        });
+        total += basePrice;
+        summaryBaseVal.textContent = `${selectedBaseText} ($${basePrice.toFixed(2)})`;
+
+        // 2. Get Items (limit to 3 checked)
+        let checkedItems = [];
+        itemChecks.forEach(check => {
+          if (check.checked) {
+            checkedItems.push(check.value);
+            total += parseFloat(check.dataset.price);
+          }
+        });
+        if (itemCounter) itemCounter.textContent = `${checkedItems.length}/3 Selected`;
+
+        // Manage checkbox disabled state if max limit reached
+        itemChecks.forEach(check => {
+          if (!check.checked) {
+            check.disabled = checkedItems.length >= 3;
+            if (check.closest('.builder-item-card')) {
+              check.closest('.builder-item-card').classList.toggle('opacity-50', checkedItems.length >= 3);
+              check.closest('.builder-item-card').classList.toggle('cursor-not-allowed', checkedItems.length >= 3);
+            }
+          } else {
+            check.disabled = false;
+            if (check.closest('.builder-item-card')) {
+              check.closest('.builder-item-card').classList.remove('opacity-50', 'cursor-not-allowed');
+            }
+          }
+        });
+
+        if (checkedItems.length > 0) {
+          summaryItemsList.innerHTML = checkedItems.map(name => `
+            <span class="px-2.5 py-1 rounded-lg bg-amber-50 dark:bg-amber-900/40 text-brand-primary font-bold text-xs">
+              + ${name}
+            </span>
+          `).join('');
+        } else {
+          summaryItemsList.innerHTML = '<span class="italic text-slate-400 dark:text-slate-500">No items selected yet.</span>';
+        }
+
+        // 3. Get Finishings
+        let checkedFinishings = [];
+        finishingChecks.forEach(check => {
+          if (check.checked) {
+            checkedFinishings.push(check.value);
+            total += parseFloat(check.dataset.price);
+          }
+        });
+
+        if (checkedFinishings.length > 0) {
+          summaryFinishingsList.innerHTML = checkedFinishings.map(name => `
+            <span class="px-2.5 py-1 rounded-lg bg-emerald-50 dark:bg-emerald-900/40 text-brand-secondary font-bold text-xs">
+              + ${name}
+            </span>
+          `).join('');
+        } else {
+          summaryFinishingsList.innerHTML = '<span class="italic text-slate-400 dark:text-slate-500">No finishing touches selected.</span>';
+        }
+
+        // 4. Update Price
+        summaryTotalPrice.textContent = total.toFixed(2);
+      }
+
+      // Add listeners
+      baseRadios.forEach(radio => radio.addEventListener('change', updateSummary));
+      itemChecks.forEach(check => check.addEventListener('change', updateSummary));
+      finishingChecks.forEach(check => check.addEventListener('change', updateSummary));
+
+      // Run initially
+      updateSummary();
+    }
+
+    // --- Weekly Specials Carousel ---
+    function initSpecialsCarousel() {
+      const slides = document.querySelectorAll('.weekly-special-slide');
+      const dots = document.querySelectorAll('.special-dot');
+      const prevBtn = document.getElementById('prev-special-btn');
+      const bgNextBtn = document.getElementById('next-special-btn');
+      
+      let currentIndex = 0;
+
+      function goToSlide(index) {
+        if (index < 0) index = slides.length - 1;
+        if (index >= slides.length) index = 0;
+
+        currentIndex = index;
+
+        slides.forEach((slide, i) => {
+          if (i === currentIndex) {
+            slide.classList.remove('opacity-0', 'pointer-events-none');
+            slide.classList.add('opacity-100');
+          } else {
+            slide.classList.add('opacity-0', 'pointer-events-none');
+            slide.classList.remove('opacity-100');
+          }
+        });
+
+        dots.forEach((dot, i) => {
+          if (i === currentIndex) {
+            dot.classList.add('bg-brand-primary');
+            dot.classList.remove('bg-slate-300', 'dark:bg-slate-700');
+          } else {
+            dot.classList.remove('bg-brand-primary');
+            dot.classList.add('bg-slate-300', 'dark:bg-slate-700');
+          }
+        });
+      }
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
+      }
+      if (bgNextBtn) {
+        bgNextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
+      }
+
+      dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => goToSlide(i));
+      });
+    }
+  </script>
+
+</body>
+</html>

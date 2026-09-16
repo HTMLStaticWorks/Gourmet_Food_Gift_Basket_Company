@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Gifted Pantry - About Our Story & Gifting Philosophy</title>
+  <meta name="description" content="Learn about The Gifted Pantry — our passion for artisan gourmet foods, our gifting philosophy, and our commitment to making every basket a beautiful, memorable experience.">
+  
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="index.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              light: '#fdf8ef', dark: '#1a1207',
+              primary: '#c8892a', primaryHover: '#a36d1a',
+              secondary: '#2d6a4f', secondaryHover: '#1f4f3a',
+              accent: '#e0a84a', navy: '#1a3a2a',
+            },
+            slate: {
+              50: '#faf8f3', 100: '#f5f0e6', 200: '#e8ddc5',
+              300: '#d9c89f', 400: '#c4a96e', 500: '#a8883d',
+              600: '#896724', 700: '#664d17', 800: '#46330d',
+              850: '#352606', 900: '#221800', 950: '#1a1207',
+            }
+          },
+          fontFamily: { sans: ['Inter', 'sans-serif'], outfit: ['Outfit', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 min-h-screen flex flex-col">
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="glass-nav fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center space-x-2 rtl:space-x-reverse group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-primary to-brand-accent flex items-center justify-center text-white shadow-md shadow-amber-500/20 animate-bounce">
+            <i data-lucide="gift" class="w-6 h-6"></i>
+          </div>
+          <span class="font-outfit text-2xl font-bold tracking-tight text-slate-900 dark:text-white">
+            The<span class="text-brand-primary"> Gifted Pantry</span>
+          </span>
+        </a>
+        <div class="hidden lg:flex items-center space-x-1 rtl:space-x-reverse">
+          <a href="index.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Home</a>
+          <a href="home2.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Home 2</a>
+          <a href="services.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Our Baskets</a>
+          <a href="gallery.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Corporate Gifting</a>
+          <a href="blog.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Customization</a>
+          <a href="about.html" class="px-3 py-2 rounded-lg text-sm font-semibold transition-colors text-brand-primary dark:text-amber-400">About Us</a>
+          <a href="contact.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Contact</a>
+        </div>
+        <div class="hidden lg:flex items-center space-x-4 rtl:space-x-reverse">
+          <button class="rtl-toggle w-10 h-10 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center" aria-label="Toggle Direction">
+            <i data-lucide="arrow-left-right" class="w-4 h-4"></i>
+          </button>
+          <button class="theme-toggle w-10 h-10 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center" aria-label="Toggle Theme">
+            <i data-lucide="sun" class="sun-icon w-5 h-5 hidden"></i>
+            <i data-lucide="moon" class="moon-icon w-5 h-5"></i>
+          </button>
+          <a href="quote.html" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-primary to-brand-accent text-white text-sm font-semibold hover:shadow-lg hover:shadow-amber-500/25 transition-all transform hover:-translate-y-0.5">Get a Quote</a>
+        </div>
+        <div class="flex items-center space-x-3 lg:hidden rtl:space-x-reverse">
+          <button id="mobile-menu-btn" class="p-2 rounded-lg border border-slate-200 dark:border-slate-800 text-slate-650 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="Open Menu">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden absolute top-20 left-0 right-0 glass-nav shadow-lg flex-col px-4 pt-4 pb-6 space-y-3 transition-all duration-300 transform opacity-0 -translate-y-4">
+      <a href="index.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-655 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Home</a>
+      <a href="home2.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-655 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Home 2</a>
+      <a href="services.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-655 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Our Baskets</a>
+      <a href="gallery.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-655 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Corporate Gifting</a>
+      <a href="blog.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-655 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Customization</a>
+      <a href="about.html" class="px-3 py-2 rounded-lg text-base font-semibold text-brand-primary bg-amber-50/50 dark:bg-amber-950/20">About Us</a>
+      <a href="contact.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-655 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Contact</a>
+      <div class="h-[1px] bg-slate-200 dark:bg-slate-800 my-2"></div>
+      <div class="flex items-center justify-between space-x-3 rtl:space-x-reverse pt-1 pb-2">
+        <button class="rtl-toggle flex-1 h-10 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-650 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center bg-white dark:bg-slate-900" aria-label="Toggle Direction">
+          <i data-lucide="arrow-left-right" class="w-4 h-4"></i>
+        </button>
+        <button class="theme-toggle flex-1 h-10 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-655 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center space-x-2 bg-white dark:bg-slate-900" aria-label="Toggle Theme">
+          <i data-lucide="sun" class="sun-icon w-4 h-4 hidden"></i>
+          <i data-lucide="moon" class="moon-icon w-4 h-4"></i>
+          <span class="text-xs font-bold tracking-wider dark:hidden">Dark Mode</span>
+          <span class="text-xs font-bold tracking-wider hidden dark:inline">Light Mode</span>
+        </button>
+      </div>
+      <div class="flex flex-col space-y-2.5">
+        <a href="quote.html" class="text-center px-4 py-2.5 rounded-xl bg-gradient-to-r from-brand-primary to-brand-accent text-white text-sm font-semibold shadow-md shadow-amber-500/20">Get a Quote</a>
+      </div>
+      <button id="mobile-menu-close" class="absolute top-2 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-white">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+    </div>
+  </nav>
+  
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="flex-grow pt-20">
+    
+    <!-- 1. Hero Section -->
+    <section class="relative py-20 md:py-28 overflow-hidden text-white bg-slate-950 page-hero">
+      <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&q=80&w=1600" 
+           alt="Artisan Gourmet Ingredients and Gift Baskets" 
+           class="absolute inset-0 w-full h-full object-cover opacity-60">
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/55 to-slate-900/25 z-0"></div>
+      
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4 relative z-10 animate-fade-in-up">
+        <span class="text-amber-300 font-semibold uppercase tracking-wider text-xs sm:text-sm">Who We Are</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-outfit text-white leading-tight">
+          About The Gifted Pantry
+        </h1>
+        <p class="text-slate-200 max-w-xl mx-auto text-xs sm:text-sm md:text-base font-normal leading-relaxed">
+          Learn about our passion for gourmet artisan foods, our gifting philosophy, and our unwavering commitment to making every basket a beautiful, lasting memory.
+        </p>
+      </div>
+    </section>
+
+    <!-- 2. Our Story Section -->
+    <section class="py-16 bg-white dark:bg-slate-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-7 space-y-6 text-left ltr:text-left rtl:text-right">
+            <span class="text-brand-secondary font-semibold uppercase tracking-wider text-sm">Founded in 2014</span>
+            <h2 class="text-2xl sm:text-3xl font-bold font-outfit text-slate-900 dark:text-white leading-snug">
+              A Decade of Curating Gifting Joy
+            </h2>
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
+              The Gifted Pantry was founded by food lover and entrepreneur Claire Ashworth, who believed that the best gift you could give someone was the joy of discovering extraordinary artisan food. After years of scouring farmers markets, specialty food halls, and gourmet importers, Claire began building the curated collections that would become The Gifted Pantry — a company dedicated to making artisan gourmet gifting effortless and beautiful.
+            </p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4 border-t border-slate-100 dark:border-slate-800">
+              <div>
+                <h4 class="font-bold text-slate-900 dark:text-white text-base">Artisan First</h4>
+                <p class="text-xs text-slate-400 mt-1 font-normal">We work exclusively with small-batch, artisan producers who share our passion for quality and craft.</p>
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-900 dark:text-white text-base">Beautifully Packaged</h4>
+                <p class="text-xs text-slate-400 mt-1 font-normal">Every basket is a work of art — thoughtfully arranged, elegantly wrapped, and ready to impress.</p>
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-900 dark:text-white text-base">Inclusively Curated</h4>
+                <p class="text-xs text-slate-400 mt-1 font-normal">From vegan to gluten-free to kosher, we ensure everyone receives a delicious, appropriate gift.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 relative">
+            <div class="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-brand-primary to-brand-accent opacity-10 blur-xl dark:opacity-20"></div>
+            <div class="relative glass-card p-3 rounded-3xl shadow-xl">
+              <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?auto=format&fit=crop&q=80&w=600" 
+                   alt="Beautifully curated gift basket ready for delivery" 
+                   class="rounded-2xl w-full h-auto aspect-[4/3] lg:h-[340px] lg:aspect-auto object-cover object-center">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Quality Standards Section -->
+    <section class="py-16 bg-slate-50 dark:bg-slate-950 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+          <span class="text-brand-primary font-semibold uppercase tracking-wider text-sm">Our Standards</span>
+          <h2 class="text-2xl sm:text-3xl font-bold font-outfit text-slate-900 dark:text-white">
+            Quality, Provenance &amp; Presentation
+          </h2>
+          <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm font-normal">
+            Every product in every basket meets our rigorous sourcing standards — from farm to presentation, we never compromise.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="glass-card p-8 rounded-2xl border border-slate-100 dark:border-slate-800 flex flex-col items-center text-center space-y-4">
+            <div class="p-4 bg-white dark:bg-slate-900 rounded-2xl text-brand-primary shadow-sm">
+              <i data-lucide="award" class="w-7 h-7"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-900 dark:text-white text-lg mb-2">Artisan Provenance</h3>
+              <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal leading-relaxed">
+                Every cheese, chocolate, and specialty food is sourced from certified artisan producers with traceable, ethical supply chains.
+              </p>
+            </div>
+          </div>
+
+          <div class="glass-card p-8 rounded-2xl border border-slate-100 dark:border-slate-800 flex flex-col items-center text-center space-y-4">
+            <div class="p-4 bg-white dark:bg-slate-900 rounded-2xl text-brand-secondary shadow-sm">
+              <i data-lucide="package-check" class="w-7 h-7"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-900 dark:text-white text-lg mb-2">Premium Packaging</h3>
+              <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal leading-relaxed">
+                All baskets are assembled with FSC-certified packaging materials, premium satin ribbons, and food-safe insulating liners for freshness.
+              </p>
+            </div>
+          </div>
+
+          <div class="glass-card p-8 rounded-2xl border border-slate-100 dark:border-slate-800 flex flex-col items-center text-center space-y-4">
+            <div class="p-4 bg-white dark:bg-slate-900 rounded-2xl text-amber-500 shadow-sm">
+              <i data-lucide="leaf" class="w-7 h-7"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-900 dark:text-white text-lg mb-2">Sustainable Choices</h3>
+              <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal leading-relaxed">
+                We prioritize eco-conscious producers, organic certifications, and sustainable packaging across our entire range of gourmet gifts.
+              </p>
+            </div>
+          </div>
+
+          <div class="glass-card p-8 rounded-2xl border border-slate-100 dark:border-slate-800 flex flex-col items-center text-center space-y-4">
+            <div class="p-4 bg-white dark:bg-slate-900 rounded-2xl text-rose-500 shadow-sm">
+              <i data-lucide="shield-check" class="w-7 h-7"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-900 dark:text-white text-lg mb-2">Safe &amp; Compliant</h3>
+              <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal leading-relaxed">
+                Full allergen transparency, clear dietary labeling, and food-grade certified packaging for every single basket we produce.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. Our Approach Section -->
+    <section class="py-16 bg-white dark:bg-slate-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-5 relative order-last lg:order-first">
+            <div class="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-brand-secondary to-brand-primary opacity-10 blur-xl dark:opacity-20"></div>
+            <div class="relative glass-card p-3 rounded-3xl shadow-xl">
+              <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&q=80&w=600" 
+                   alt="Gourmet artisan food selection process" 
+                   class="rounded-2xl w-full h-auto aspect-[4/3] lg:h-[340px] lg:aspect-auto object-cover object-center">
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 space-y-6 text-left ltr:text-left rtl:text-right">
+            <span class="text-brand-secondary font-semibold uppercase tracking-wider text-sm">Our Gifting Philosophy</span>
+            <h2 class="text-2xl sm:text-3xl font-bold font-outfit text-slate-900 dark:text-white leading-snug">
+              Thoughtful Curation, Joyful Discovery
+            </h2>
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
+              We believe that the best gift baskets don't just contain good food — they tell a story, spark discovery, and invite the recipient to slow down and savor something extraordinary. That's why we spend so much time seeking out truly special artisan producers: the small dairy making exceptional aged cheddars, the chocolatier using rare heritage cacao beans, the beekeeper harvesting single-floral raw honey.
+            </p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
+              When our customers send a basket, they're not just giving food — they're giving an experience, a moment of delight, and a connection to the passionate makers behind every product.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-3 pt-2">
+              <a href="contact.html" class="px-6 py-3 rounded-xl bg-brand-primary hover:bg-brand-primaryHover text-white font-semibold shadow-md shadow-amber-500/20 transition-colors whitespace-nowrap text-center">
+                Order a Basket
+              </a>
+              <a href="services.html" class="px-6 py-3 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-200 font-semibold hover:bg-amber-50 hover:text-brand-primary hover:border-brand-primary dark:hover:bg-slate-800 dark:hover:text-white transition-all duration-300 whitespace-nowrap text-center">
+                Browse Collections
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Our Commitment Section -->
+    <section class="py-16 bg-slate-900 dark:bg-slate-950 text-white relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-7 space-y-6 text-left ltr:text-left rtl:text-right">
+            <span class="text-brand-secondary font-semibold uppercase tracking-wider text-sm">Why The Gifted Pantry</span>
+            <h2 class="text-2xl sm:text-3xl font-bold font-outfit text-white leading-snug">
+              Our Commitment to Exceptional Gifting
+            </h2>
+            <p class="text-sm text-slate-300 leading-relaxed font-normal">
+              At The Gifted Pantry, we believe gifting is an act of love. Whether it's a small token of appreciation or a grand corporate gesture, we put the same care and attention into every basket — because the person receiving it deserves to feel truly special.
+            </p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+              <div class="flex items-start space-x-3.5 rtl:space-x-reverse">
+                <div class="p-2.5 bg-slate-800 rounded-xl text-brand-secondary flex-shrink-0">
+                  <i data-lucide="heart" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold text-white text-base">Curated with Heart</h3>
+                  <p class="text-xs text-slate-400 mt-1 leading-relaxed">Each basket is curated by our gifting specialists with genuine care for the recipient's tastes and the occasion.</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start space-x-3.5 rtl:space-x-reverse">
+                <div class="p-2.5 bg-slate-800 rounded-xl text-brand-primary flex-shrink-0">
+                  <i data-lucide="star" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold text-white text-base">Premium at Every Level</h3>
+                  <p class="text-xs text-slate-400 mt-1 leading-relaxed">From the gourmet products inside to the final bow on the packaging — every detail reflects our commitment to excellence.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 relative">
+            <div class="relative glass-card p-8 rounded-3xl border border-slate-700 bg-slate-800/40 text-left ltr:text-left rtl:text-right space-y-6">
+              <h3 class="text-xl font-bold font-outfit text-white">Our Track Record</h3>
+              <p class="text-xs text-slate-300 leading-relaxed font-normal">
+                Over a decade of curating extraordinary gifting experiences for individuals, families, and hundreds of businesses across the country.
+              </p>
+              <div class="flex items-center space-x-4 rtl:space-x-reverse bg-slate-900/60 p-4 rounded-2xl border border-slate-700/50">
+                <div class="text-3xl font-extrabold text-brand-secondary">12k+</div>
+                <div class="text-[11px] text-slate-400 font-semibold uppercase tracking-wider leading-snug">
+                  Gourmet gift baskets lovingly curated and delivered since 2014
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Team Section -->
+    <section class="py-16 bg-white dark:bg-slate-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        
+        <div class="max-w-3xl mx-auto mb-16 space-y-4">
+          <span class="text-brand-primary font-semibold uppercase tracking-wider text-sm">Our Team</span>
+          <h2 class="text-2xl sm:text-3xl font-bold font-outfit text-slate-900 dark:text-white">
+            Meet Our Gifting Specialists
+          </h2>
+          <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm font-normal">
+            Our passionate team brings together expertise in artisan food, design, and customer experience to create gifting moments that truly resonate.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="flex flex-col bg-slate-50 dark:bg-slate-950 rounded-3xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-slate-100 dark:border-slate-800 group">
+            <div class="overflow-hidden h-96 relative">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600" 
+                   alt="Claire Ashworth, Founder & Chief Gifting Officer" 
+                   class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-6 text-left ltr:text-left rtl:text-right space-y-2">
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white">Claire Ashworth</h3>
+              <p class="text-xs text-brand-primary font-semibold uppercase tracking-wider">Founder &amp; Chief Gifting Officer</p>
+              <p class="text-xs text-slate-500 dark:text-slate-400 font-normal leading-relaxed pt-1">
+                With a background in food journalism and 10+ years curating artisan collections, Claire's passion for extraordinary gourmet food is the heart of every Gifted Pantry basket.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-col bg-slate-50 dark:bg-slate-950 rounded-3xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-slate-100 dark:border-slate-800 group">
+            <div class="overflow-hidden h-96 relative">
+              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=600" 
+                   alt="Daniel Park, Head of Sourcing" 
+                   class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-6 text-left ltr:text-left rtl:text-right space-y-2">
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white">Daniel Park</h3>
+              <p class="text-xs text-brand-secondary font-semibold uppercase tracking-wider">Head of Artisan Sourcing</p>
+              <p class="text-xs text-slate-500 dark:text-slate-400 font-normal leading-relaxed pt-1">
+                A certified cheesemonger and fine wine specialist, Daniel travels the world discovering exceptional small-batch producers to add to our ever-evolving gourmet portfolio.
+              </p>
+            </div>
+          </div>
+
+          <div class="last-card-md flex flex-col bg-slate-50 dark:bg-slate-950 rounded-3xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-slate-100 dark:border-slate-800 group">
+            <div class="overflow-hidden h-96 relative">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=600" 
+                   alt="Emma Voss, Creative Packaging Director" 
+                   class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-6 text-left ltr:text-left rtl:text-right space-y-2">
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white">Emma Voss</h3>
+              <p class="text-xs text-amber-600 font-semibold uppercase tracking-wider">Creative Packaging Director</p>
+              <p class="text-xs text-slate-500 dark:text-slate-400 font-normal leading-relaxed pt-1">
+                A visual designer with a background in luxury brand packaging, Emma ensures every basket we assemble is as beautiful to look at as it is delicious to explore.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="glass-footer py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 mb-12">
+        <div class="md:col-span-1 lg:col-span-4 space-y-4 text-left rtl:text-right">
+          <a href="index.html" class="flex items-center space-x-2 rtl:space-x-reverse">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-primary to-brand-accent flex items-center justify-center text-white shadow-md shadow-amber-500/20">
+              <i data-lucide="gift" class="w-5 h-5"></i>
+            </div>
+            <span class="font-outfit text-2xl font-bold tracking-tight footer-brand-name">
+              The<span class="text-brand-primary"> Gifted Pantry</span>
+            </span>
+          </a>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-normal">
+            Premium gourmet food gift baskets for every occasion. Artisan cheeses, fine chocolates, curated wines, and seasonal delicacies, beautifully packaged and delivered with care.
+          </p>
+          <div class="flex items-center space-x-3 rtl:space-x-reverse pt-2">
+            <a href="#" class="w-9 h-9 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-brand-primary hover:text-white transition-all duration-300" aria-label="Facebook">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="#" class="w-9 h-9 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-brand-primary hover:text-white transition-all duration-300" aria-label="Instagram">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" class="w-9 h-9 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-brand-primary hover:text-white transition-all duration-300" aria-label="LinkedIn">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+          </div>
+        </div>
+        <div class="md:col-span-1 lg:col-span-2 space-y-4 text-left rtl:text-right">
+          <h4 class="text-white font-bold text-sm uppercase tracking-wider">Collections</h4>
+          <ul class="space-y-2.5 text-sm font-medium">
+            <li><a href="services.html" class="hover:text-brand-primary transition-colors">Cheese &amp; Charcuterie</a></li>
+            <li><a href="services.html" class="hover:text-brand-primary transition-colors">Chocolates &amp; Sweets</a></li>
+            <li><a href="services.html" class="hover:text-brand-primary transition-colors">Wine &amp; Gourmet</a></li>
+            <li><a href="services.html" class="hover:text-brand-primary transition-colors">Seasonal &amp; Holiday</a></li>
+          </ul>
+        </div>
+        <div class="md:col-span-1 lg:col-span-2 space-y-4 text-left rtl:text-right">
+          <h4 class="text-white font-bold text-sm uppercase tracking-wider">Company</h4>
+          <ul class="space-y-2.5 text-sm font-medium">
+            <li><a href="index.html" class="hover:text-brand-primary transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-brand-primary transition-colors">About Us</a></li>
+            <li><a href="gallery.html" class="hover:text-brand-primary transition-colors">Corporate Gifting</a></li>
+            <li><a href="blog.html" class="hover:text-brand-primary transition-colors">Customization</a></li>
+          </ul>
+        </div>
+        <div class="md:col-span-1 lg:col-span-4 space-y-4 text-left rtl:text-right">
+          <h4 class="text-white font-bold text-sm uppercase tracking-wider font-outfit">Contact Us</h4>
+          <ul class="space-y-2.5 text-sm font-medium">
+            <li class="flex items-center space-x-2.5 rtl:space-x-reverse">
+              <i data-lucide="phone" class="w-4 h-4 text-brand-primary flex-shrink-0"></i>
+              <span>+1 (800) 555-GIFT</span>
+            </li>
+            <li class="flex items-center space-x-2.5 rtl:space-x-reverse">
+              <i data-lucide="mail" class="w-4 h-4 text-brand-primary flex-shrink-0"></i>
+              <span class="break-all">hello@giftedpantry.com</span>
+            </li>
+            <li class="flex items-center space-x-2.5 rtl:space-x-reverse">
+              <i data-lucide="clock" class="w-4 h-4 text-brand-primary flex-shrink-0"></i>
+              <span>Mon - Fri: 9:00 AM - 6:00 PM</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-copyright pt-8 border-t flex flex-col sm:flex-row items-center justify-between text-xs sm:text-sm font-medium">
+        <p>&copy; 2026 The Gifted Pantry. All rights reserved.</p>
+        <div class="flex items-center space-x-4 rtl:space-x-reverse mt-4 sm:mt-0">
+          <a href="#" class="hover:text-slate-900 dark:text-white transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

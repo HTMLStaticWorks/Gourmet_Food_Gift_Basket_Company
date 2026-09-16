@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Gifted Pantry - Contact &amp; Bulk Order Enquiry</title>
+  <meta name="description" content="Get in touch with The Gifted Pantry. Place a custom order, enquire about bulk or corporate gifting, or ask our gifting specialists anything — we'd love to hear from you.">
+  
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="index.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              light: '#fdf8ef', dark: '#1a1207',
+              primary: '#c8892a', primaryHover: '#a36d1a',
+              secondary: '#2d6a4f', secondaryHover: '#1f4f3a',
+              accent: '#e0a84a', navy: '#1a3a2a',
+            },
+            slate: {
+              50: '#faf8f3', 100: '#f5f0e6', 200: '#e8ddc5',
+              300: '#d9c89f', 400: '#c4a96e', 500: '#a8883d',
+              600: '#896724', 700: '#664d17', 800: '#46330d',
+              850: '#352606', 900: '#221800', 950: '#1a1207',
+            }
+          },
+          fontFamily: { sans: ['Inter', 'sans-serif'], outfit: ['Outfit', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 min-h-screen flex flex-col">
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="glass-nav fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center space-x-2 rtl:space-x-reverse group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-primary to-brand-accent flex items-center justify-center text-white shadow-md shadow-amber-500/20 animate-bounce">
+            <i data-lucide="gift" class="w-6 h-6"></i>
+          </div>
+          <span class="font-outfit text-2xl font-bold tracking-tight text-slate-900 dark:text-white">
+            The<span class="text-brand-primary"> Gifted Pantry</span>
+          </span>
+        </a>
+        <div class="hidden lg:flex items-center space-x-1 rtl:space-x-reverse">
+          <a href="index.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Home</a>
+          <a href="home2.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Home 2</a>
+          <a href="services.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Our Baskets</a>
+          <a href="gallery.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Corporate Gifting</a>
+          <a href="blog.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Customization</a>
+          <a href="about.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-amber-400 transition-colors">About Us</a>
+          <a href="contact.html" class="px-3 py-2 rounded-lg text-sm font-semibold transition-colors text-brand-primary dark:text-amber-400">Contact</a>
+        </div>
+        <div class="hidden lg:flex items-center space-x-4 rtl:space-x-reverse">
+          <button class="rtl-toggle w-10 h-10 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center" aria-label="Toggle Direction">
+            <i data-lucide="arrow-left-right" class="w-4 h-4"></i>
+          </button>
+          <button class="theme-toggle w-10 h-10 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center" aria-label="Toggle Theme">
+            <i data-lucide="sun" class="sun-icon w-5 h-5 hidden"></i>
+            <i data-lucide="moon" class="moon-icon w-5 h-5"></i>
+          </button>
+          <a href="quote.html" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-primary to-brand-accent text-white text-sm font-semibold hover:shadow-lg hover:shadow-amber-500/25 transition-all transform hover:-translate-y-0.5">Get a Quote</a>
+        </div>
+        <div class="flex items-center space-x-3 lg:hidden rtl:space-x-reverse">
+          <button id="mobile-menu-btn" class="p-2 rounded-lg border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="Open Menu">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden absolute top-20 left-0 right-0 glass-nav shadow-lg flex-col px-4 pt-4 pb-6 space-y-3 transition-all duration-300 transform opacity-0 -translate-y-4">
+      <a href="index.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-655 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Home</a>
+      <a href="home2.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-655 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Home 2</a>
+      <a href="services.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-655 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Our Baskets</a>
+      <a href="gallery.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-655 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Corporate Gifting</a>
+      <a href="blog.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-655 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Customization</a>
+      <a href="about.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-655 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">About Us</a>
+      <a href="contact.html" class="px-3 py-2 rounded-lg text-base font-semibold text-brand-primary bg-amber-50/50 dark:bg-amber-950/20">Contact</a>
+      <div class="h-[1px] bg-slate-200 dark:bg-slate-800 my-2"></div>
+      <div class="flex items-center justify-between space-x-3 rtl:space-x-reverse pt-1 pb-2">
+        <button class="rtl-toggle flex-1 h-10 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-650 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center bg-white dark:bg-slate-900" aria-label="Toggle Direction">
+          <i data-lucide="arrow-left-right" class="w-4 h-4"></i>
+        </button>
+        <button class="theme-toggle flex-1 h-10 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-655 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center space-x-2 bg-white dark:bg-slate-900" aria-label="Toggle Theme">
+          <i data-lucide="sun" class="sun-icon w-4 h-4 hidden"></i>
+          <i data-lucide="moon" class="moon-icon w-4 h-4"></i>
+          <span class="text-xs font-bold tracking-wider dark:hidden">Dark Mode</span>
+          <span class="text-xs font-bold tracking-wider hidden dark:inline">Light Mode</span>
+        </button>
+      </div>
+      <div class="flex flex-col space-y-2.5">
+        <a href="quote.html" class="text-center px-4 py-2.5 rounded-xl bg-gradient-to-r from-brand-primary to-brand-accent text-white text-sm font-semibold shadow-md shadow-amber-500/20">Get a Quote</a>
+      </div>
+      <button id="mobile-menu-close" class="absolute top-2 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-white">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="flex-grow pt-20">
+    
+    <!-- 1. Hero Section -->
+    <section class="relative py-20 md:py-28 overflow-hidden text-white bg-slate-950 page-hero">
+      <img src="https://images.unsplash.com/photo-1481391032119-d89fee407e44?auto=format&fit=crop&q=80&w=1600" 
+           alt="Gourmet Gift Basket Contact and Enquiry" 
+           class="absolute inset-0 w-full h-full object-cover opacity-60">
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/55 to-slate-900/25 z-0"></div>
+      
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4 relative z-10 animate-fade-in-up">
+        <span class="text-amber-300 font-semibold uppercase tracking-wider text-xs sm:text-sm">Get in Touch</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-outfit text-white leading-tight">
+          Contact &amp; Order Enquiry
+        </h1>
+        <p class="text-slate-200 max-w-xl mx-auto text-xs sm:text-sm md:text-base font-normal leading-relaxed">
+          Ready to place an order, ask about bulk gifting, or create a fully customized basket? Our gifting specialists are here to help — fill out the form below and we'll be in touch within 1 business day.
+        </p>
+      </div>
+    </section>
+
+    <!-- 2. Contact Info Cards -->
+    <section class="py-16 bg-white dark:bg-slate-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+          
+          <!-- Phone -->
+          <div class="glass-card rounded-2xl border border-slate-100 dark:border-slate-800 p-6 flex flex-col items-center text-center space-y-3 hover:shadow-lg transition-all">
+            <div class="p-4 bg-amber-50 dark:bg-amber-950/30 text-brand-primary rounded-2xl">
+              <i data-lucide="phone" class="w-7 h-7"></i>
+            </div>
+            <h3 class="font-bold text-slate-900 dark:text-white text-base">Call Us</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Mon - Fri: 9:00 AM – 6:00 PM</p>
+            <a href="tel:+18005554438" class="text-brand-primary font-semibold text-sm hover:underline">+1 (800) 555-GIFT</a>
+          </div>
+
+          <!-- Email -->
+          <div class="glass-card rounded-2xl border border-slate-100 dark:border-slate-800 p-6 flex flex-col items-center text-center space-y-3 hover:shadow-lg transition-all">
+            <div class="p-4 bg-green-50 dark:bg-green-950/30 text-brand-secondary rounded-2xl">
+              <i data-lucide="mail" class="w-7 h-7"></i>
+            </div>
+            <h3 class="font-bold text-slate-900 dark:text-white text-base">Email Us</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400">We reply within 1 business day</p>
+            <a href="mailto:hello@giftedpantry.com" class="text-brand-primary font-semibold text-sm hover:underline break-all">hello@giftedpantry.com</a>
+          </div>
+
+          <!-- Address -->
+          <div class="glass-card rounded-2xl border border-slate-100 dark:border-slate-800 p-6 flex flex-col items-center text-center space-y-3 hover:shadow-lg transition-all">
+            <div class="p-4 bg-amber-50 dark:bg-amber-950/30 text-amber-600 rounded-2xl">
+              <i data-lucide="map-pin" class="w-7 h-7"></i>
+            </div>
+            <h3 class="font-bold text-slate-900 dark:text-white text-base">Our Showroom</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400">By appointment only</p>
+            <p class="text-slate-600 dark:text-slate-300 text-sm font-medium text-center">24 Artisan Lane, New York, NY 10012</p>
+          </div>
+
+          <!-- Corporate -->
+          <div class="glass-card rounded-2xl border border-slate-100 dark:border-slate-800 p-6 flex flex-col items-center text-center space-y-3 hover:shadow-lg transition-all">
+            <div class="p-4 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 rounded-2xl">
+              <i data-lucide="building-2" class="w-7 h-7"></i>
+            </div>
+            <h3 class="font-bold text-slate-900 dark:text-white text-base">Corporate Enquiries</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Bulk orders of 10+ baskets</p>
+            <a href="mailto:corporate@giftedpantry.com" class="text-brand-primary font-semibold text-sm hover:underline break-all">corporate@giftedpantry.com</a>
+          </div>
+
+        </div>
+
+        <!-- 3. Bulk Order Enquiry Form -->
+        <div id="enquiry-form" class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-start">
+          
+          <!-- Left: Form -->
+          <div class="lg:col-span-7">
+            <div class="bg-white dark:bg-slate-900 rounded-3xl shadow-xl border border-slate-100 dark:border-slate-800 p-8 space-y-6">
+              
+              <div class="space-y-2">
+                <h2 class="text-2xl font-bold font-outfit text-slate-900 dark:text-white">Basket &amp; Bulk Order Enquiry Form</h2>
+                <p class="text-sm text-slate-500 dark:text-slate-400 font-normal">Tell us about your gifting needs — personal order, custom basket, or large corporate program. We'll put together a tailored proposal for you.</p>
+              </div>
+
+              <form id="gift-enquiry-form" class="space-y-5" novalidate>
+                
+                <!-- Row 1: Name / Company -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div class="space-y-1.5">
+                    <label for="full-name" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider">Full Name *</label>
+                    <input 
+                      type="text" 
+                      id="full-name" 
+                      name="full-name"
+                      autocomplete="name"
+                      placeholder="Jane Smith"
+                      class="w-full px-4 py-3 text-sm rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:border-brand-primary dark:focus:border-brand-accent focus:ring-2 focus:ring-brand-primary/20 transition-all"
+                      required>
+                  </div>
+                  <div class="space-y-1.5">
+                    <label for="company-name" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider">Company / Organization</label>
+                    <input 
+                      type="text" 
+                      id="company-name" 
+                      name="company-name"
+                      autocomplete="organization"
+                      placeholder="Acme Corp (optional)"
+                      class="w-full px-4 py-3 text-sm rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:border-brand-primary dark:focus:border-brand-accent focus:ring-2 focus:ring-brand-primary/20 transition-all">
+                  </div>
+                </div>
+
+                <!-- Row 2: Email / Phone -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div class="space-y-1.5">
+                    <label for="email" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider">Email Address *</label>
+                    <input 
+                      type="email" 
+                      id="email" 
+                      name="email"
+                      autocomplete="email"
+                      placeholder="jane@example.com"
+                      class="w-full px-4 py-3 text-sm rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:border-brand-primary dark:focus:border-brand-accent focus:ring-2 focus:ring-brand-primary/20 transition-all"
+                      required>
+                  </div>
+                  <div class="space-y-1.5">
+                    <label for="phone" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider">Phone Number</label>
+                    <input 
+                      type="tel" 
+                      id="phone" 
+                      name="phone"
+                      autocomplete="tel"
+                      placeholder="+1 (212) 555-0000"
+                      class="w-full px-4 py-3 text-sm rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:border-brand-primary dark:focus:border-brand-accent focus:ring-2 focus:ring-brand-primary/20 transition-all">
+                  </div>
+                </div>
+
+                <!-- Row 3: Enquiry Type -->
+                <div class="space-y-1.5">
+                  <label for="enquiry-type" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider">Enquiry Type *</label>
+                  <select 
+                    id="enquiry-type" 
+                    name="enquiry-type"
+                    class="w-full px-4 py-3 text-sm rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-slate-100 focus:outline-none focus:border-brand-primary dark:focus:border-brand-accent focus:ring-2 focus:ring-brand-primary/20 transition-all"
+                    required>
+                    <option value="" disabled selected>Select enquiry type</option>
+                    <option value="personal">Personal Gift Order (1–9 baskets)</option>
+                    <option value="custom">Custom / Bespoke Basket Design</option>
+                    <option value="bulk">Bulk Order Enquiry (10–49 baskets)</option>
+                    <option value="corporate">Corporate Programme (50+ baskets)</option>
+                    <option value="event">Event / Conference Gifting</option>
+                    <option value="other">General Enquiry</option>
+                  </select>
+                </div>
+
+                <!-- Row 4: Occasion / Delivery Date -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div class="space-y-1.5">
+                    <label for="occasion" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider">Occasion / Purpose</label>
+                    <select 
+                      id="occasion" 
+                      name="occasion"
+                      class="w-full px-4 py-3 text-sm rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-slate-100 focus:outline-none focus:border-brand-primary dark:focus:border-brand-accent focus:ring-2 focus:ring-brand-primary/20 transition-all">
+                      <option value="" disabled selected>Select occasion</option>
+                      <option value="birthday">Birthday &amp; Celebration</option>
+                      <option value="wedding">Wedding &amp; Anniversary</option>
+                      <option value="holiday">Holiday &amp; Seasonal</option>
+                      <option value="thankyou">Thank You &amp; Appreciation</option>
+                      <option value="sympathy">Sympathy &amp; Condolences</option>
+                      <option value="corporate-client">Corporate Client Gift</option>
+                      <option value="corporate-employee">Employee Recognition</option>
+                      <option value="other">Other / Multiple Occasions</option>
+                    </select>
+                  </div>
+                  <div class="space-y-1.5">
+                    <label for="delivery-date" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider">Required Delivery Date</label>
+                    <input 
+                      type="date" 
+                      id="delivery-date" 
+                      name="delivery-date"
+                      class="w-full px-4 py-3 text-sm rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-slate-100 focus:outline-none focus:border-brand-primary dark:focus:border-brand-accent focus:ring-2 focus:ring-brand-primary/20 transition-all">
+                  </div>
+                </div>
+
+                <!-- Row 5: Quantity / Budget -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div class="space-y-1.5">
+                    <label for="quantity" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider">Number of Baskets *</label>
+                    <select 
+                      id="quantity" 
+                      name="quantity"
+                      class="w-full px-4 py-3 text-sm rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-slate-100 focus:outline-none focus:border-brand-primary dark:focus:border-brand-accent focus:ring-2 focus:ring-brand-primary/20 transition-all"
+                      required>
+                      <option value="" disabled selected>Select quantity</option>
+                      <option value="1">1 basket</option>
+                      <option value="2-5">2–5 baskets</option>
+                      <option value="6-9">6–9 baskets</option>
+                      <option value="10-24">10–24 baskets (bulk rate)</option>
+                      <option value="25-49">25–49 baskets (bulk rate)</option>
+                      <option value="50-99">50–99 baskets (corporate rate)</option>
+                      <option value="100-499">100–499 baskets (enterprise rate)</option>
+                      <option value="500+">500+ baskets (custom program)</option>
+                    </select>
+                  </div>
+                  <div class="space-y-1.5">
+                    <label for="budget" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider">Approximate Budget</label>
+                    <select 
+                      id="budget" 
+                      name="budget"
+                      class="w-full px-4 py-3 text-sm rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-slate-100 focus:outline-none focus:border-brand-primary dark:focus:border-brand-accent focus:ring-2 focus:ring-brand-primary/20 transition-all">
+                      <option value="" disabled selected>Select budget range</option>
+                      <option value="under50">Under $50 per basket</option>
+                      <option value="50-100">$50 – $100 per basket</option>
+                      <option value="100-200">$100 – $200 per basket</option>
+                      <option value="200-500">$200 – $500 per basket</option>
+                      <option value="500+">$500+ per basket (ultra-premium)</option>
+                      <option value="flexible">Flexible — advise me</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Row 6: Dietary Requirements -->
+                <div class="space-y-2">
+                  <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider">Dietary Requirements</label>
+                  <div class="flex flex-wrap gap-x-6 gap-y-2.5">
+                    <label class="flex items-center space-x-2 rtl:space-x-reverse cursor-pointer">
+                      <input type="checkbox" id="dietary-vegan" name="dietary[]" value="vegan" class="rounded">
+                      <span class="text-sm text-slate-600 dark:text-slate-300">Vegan / Plant-Based</span>
+                    </label>
+                    <label class="flex items-center space-x-2 rtl:space-x-reverse cursor-pointer">
+                      <input type="checkbox" id="dietary-gf" name="dietary[]" value="gluten-free" class="rounded">
+                      <span class="text-sm text-slate-600 dark:text-slate-300">Gluten-Free</span>
+                    </label>
+                    <label class="flex items-center space-x-2 rtl:space-x-reverse cursor-pointer">
+                      <input type="checkbox" id="dietary-nf" name="dietary[]" value="nut-free" class="rounded">
+                      <span class="text-sm text-slate-600 dark:text-slate-300">Nut-Free</span>
+                    </label>
+                    <label class="flex items-center space-x-2 rtl:space-x-reverse cursor-pointer">
+                      <input type="checkbox" id="dietary-kosher" name="dietary[]" value="kosher" class="rounded">
+                      <span class="text-sm text-slate-600 dark:text-slate-300">Kosher</span>
+                    </label>
+                    <label class="flex items-center space-x-2 rtl:space-x-reverse cursor-pointer">
+                      <input type="checkbox" id="dietary-halal" name="dietary[]" value="halal" class="rounded">
+                      <span class="text-sm text-slate-600 dark:text-slate-300">Halal</span>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Row 7: Custom Branding (for corporate) -->
+                <div class="space-y-1.5">
+                  <label for="branding" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider">Custom Branding Needed?</label>
+                  <select 
+                    id="branding" 
+                    name="branding"
+                    class="w-full px-4 py-3 text-sm rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-slate-100 focus:outline-none focus:border-brand-primary dark:focus:border-brand-accent focus:ring-2 focus:ring-brand-primary/20 transition-all">
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="none">No branding needed — standard packaging</option>
+                    <option value="ribbon">Custom branded ribbon only</option>
+                    <option value="insert">Branded insert / printed card only</option>
+                    <option value="full">Full branded packaging (ribbon + insert + box wrap)</option>
+                    <option value="unsure">Unsure — advise me on options</option>
+                  </select>
+                </div>
+
+                <!-- Row 8: Message / Notes -->
+                <div class="space-y-1.5">
+                  <label for="message" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider">Additional Details or Special Requests</label>
+                  <textarea 
+                    id="message" 
+                    name="message"
+                    rows="5" 
+                    placeholder="Tell us about any specific gourmet items you'd like included, preferred packaging style, delivery notes, or anything else that would help us curate the perfect gift basket for you..."
+                    class="w-full px-4 py-3 text-sm rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:border-brand-primary dark:focus:border-brand-accent focus:ring-2 focus:ring-brand-primary/20 transition-all resize-y"></textarea>
+                </div>
+
+                <!-- Terms & Consent -->
+                <div class="flex items-start space-x-3 rtl:space-x-reverse">
+                  <input type="checkbox" id="consent" name="consent" required class="rounded mt-0.5 flex-shrink-0">
+                  <label for="consent" class="text-xs text-slate-500 dark:text-slate-400 font-normal cursor-pointer leading-relaxed">
+                    I agree to The Gifted Pantry's <a href="#" class="text-brand-primary hover:underline font-semibold">Privacy Policy</a> and consent to being contacted about my order enquiry.
+                  </label>
+                </div>
+
+                <!-- Submit Button -->
+                <button 
+                  type="submit" 
+                  id="submit-enquiry-btn"
+                  class="w-full px-8 py-4 rounded-xl bg-gradient-to-r from-brand-primary to-brand-accent text-white text-sm font-semibold hover:shadow-lg hover:shadow-amber-500/25 transition-all transform hover:-translate-y-0.5 flex items-center justify-center space-x-2 rtl:space-x-reverse">
+                  <i data-lucide="send" class="w-4 h-4"></i>
+                  <span>Send Enquiry &amp; Get a Quote</span>
+                </button>
+
+                <!-- Success Message (hidden by default) -->
+                <div id="form-success" class="hidden p-4 bg-green-50 dark:bg-green-950/30 border border-green-200 dark:border-green-800 rounded-xl text-green-700 dark:text-green-300 text-sm text-center">
+                  <div class="flex items-center justify-center space-x-2 rtl:space-x-reverse font-semibold">
+                    <i data-lucide="check-circle" class="w-5 h-5 flex-shrink-0"></i>
+                    <span>Thank you! Your enquiry has been sent successfully.</span>
+                  </div>
+                  <p class="mt-1 text-xs">One of our gifting specialists will be in touch within 1 business day.</p>
+                </div>
+
+              </form>
+
+            </div>
+          </div>
+
+          <!-- Right: Why Contact us + FAQ -->
+          <div class="lg:col-span-5 space-y-6">
+            
+            <!-- Why contact card -->
+            <div class="glass-card rounded-3xl border border-slate-100 dark:border-slate-800 p-7 space-y-5">
+              <h3 class="text-lg font-bold font-outfit text-slate-900 dark:text-white">Why Contact The Gifted Pantry?</h3>
+              <ul class="space-y-4">
+                <li class="flex items-start space-x-3 rtl:space-x-reverse">
+                  <div class="p-2 bg-amber-50 dark:bg-amber-950/30 text-brand-primary rounded-lg flex-shrink-0">
+                    <i data-lucide="sparkles" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-slate-900 dark:text-white text-sm">Expert Gifting Advice</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5 leading-relaxed">Our gifting specialists help you choose the perfect basket for any occasion, recipient, and budget.</p>
+                  </div>
+                </li>
+                <li class="flex items-start space-x-3 rtl:space-x-reverse">
+                  <div class="p-2 bg-green-50 dark:bg-green-950/30 text-brand-secondary rounded-lg flex-shrink-0">
+                    <i data-lucide="package" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-slate-900 dark:text-white text-sm">Fully Custom Options</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5 leading-relaxed">Build a completely bespoke basket from scratch — every item, ribbon, and message card chosen by you.</p>
+                  </div>
+                </li>
+                <li class="flex items-start space-x-3 rtl:space-x-reverse">
+                  <div class="p-2 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 rounded-lg flex-shrink-0">
+                    <i data-lucide="layers" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-slate-900 dark:text-white text-sm">Bulk &amp; Corporate Programs</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5 leading-relaxed">We manage the full lifecycle of corporate gifting campaigns — from concept to delivery at any scale.</p>
+                  </div>
+                </li>
+                <li class="flex items-start space-x-3 rtl:space-x-reverse">
+                  <div class="p-2 bg-amber-50 dark:bg-amber-950/30 text-amber-600 rounded-lg flex-shrink-0">
+                    <i data-lucide="clock" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-slate-900 dark:text-white text-sm">Fast Response Guaranteed</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5 leading-relaxed">We respond to all enquiries within 1 business day with a tailored proposal and full pricing details.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Quick Info Cards -->
+            <div class="glass-card rounded-3xl border border-slate-100 dark:border-slate-800 p-7 space-y-4">
+              <h3 class="text-base font-bold text-slate-900 dark:text-white">Frequently Asked Questions</h3>
+              
+              <details class="faq-item group border border-slate-100 dark:border-slate-800 rounded-2xl overflow-hidden">
+                <summary class="flex items-center justify-between p-4 cursor-pointer text-slate-900 dark:text-white font-semibold text-xs">
+                  How quickly can you fulfil an order?
+                  <span class="faq-chevron p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-400 flex-shrink-0 ml-3">
+                    <i data-lucide="chevron-down" class="w-3 h-3"></i>
+                  </span>
+                </summary>
+                <div class="px-4 pb-4 text-xs text-slate-500 dark:text-slate-400 font-normal leading-relaxed">
+                  Standard orders ship within 2–3 business days. Custom baskets require 3–5 business days, and corporate bulk orders need 2–4 weeks depending on volume and branding.
+                </div>
+              </details>
+
+              <details class="faq-item group border border-slate-100 dark:border-slate-800 rounded-2xl overflow-hidden">
+                <summary class="flex items-center justify-between p-4 cursor-pointer text-slate-900 dark:text-white font-semibold text-xs">
+                  Do you ship nationally?
+                  <span class="faq-chevron p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-400 flex-shrink-0 ml-3">
+                    <i data-lucide="chevron-down" class="w-3 h-3"></i>
+                  </span>
+                </summary>
+                <div class="px-4 pb-4 text-xs text-slate-500 dark:text-slate-400 font-normal leading-relaxed">
+                  Yes! We ship across all 50 US states with temperature-controlled packaging to ensure freshness. International shipping is available for select markets — please enquire directly.
+                </div>
+              </details>
+
+              <details class="faq-item group border border-slate-100 dark:border-slate-800 rounded-2xl overflow-hidden">
+                <summary class="flex items-center justify-between p-4 cursor-pointer text-slate-900 dark:text-white font-semibold text-xs">
+                  What is the minimum for bulk orders?
+                  <span class="faq-chevron p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-400 flex-shrink-0 ml-3">
+                    <i data-lucide="chevron-down" class="w-3 h-3"></i>
+                  </span>
+                </summary>
+                <div class="px-4 pb-4 text-xs text-slate-500 dark:text-slate-400 font-normal leading-relaxed">
+                  Our bulk pricing starts at 10 baskets. For corporate branding programs, we recommend a minimum of 10 units. There's no minimum for standard personal gift orders.
+                </div>
+              </details>
+
+            </div>
+
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-0 bg-white dark:bg-slate-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+        
+        <div class="space-y-6">
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+            <div class="space-y-1">
+              <h2 class="text-xl font-bold font-outfit text-slate-900 dark:text-white">Find Our Showroom</h2>
+              <p class="text-sm text-slate-500 dark:text-slate-400">24 Artisan Lane, New York, NY 10012 &mdash; Visits by appointment only</p>
+            </div>
+            <a href="https://www.google.com/maps?q=24+Artisan+Lane+New+York+NY+10012" target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center space-x-2 rtl:space-x-reverse px-5 py-2.5 rounded-xl border border-brand-primary text-brand-primary font-semibold text-sm hover:bg-brand-primary hover:text-white transition-all whitespace-nowrap self-start">
+              <i data-lucide="navigation" class="w-4 h-4"></i>
+              <span>Get Directions</span>
+            </a>
+          </div>
+
+          <!-- Map Embed -->
+          <div class="w-full rounded-3xl overflow-hidden shadow-xl border border-slate-100 dark:border-slate-800 h-80 sm:h-96">
+            <iframe
+              title="The Gifted Pantry Showroom Location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.3974673393306!2d-74.00277168459482!3d40.72435897932965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25991f72f4f15%3A0xc3f44c8a2bf27c0e!2sSoHo%2C+New+York%2C+NY+10012!5e0!3m2!1sen!2sus!4v1694789012345!5m2!1sen!2sus"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+
+          <!-- Address / Hours Row -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="flex items-start space-x-3 rtl:space-x-reverse p-5 bg-slate-50 dark:bg-slate-950 rounded-2xl border border-slate-100 dark:border-slate-800">
+              <div class="p-2 bg-amber-50 dark:bg-amber-950/30 text-brand-primary rounded-lg flex-shrink-0">
+                <i data-lucide="map-pin" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-slate-900 dark:text-white text-sm">Address</h4>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5 leading-relaxed">24 Artisan Lane<br>New York, NY 10012</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-3 rtl:space-x-reverse p-5 bg-slate-50 dark:bg-slate-950 rounded-2xl border border-slate-100 dark:border-slate-800">
+              <div class="p-2 bg-green-50 dark:bg-green-950/30 text-brand-secondary rounded-lg flex-shrink-0">
+                <i data-lucide="clock" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-slate-900 dark:text-white text-sm">Showroom Hours</h4>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5 leading-relaxed">Mon – Fri: 9:00 AM – 6:00 PM<br>By appointment only</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-3 rtl:space-x-reverse p-5 bg-slate-50 dark:bg-slate-950 rounded-2xl border border-slate-100 dark:border-slate-800">
+              <div class="p-2 bg-amber-50 dark:bg-amber-950/30 text-amber-600 rounded-lg flex-shrink-0">
+                <i data-lucide="car" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-slate-900 dark:text-white text-sm">Parking &amp; Transit</h4>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5 leading-relaxed">Street parking available.<br>Nearest subway: Spring St (C, E)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="glass-footer py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 mb-12">
+        <div class="md:col-span-1 lg:col-span-4 space-y-4 text-left rtl:text-right">
+          <a href="index.html" class="flex items-center space-x-2 rtl:space-x-reverse">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-primary to-brand-accent flex items-center justify-center text-white shadow-md shadow-amber-500/20">
+              <i data-lucide="gift" class="w-5 h-5"></i>
+            </div>
+            <span class="font-outfit text-2xl font-bold tracking-tight footer-brand-name">
+              The<span class="text-brand-primary"> Gifted Pantry</span>
+            </span>
+          </a>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-normal">
+            Premium gourmet food gift baskets for every occasion. Artisan cheeses, fine chocolates, curated wines, and seasonal delicacies, beautifully packaged and delivered with care.
+          </p>
+          <div class="flex items-center space-x-3 rtl:space-x-reverse pt-2">
+            <a href="#" class="w-9 h-9 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-brand-primary hover:text-white transition-all duration-300" aria-label="Facebook">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="#" class="w-9 h-9 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-brand-primary hover:text-white transition-all duration-300" aria-label="Instagram">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" class="w-9 h-9 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-brand-primary hover:text-white transition-all duration-300" aria-label="LinkedIn">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+          </div>
+        </div>
+        <div class="md:col-span-1 lg:col-span-2 space-y-4 text-left rtl:text-right">
+          <h4 class="text-white font-bold text-sm uppercase tracking-wider">Collections</h4>
+          <ul class="space-y-2.5 text-sm font-medium">
+            <li><a href="services.html" class="hover:text-brand-primary transition-colors">Cheese &amp; Charcuterie</a></li>
+            <li><a href="services.html" class="hover:text-brand-primary transition-colors">Chocolates &amp; Sweets</a></li>
+            <li><a href="services.html" class="hover:text-brand-primary transition-colors">Wine &amp; Gourmet</a></li>
+            <li><a href="services.html" class="hover:text-brand-primary transition-colors">Seasonal &amp; Holiday</a></li>
+          </ul>
+        </div>
+        <div class="md:col-span-1 lg:col-span-2 space-y-4 text-left rtl:text-right">
+          <h4 class="text-white font-bold text-sm uppercase tracking-wider">Company</h4>
+          <ul class="space-y-2.5 text-sm font-medium">
+            <li><a href="index.html" class="hover:text-brand-primary transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-brand-primary transition-colors">About Us</a></li>
+            <li><a href="gallery.html" class="hover:text-brand-primary transition-colors">Corporate Gifting</a></li>
+            <li><a href="blog.html" class="hover:text-brand-primary transition-colors">Customization</a></li>
+          </ul>
+        </div>
+        <div class="md:col-span-1 lg:col-span-4 space-y-4 text-left rtl:text-right">
+          <h4 class="text-white font-bold text-sm uppercase tracking-wider font-outfit">Contact Us</h4>
+          <ul class="space-y-2.5 text-sm font-medium">
+            <li class="flex items-center space-x-2.5 rtl:space-x-reverse">
+              <i data-lucide="phone" class="w-4 h-4 text-brand-primary flex-shrink-0"></i>
+              <span>+1 (800) 555-GIFT</span>
+            </li>
+            <li class="flex items-center space-x-2.5 rtl:space-x-reverse">
+              <i data-lucide="mail" class="w-4 h-4 text-brand-primary flex-shrink-0"></i>
+              <span class="break-all">hello@giftedpantry.com</span>
+            </li>
+            <li class="flex items-center space-x-2.5 rtl:space-x-reverse">
+              <i data-lucide="clock" class="w-4 h-4 text-brand-primary flex-shrink-0"></i>
+              <span>Mon - Fri: 9:00 AM - 6:00 PM</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-copyright pt-8 border-t flex flex-col sm:flex-row items-center justify-between text-xs sm:text-sm font-medium">
+        <p>&copy; 2026 The Gifted Pantry. All rights reserved.</p>
+        <div class="flex items-center space-x-4 rtl:space-x-reverse mt-4 sm:mt-0">
+          <a href="#" class="hover:text-slate-900 dark:text-white transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Form interaction script -->
+  <script>
+    document.getElementById('gift-enquiry-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submit-enquiry-btn');
+      const success = document.getElementById('form-success');
+      btn.disabled = true;
+      btn.innerHTML = '<svg class="animate-spin w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg><span>Sending Enquiry...</span>';
+      setTimeout(() => {
+        btn.classList.add('hidden');
+        success.classList.remove('hidden');
+        lucide.createIcons();
+      }, 1600);
+    });
+  </script>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Gifted Pantry - Corporate Gifting Solutions</title>
+  <meta name="description" content="Elevate your corporate gifting strategy with The Gifted Pantry. Custom branded gourmet gift baskets for clients, employees, events, and business milestones.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="index.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              light: '#fdf8ef', dark: '#1a1207',
+              primary: '#c8892a', primaryHover: '#a36d1a',
+              secondary: '#2d6a4f', secondaryHover: '#1f4f3a',
+              accent: '#e0a84a', navy: '#1a3a2a',
+            },
+            slate: {
+              50: '#faf8f3', 100: '#f5f0e6', 200: '#e8ddc5',
+              300: '#d9c89f', 400: '#c4a96e', 500: '#a8883d',
+              600: '#896724', 700: '#664d17', 800: '#46330d',
+              850: '#352606', 900: '#221800', 950: '#1a1207',
+            }
+          },
+          fontFamily: { sans: ['Inter', 'sans-serif'], outfit: ['Outfit', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 min-h-screen flex flex-col">
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="glass-nav fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center space-x-2 rtl:space-x-reverse group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-primary to-brand-accent flex items-center justify-center text-white shadow-md shadow-amber-500/20 animate-bounce">
+            <i data-lucide="gift" class="w-6 h-6"></i>
+          </div>
+          <span class="font-outfit text-2xl font-bold tracking-tight text-slate-900 dark:text-white">
+            The<span class="text-brand-primary"> Gifted Pantry</span>
+          </span>
+        </a>
+
+        <div class="hidden lg:flex items-center space-x-1 rtl:space-x-reverse">
+          <a href="index.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Home</a>
+          <a href="home2.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Home 2</a>
+          <a href="services.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Our Baskets</a>
+          <a href="gallery.html" class="px-3 py-2 rounded-lg text-sm font-semibold transition-colors text-brand-primary dark:text-amber-400">Corporate Gifting</a>
+          <a href="blog.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Customization</a>
+          <a href="about.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-amber-400 transition-colors">About Us</a>
+          <a href="contact.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Contact</a>
+        </div>
+
+        <div class="hidden lg:flex items-center space-x-4 rtl:space-x-reverse">
+          <button class="rtl-toggle w-10 h-10 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center" aria-label="Toggle Direction">
+            <i data-lucide="arrow-left-right" class="w-4 h-4"></i>
+          </button>
+          <button class="theme-toggle w-10 h-10 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center" aria-label="Toggle Theme">
+            <i data-lucide="sun" class="sun-icon w-5 h-5 hidden"></i>
+            <i data-lucide="moon" class="moon-icon w-5 h-5"></i>
+          </button>
+          <a href="quote.html" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-primary to-brand-accent text-white text-sm font-semibold hover:shadow-lg hover:shadow-amber-500/25 transition-all transform hover:-translate-y-0.5">Get a Quote</a>
+        </div>
+
+        <div class="flex items-center space-x-3 lg:hidden rtl:space-x-reverse">
+          <button id="mobile-menu-btn" class="p-2 rounded-lg border border-slate-200 dark:border-slate-800 text-slate-650 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="Open Menu">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden absolute top-20 left-0 right-0 glass-nav shadow-lg flex-col px-4 pt-4 pb-6 space-y-3 transition-all duration-300 transform opacity-0 -translate-y-4">
+      <a href="index.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-655 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Home</a>
+      <a href="home2.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-655 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Home 2</a>
+      <a href="services.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-655 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Our Baskets</a>
+      <a href="gallery.html" class="px-3 py-2 rounded-lg text-base font-semibold text-brand-primary bg-amber-50/50 dark:bg-amber-950/20">Corporate Gifting</a>
+      <a href="blog.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-655 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Customization</a>
+      <a href="about.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-655 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">About Us</a>
+      <a href="contact.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-655 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Contact</a>
+      <div class="h-[1px] bg-slate-200 dark:bg-slate-800 my-2"></div>
+      <div class="flex items-center justify-between space-x-3 rtl:space-x-reverse pt-1 pb-2">
+        <button class="rtl-toggle flex-1 h-10 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-650 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center bg-white dark:bg-slate-900" aria-label="Toggle Direction">
+          <i data-lucide="arrow-left-right" class="w-4 h-4"></i>
+        </button>
+        <button class="theme-toggle flex-1 h-10 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-655 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center space-x-2 bg-white dark:bg-slate-900" aria-label="Toggle Theme">
+          <i data-lucide="sun" class="sun-icon w-4 h-4 hidden"></i>
+          <i data-lucide="moon" class="moon-icon w-4 h-4"></i>
+          <span class="text-xs font-bold tracking-wider dark:hidden">Dark Mode</span>
+          <span class="text-xs font-bold tracking-wider hidden dark:inline">Light Mode</span>
+        </button>
+      </div>
+      <div class="flex flex-col space-y-2.5">
+        <a href="quote.html" class="text-center px-4 py-2.5 rounded-xl bg-gradient-to-r from-brand-primary to-brand-accent text-white text-sm font-semibold shadow-md shadow-amber-500/20">Get a Quote</a>
+      </div>
+      <button id="mobile-menu-close" class="absolute top-2 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-white">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="flex-grow pt-20">
+    
+    <!-- 1. Hero Section -->
+    <section class="relative py-20 md:py-28 overflow-hidden text-white bg-slate-950 page-hero">
+      <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1600" 
+           alt="Corporate Gifting Solutions" 
+           class="absolute inset-0 w-full h-full object-cover opacity-60">
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/55 to-slate-900/25 z-0"></div>
+      
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4 relative z-10 animate-fade-in-up">
+        <span class="text-amber-300 font-semibold uppercase tracking-wider text-xs sm:text-sm">For Businesses</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-outfit text-white leading-tight">
+          Corporate Gifting Solutions
+        </h1>
+        <p class="text-slate-200 max-w-xl mx-auto text-xs sm:text-sm md:text-base font-normal leading-relaxed">
+          Strengthen business relationships, reward your team, and delight clients with our bespoke corporate gift basket programs — branded, bulk, and beautifully delivered.
+        </p>
+      </div>
+    </section>
+
+    <!-- 2. Why Corporate Gifting Section -->
+    <section class="py-16 bg-white dark:bg-slate-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          <!-- Client Appreciation -->
+          <div class="glass-card rounded-2xl border border-slate-100 dark:border-slate-800 overflow-hidden shadow-lg flex flex-col h-full hover:shadow-xl transition-all">
+            <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&q=80&w=600" 
+                 alt="Client Appreciation Gift Basket" 
+                 class="h-60 w-full object-cover">
+            <div class="p-6 flex flex-col flex-grow text-left ltr:text-left rtl:text-right">
+              <h3 class="font-bold text-slate-900 dark:text-white text-lg mb-2">Client Appreciation</h3>
+              <p class="text-xs sm:text-sm text-slate-650 dark:text-slate-300 font-normal leading-relaxed flex-grow">
+                Impress your top clients with premium gourmet baskets featuring fine wines, artisan cheeses, and luxury chocolates, elegantly branded with your company identity.
+              </p>
+              <div class="mt-4 pt-4 border-t border-slate-100 dark:border-slate-800 text-xs text-slate-600 dark:text-slate-350 font-bold uppercase tracking-wider">Client Retention</div>
+            </div>
+          </div>
+
+          <!-- Employee Recognition -->
+          <div class="glass-card rounded-2xl border border-slate-100 dark:border-slate-800 overflow-hidden shadow-lg flex flex-col h-full hover:shadow-xl transition-all">
+            <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?auto=format&fit=crop&q=80&w=600" 
+                 alt="Employee Recognition Gift Basket" 
+                 class="h-60 w-full object-cover">
+            <div class="p-6 flex flex-col flex-grow text-left ltr:text-left rtl:text-right">
+              <h3 class="font-bold text-slate-900 dark:text-white text-lg mb-2">Employee Recognition</h3>
+              <p class="text-xs sm:text-sm text-slate-655 dark:text-slate-300 font-normal leading-relaxed flex-grow">
+                Show your team appreciation with thoughtfully curated wellness and gourmet baskets for work anniversaries, performance milestones, and holiday gifting.
+              </p>
+              <div class="mt-4 pt-4 border-t border-slate-100 dark:border-slate-800 text-xs text-slate-600 dark:text-slate-350 font-bold uppercase tracking-wider">Team Morale</div>
+            </div>
+          </div>
+
+          <!-- Event & Conference Gifts -->
+          <div class="glass-card rounded-2xl border border-slate-100 dark:border-slate-800 overflow-hidden shadow-lg flex flex-col h-full hover:shadow-xl transition-all">
+            <img src="https://images.unsplash.com/photo-1549007953-2f2dc0b24019?auto=format&fit=crop&q=80&w=600" 
+                 alt="Conference and Event Gift Basket" 
+                 class="h-60 w-full object-cover">
+            <div class="p-6 flex flex-col flex-grow text-left ltr:text-left rtl:text-right">
+              <h3 class="font-bold text-slate-900 dark:text-white text-lg mb-2">Events &amp; Conferences</h3>
+              <p class="text-xs sm:text-sm text-slate-655 dark:text-slate-300 font-normal leading-relaxed flex-grow">
+                Make your corporate event unforgettable with curated welcome baskets, speaker gifts, VIP delegate packages, and branded conference thank-you sets.
+              </p>
+              <div class="mt-4 pt-4 border-t border-slate-100 dark:border-slate-800 text-xs text-slate-600 dark:text-slate-350 font-bold uppercase tracking-wider">Premium Events</div>
+            </div>
+          </div>
+
+          <!-- Holiday Corporate Gifting -->
+          <div class="glass-card rounded-2xl border border-slate-100 dark:border-slate-800 overflow-hidden shadow-lg flex flex-col h-full hover:shadow-xl transition-all">
+            <img src="https://images.unsplash.com/photo-1606787364406-a3cdf06c6d0c?auto=format&fit=crop&q=80&w=600" 
+                 alt="Holiday Corporate Gift Basket" 
+                 class="h-60 w-full object-cover">
+            <div class="p-6 flex flex-col flex-grow text-left ltr:text-left rtl:text-right">
+              <h3 class="font-bold text-slate-900 dark:text-white text-lg mb-2">Holiday Corporate Sets</h3>
+              <p class="text-xs sm:text-sm text-slate-655 dark:text-slate-300 font-normal leading-relaxed flex-grow">
+                Seasonal corporate gifting programs with custom branding for Christmas, Year End, Thanksgiving, and more — delivered to all your clients and team members.
+              </p>
+              <div class="mt-4 pt-4 border-t border-slate-100 dark:border-slate-800 text-xs text-slate-600 dark:text-slate-350 font-bold uppercase tracking-wider">Seasonal Programs</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. Corporate Programme Process -->
+    <section class="py-16 bg-slate-50 dark:bg-slate-950 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+          <span class="text-brand-secondary font-semibold uppercase tracking-wider text-sm">How It Works</span>
+          <h2 class="text-2xl sm:text-3xl font-bold font-outfit text-slate-900 dark:text-white">
+            Your Corporate Gifting Programme
+          </h2>
+          <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm font-normal">
+            From brief to delivery, our dedicated corporate team handles every detail of your gifting campaign.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div class="p-8 bg-white dark:bg-slate-900 rounded-3xl shadow-md space-y-4">
+            <div class="inline-flex items-center justify-center px-3 py-1 rounded-full bg-amber-50 dark:bg-amber-950/30 text-brand-primary text-xs font-bold font-outfit">STEP 1</div>
+            <h3 class="font-bold text-slate-900 dark:text-white text-lg">Brief &amp; Brand Discovery</h3>
+            <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal leading-relaxed">
+              Share your brand identity, gifting budget, and recipient profile with your dedicated account manager. We listen, advise, and propose a curated selection tailored to your corporate values.
+            </p>
+          </div>
+
+          <div class="p-8 bg-white dark:bg-slate-900 rounded-3xl shadow-md space-y-4">
+            <div class="inline-flex items-center justify-center px-3 py-1 rounded-full bg-green-50 dark:bg-green-950/30 text-brand-secondary text-xs font-bold font-outfit">STEP 2</div>
+            <h3 class="font-bold text-slate-900 dark:text-white text-lg">Custom Curation &amp; Branding</h3>
+            <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal leading-relaxed">
+              We curate your basket contents and apply your corporate branding — logo packaging, branded ribbons, custom inserts, and personalized notes — ensuring every basket is unmistakably yours.
+            </p>
+          </div>
+
+          <div class="p-8 bg-white dark:bg-slate-900 rounded-3xl shadow-md space-y-4">
+            <div class="inline-flex items-center justify-center px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/30 text-amber-600 text-xs font-bold font-outfit">STEP 3</div>
+            <h3 class="font-bold text-slate-900 dark:text-white text-lg">Bulk Assembly &amp; Delivery</h3>
+            <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal leading-relaxed">
+              We assemble and dispatch your entire order on schedule — whether 10 or 500 baskets — to a single address or multiple recipients across the country with full tracking provided.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. Corporate Benefits & Stats Section -->
+    <section class="py-16 bg-white dark:bg-slate-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Left: Text & Features -->
+          <div class="lg:col-span-5 relative order-last lg:order-first">
+            <div class="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-brand-secondary to-brand-primary opacity-10 blur-xl dark:opacity-20"></div>
+            <div class="relative glass-card p-3 rounded-3xl shadow-xl">
+              <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=600" 
+                   alt="Professional corporate gifting environment" 
+                   class="rounded-2xl w-full h-auto aspect-[4/3] lg:h-[340px] lg:aspect-auto object-cover object-center">
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 space-y-6 text-left ltr:text-left rtl:text-right">
+            <span class="text-brand-secondary font-semibold uppercase tracking-wider text-sm">Why Choose Us</span>
+            <h2 class="text-2xl sm:text-3xl font-bold font-outfit text-slate-900 dark:text-white leading-snug">
+              The Corporate Gifting Partner Businesses Trust
+            </h2>
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
+              We manage the full complexity of large-scale corporate gifting programs — from custom branding and procurement to packaging and logistics — so you can focus on the relationships that matter.
+            </p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-slate-100 dark:border-slate-800">
+              <div>
+                <h4 class="font-bold text-slate-900 dark:text-white text-base">Custom Branding</h4>
+                <p class="text-xs text-slate-400 mt-1 font-normal">Full logo wrapping, branded ribbons, printed inserts, and company message cards at scale.</p>
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-900 dark:text-white text-base">Bulk Pricing</h4>
+                <p class="text-xs text-slate-400 mt-1 font-normal">Generous volume discounts from 10 units upward, with dedicated pricing tiers for 100+ and 500+ orders.</p>
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-900 dark:text-white text-base">Managed Delivery</h4>
+                <p class="text-xs text-slate-400 mt-1 font-normal">Single warehouse delivery or multi-recipient nationwide distribution with full tracking and scheduling.</p>
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-900 dark:text-white text-base">Account Manager</h4>
+                <p class="text-xs text-slate-400 mt-1 font-normal">A dedicated corporate gifting specialist assigned to your account for seamless program management.</p>
+              </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-3 pt-2">
+              <a href="contact.html?type=corporate" class="px-6 py-3 rounded-xl bg-brand-primary hover:bg-brand-primaryHover text-white font-semibold shadow-md shadow-amber-500/20 transition-colors whitespace-nowrap text-center">
+                Get a Corporate Quote
+              </a>
+              <a href="services.html" class="px-6 py-3 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-200 font-semibold hover:bg-amber-50 hover:text-brand-primary hover:border-brand-primary dark:hover:bg-slate-800 dark:hover:text-white transition-all duration-300 whitespace-nowrap text-center">
+                View All Collections
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Corporate Commitment Section -->
+    <section class="py-16 bg-slate-900 dark:bg-slate-950 text-white relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-7 space-y-6 text-left ltr:text-left rtl:text-right">
+            <span class="text-brand-secondary font-semibold uppercase tracking-wider text-sm">Our Corporate Promise</span>
+            <h2 class="text-2xl sm:text-3xl font-bold font-outfit text-white leading-snug">
+              Gifting That Makes a Lasting Business Impression
+            </h2>
+            <p class="text-sm text-slate-300 leading-relaxed font-normal">
+              We understand that corporate gifting is a strategic investment in relationships. That's why every basket we produce for businesses carries the same level of care, premium quality, and elegant presentation that we put into each personal gift.
+            </p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+              <div class="flex items-start space-x-3.5 rtl:space-x-reverse">
+                <div class="p-2.5 bg-slate-800 rounded-xl text-brand-secondary flex-shrink-0">
+                  <i data-lucide="shield-check" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold text-white text-base">Quality Guaranteed</h3>
+                  <p class="text-xs text-slate-400 mt-1 leading-relaxed">Every item hand-selected for freshness, provenance, and premium quality. No compromises at any scale.</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start space-x-3.5 rtl:space-x-reverse">
+                <div class="p-2.5 bg-slate-800 rounded-xl text-brand-primary flex-shrink-0">
+                  <i data-lucide="truck" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold text-white text-base">On-Time, Every Time</h3>
+                  <p class="text-xs text-slate-400 mt-1 leading-relaxed">We commit to your delivery schedule and honor it — even for large multi-location programs.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 relative">
+            <div class="relative glass-card p-8 rounded-3xl border border-slate-700 bg-slate-800/40 text-left ltr:text-left rtl:text-right space-y-6">
+              <h3 class="text-xl font-bold font-outfit text-white">Corporate Impact Numbers</h3>
+              <p class="text-xs text-slate-300 leading-relaxed font-normal">
+                Hundreds of businesses trust The Gifted Pantry for their most important gifting moments — from startups to Fortune 500 companies.
+              </p>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="flex flex-col items-start bg-slate-900/60 p-4 rounded-2xl border border-slate-700/50">
+                  <div class="text-3xl font-extrabold text-brand-secondary">500+</div>
+                  <div class="text-[11px] text-slate-400 font-semibold uppercase tracking-wider leading-snug mt-1">Corporate clients served</div>
+                </div>
+                <div class="flex flex-col items-start bg-slate-900/60 p-4 rounded-2xl border border-slate-700/50">
+                  <div class="text-3xl font-extrabold text-brand-primary">10k+</div>
+                  <div class="text-[11px] text-slate-400 font-semibold uppercase tracking-wider leading-snug mt-1">Corporate baskets delivered</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Partner Logos / Client Trust Section -->
+    <section class="py-16 bg-white dark:bg-slate-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        
+        <div class="max-w-3xl mx-auto mb-16 space-y-4">
+          <span class="text-brand-primary font-semibold uppercase tracking-wider text-sm">Industry Experience</span>
+          <h2 class="text-2xl sm:text-3xl font-bold font-outfit text-slate-900 dark:text-white">
+            Trusted Across Industries
+          </h2>
+          <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm font-normal">
+            We've partnered with businesses across finance, tech, healthcare, hospitality, real estate, and professional services to deliver exceptional corporate gifting experiences.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="flex flex-col bg-slate-50 dark:bg-slate-950 rounded-3xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-slate-100 dark:border-slate-800 p-8 items-center text-center space-y-4">
+            <div class="p-4 bg-white dark:bg-slate-900 rounded-2xl text-brand-primary shadow-sm">
+              <i data-lucide="building-2" class="w-7 h-7"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Financial &amp; Legal Firms</h3>
+            <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal leading-relaxed">
+              Premium client retention gifts for law firms, investment banks, and accounting practices who require sophisticated, reliable gifting programs.
+            </p>
+          </div>
+
+          <div class="flex flex-col bg-slate-50 dark:bg-slate-950 rounded-3xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-slate-100 dark:border-slate-800 p-8 items-center text-center space-y-4">
+            <div class="p-4 bg-white dark:bg-slate-900 rounded-2xl text-brand-secondary shadow-sm">
+              <i data-lucide="laptop" class="w-7 h-7"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Technology &amp; Startups</h3>
+            <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal leading-relaxed">
+              Creative and personalized gifting solutions for tech companies celebrating product launches, onboarding new employees, or rewarding engineering teams.
+            </p>
+          </div>
+
+          <div class="last-card-md flex flex-col bg-slate-50 dark:bg-slate-950 rounded-3xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-slate-100 dark:border-slate-800 p-8 items-center text-center space-y-4">
+            <div class="p-4 bg-white dark:bg-slate-900 rounded-2xl text-amber-500 shadow-sm">
+              <i data-lucide="heart-handshake" class="w-7 h-7"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Real Estate &amp; Hospitality</h3>
+            <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal leading-relaxed">
+              Elegant housewarming and closing-gift baskets for real estate agents, plus hospitality welcome packs for hotels and luxury resorts.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="glass-footer py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 mb-12">
+        <div class="md:col-span-1 lg:col-span-4 space-y-4 text-left rtl:text-right">
+          <a href="index.html" class="flex items-center space-x-2 rtl:space-x-reverse">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-primary to-brand-accent flex items-center justify-center text-white shadow-md shadow-amber-500/20">
+              <i data-lucide="gift" class="w-5 h-5"></i>
+            </div>
+            <span class="font-outfit text-2xl font-bold tracking-tight footer-brand-name">
+              The<span class="text-brand-primary"> Gifted Pantry</span>
+            </span>
+          </a>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-normal">
+            Premium gourmet food gift baskets for every occasion. Artisan cheeses, fine chocolates, curated wines, and seasonal delicacies, beautifully packaged and delivered with care.
+          </p>
+          <div class="flex items-center space-x-3 rtl:space-x-reverse pt-2">
+            <a href="#" class="w-9 h-9 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-brand-primary hover:text-white transition-all duration-300" aria-label="Facebook">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="#" class="w-9 h-9 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-brand-primary hover:text-white transition-all duration-300" aria-label="Instagram">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" class="w-9 h-9 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-brand-primary hover:text-white transition-all duration-300" aria-label="LinkedIn">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+          </div>
+        </div>
+        <div class="md:col-span-1 lg:col-span-2 space-y-4 text-left rtl:text-right">
+          <h4 class="text-white font-bold text-sm uppercase tracking-wider">Collections</h4>
+          <ul class="space-y-2.5 text-sm font-medium">
+            <li><a href="services.html" class="hover:text-brand-primary transition-colors">Cheese &amp; Charcuterie</a></li>
+            <li><a href="services.html" class="hover:text-brand-primary transition-colors">Chocolates &amp; Sweets</a></li>
+            <li><a href="services.html" class="hover:text-brand-primary transition-colors">Wine &amp; Gourmet</a></li>
+            <li><a href="services.html" class="hover:text-brand-primary transition-colors">Seasonal &amp; Holiday</a></li>
+          </ul>
+        </div>
+        <div class="md:col-span-1 lg:col-span-2 space-y-4 text-left rtl:text-right">
+          <h4 class="text-white font-bold text-sm uppercase tracking-wider">Company</h4>
+          <ul class="space-y-2.5 text-sm font-medium">
+            <li><a href="index.html" class="hover:text-brand-primary transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-brand-primary transition-colors">About Us</a></li>
+            <li><a href="gallery.html" class="hover:text-brand-primary transition-colors">Corporate Gifting</a></li>
+            <li><a href="blog.html" class="hover:text-brand-primary transition-colors">Customization</a></li>
+          </ul>
+        </div>
+        <div class="md:col-span-1 lg:col-span-4 space-y-4 text-left rtl:text-right">
+          <h4 class="text-white font-bold text-sm uppercase tracking-wider font-outfit">Contact Us</h4>
+          <ul class="space-y-2.5 text-sm font-medium">
+            <li class="flex items-center space-x-2.5 rtl:space-x-reverse">
+              <i data-lucide="phone" class="w-4 h-4 text-brand-primary flex-shrink-0"></i>
+              <span>+1 (800) 555-GIFT</span>
+            </li>
+            <li class="flex items-center space-x-2.5 rtl:space-x-reverse">
+              <i data-lucide="mail" class="w-4 h-4 text-brand-primary flex-shrink-0"></i>
+              <span class="break-all">hello@giftedpantry.com</span>
+            </li>
+            <li class="flex items-center space-x-2.5 rtl:space-x-reverse">
+              <i data-lucide="clock" class="w-4 h-4 text-brand-primary flex-shrink-0"></i>
+              <span>Mon - Fri: 9:00 AM - 6:00 PM</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-copyright pt-8 border-t flex flex-col sm:flex-row items-center justify-between text-xs sm:text-sm font-medium">
+        <p>&copy; 2026 The Gifted Pantry. All rights reserved.</p>
+        <div class="flex items-center space-x-4 rtl:space-x-reverse mt-4 sm:mt-0">
+          <a href="#" class="hover:text-slate-900 dark:text-white transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
