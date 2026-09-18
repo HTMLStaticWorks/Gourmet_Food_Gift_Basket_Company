@@ -157,7 +157,7 @@
       <a href="contact.html"
         class="px-3 py-2 rounded-lg text-base font-medium text-slate-655 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Contact</a>
       <div class="h-[1px] bg-slate-200 dark:bg-slate-800 my-2"></div>
-      <div class="flex items-center justify-between space-x-3 rtl:space-x-reverse pt-1 pb-2">
+      <div class="toggle-container flex items-center justify-between space-x-3 rtl:space-x-reverse gap-3 pt-1 pb-2">
         <!-- Mobile RTL Toggle -->
         <button
           class="rtl-toggle flex-1 h-10 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-650 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center bg-white dark:bg-slate-900"
@@ -191,14 +191,14 @@
 
     <!-- 1. Hero Section -->
     <section class="hero-section relative min-h-[90vh] lg:min-h-[92vh] flex items-center py-12 sm:py-20 lg:py-28 overflow-hidden text-white bg-slate-950">
-      <!-- Full Cover Background Image for sm+ desktop — high visibility, reduced fade -->
+      <!-- Full Cover Background Image for sm+ desktop — high visibility & crisp contrast -->
       <img
         src="https://brocrates.com/cdn/shop/files/Spirits_GourmetVarietyGiftBasket_5000x.jpg?v=1686775936"
         alt="Beautifully curated gourmet gift baskets"
-        class="hidden sm:block absolute inset-0 w-full h-full object-cover opacity-95 dark:opacity-95">
-      <!-- Light gradient overlay to preserve contrast while keeping image bright & vibrant -->
+        class="hidden sm:block absolute inset-0 w-full h-full object-cover opacity-90 dark:opacity-90">
+      <!-- Balanced gradient overlay to protect text contrast while keeping image bright & visible -->
       <div
-        class="hidden sm:block absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/30 to-slate-950/15 z-0">
+        class="hidden sm:block absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/50 to-slate-950/25 z-0">
       </div>
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center w-full">
