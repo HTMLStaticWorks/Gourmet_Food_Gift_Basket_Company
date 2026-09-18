@@ -8,10 +8,16 @@
     scroll-behavior: smooth;
     font-family: 'Inter', sans-serif;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: 'Outfit', sans-serif;
-    font-weight: 600; /* As requested, maintain heading font weight at 600 */
+    font-weight: 600;
+    /* As requested, maintain heading font weight at 600 */
   }
 
   body {
@@ -28,6 +34,7 @@
 ::-webkit-scrollbar-track {
   background: rgba(250, 248, 243, 1);
 }
+
 .dark ::-webkit-scrollbar-track {
   background: rgba(26, 18, 7, 1);
 }
@@ -36,8 +43,9 @@
   background: rgba(200, 137, 42, 0.8);
   border-radius: 4px;
 }
+
 .dark ::-webkit-scrollbar-thumb {
-  background: rgba(45, 106, 79, 0.8);
+  background: rgba(200, 137, 42, 0.8);
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -79,6 +87,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -89,6 +98,7 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -99,6 +109,7 @@
     opacity: 0;
     transform: translateX(-30px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -110,6 +121,7 @@
     opacity: 0;
     transform: translateX(30px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -136,12 +148,15 @@
 .animation-delay-100 {
   animation-delay: 100ms;
 }
+
 .animation-delay-200 {
   animation-delay: 200ms;
 }
+
 .animation-delay-300 {
   animation-delay: 300ms;
 }
+
 .animation-delay-400 {
   animation-delay: 400ms;
 }
@@ -211,12 +226,13 @@ html[dir="rtl"] .rtl-flip {
 }
 
 .dark .bubble {
-  background: radial-gradient(circle, rgba(45, 106, 79, 0.12) 0%, rgba(26, 18, 7, 0) 70%);
+  background: radial-gradient(circle, rgba(200, 137, 42, 0.12) 0%, rgba(26, 18, 7, 0) 70%);
 }
 
 /* Webkit date picker indicator color fix in dark mode */
 .dark input[type="date"]::-webkit-calendar-picker-indicator {
-  filter: none; /* Prevent double-inversion when color-scheme: dark is active */
+  filter: none;
+  /* Prevent double-inversion when color-scheme: dark is active */
   opacity: 0.9;
   cursor: pointer;
 }
@@ -266,11 +282,11 @@ html[dir="rtl"] select {
 .dark #mobile-menu {
   background: #1a1207 !important;
   background-color: #1a1207 !important;
-  border-bottom: 1px solid rgba(45, 106, 79, 0.4) !important;
+  border-bottom: 1px solid rgba(200, 137, 42, 0.4) !important;
 }
 
-#mobile-menu a, 
-#mobile-menu button, 
+#mobile-menu a,
+#mobile-menu button,
 #mobile-menu div {
   text-align: center !important;
   justify-content: center !important;
@@ -299,7 +315,7 @@ html[dir="rtl"] select {
 }
 
 /* Center the flex layout containers inside mobile menu */
-#mobile-menu > div {
+#mobile-menu>div {
   width: 100% !important;
   max-width: 280px !important;
   margin-left: auto !important;
@@ -315,38 +331,40 @@ html[dir="rtl"] select {
 
 /* --- Hero Section Height Overrides --- */
 
-/* At 768px (md) screens — reduce hero height */
-@media (min-width: 768px) and (max-width: 1023px) {
+/* At 368px / small mobile screens — clean background & responsive padding */
+@media (max-width: 639px) {
   .hero-section {
-    min-height: 75vh !important;
+    background: #1a1207 !important;
+    min-height: auto !important;
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
   }
 }
 
-/* At 1024px (lg) screens — reduce hero height */
-@media (min-width: 1024px) and (max-width: 1279px) {
+/* At 768px (md) screens */
+@media (min-width: 768px) and (max-width: 1023px) {
   .hero-section {
     min-height: 80vh !important;
   }
 }
 
-/* At 360px / small mobile — hide the absolute background image, show separate img */
-@media (max-width: 639px) {
-  .hero-bg-img {
-    display: none !important;
-  }
-  .hero-overlay {
-    display: none !important;
-  }
+/* At 1024px (lg) screens */
+@media (min-width: 1024px) and (max-width: 1279px) {
   .hero-section {
-    background: #1a1207 !important;
-    min-height: auto !important;
-    padding-top: 2rem !important;
-    padding-bottom: 0 !important;
+    min-height: 85vh !important;
+  }
+}
+
+/* At 1280px+ / 1440px desktop screens — match home 2 hero height */
+@media (min-width: 1280px) {
+  .hero-section {
+    min-height: 90vh !important;
   }
 }
 
 /* --- Header Layout for 1024px - 1279px (lg screens) --- */
 @media (min-width: 1024px) and (max-width: 1279px) {
+
   /* Reduce nav outer container horizontal padding to fit the content */
   nav .max-w-7xl {
     padding-left: 1rem !important;
@@ -355,49 +373,68 @@ html[dir="rtl"] select {
 
   /* Logo adjustment */
   nav a.group {
-    column-gap: 0.375rem !important; /* space-x-1.5 equivalent */
+    column-gap: 0.375rem !important;
+    /* space-x-1.5 equivalent */
   }
+
   nav a.group .w-10 {
-    width: 2.25rem !important; /* w-9 */
-    height: 2.25rem !important; /* h-9 */
+    width: 2.25rem !important;
+    /* w-9 */
+    height: 2.25rem !important;
+    /* h-9 */
   }
+
   nav a.group span.font-outfit {
-    font-size: 1.25rem !important; /* text-xl */
+    font-size: 1.25rem !important;
+    /* text-xl */
   }
 
   /* Desktop Menu container */
   nav div.hidden.lg\:flex.space-x-1 {
-    column-gap: 0.125rem !important; /* space-x-0.5 */
+    column-gap: 0.125rem !important;
+    /* space-x-0.5 */
     margin-left: 0.375rem !important;
     margin-right: 0.375rem !important;
   }
 
   /* Desktop Menu links */
   nav div.hidden.lg\:flex.space-x-1 a {
-    padding-left: 0.375rem !important; /* px-1.5 */
-    padding-right: 0.375rem !important; /* px-1.5 */
-    font-size: 0.75rem !important; /* text-xs */
+    padding-left: 0.375rem !important;
+    /* px-1.5 */
+    padding-right: 0.375rem !important;
+    /* px-1.5 */
+    font-size: 0.75rem !important;
+    /* text-xs */
   }
 
   /* Utility Buttons container */
   nav div.hidden.lg\:flex.space-x-4 {
-    column-gap: 0.375rem !important; /* space-x-1.5 */
+    column-gap: 0.375rem !important;
+    /* space-x-1.5 */
   }
 
   /* Utility RTL/Theme Toggle buttons */
   nav div.hidden.lg\:flex.space-x-4 button {
-    width: 2rem !important; /* w-8 */
-    height: 2rem !important; /* h-8 */
+    width: 2rem !important;
+    /* w-8 */
+    height: 2rem !important;
+    /* h-8 */
   }
 
   /* Sign Up button */
   nav div.hidden.lg\:flex.space-x-4 a {
-    padding-left: 0.75rem !important; /* px-3 */
-    padding-right: 0.75rem !important; /* px-3 */
-    padding-top: 0.375rem !important; /* py-1.5 */
-    padding-bottom: 0.375rem !important; /* py-1.5 */
-    font-size: 0.75rem !important; /* text-xs */
-    border-radius: 0.5rem !important; /* rounded-lg */
+    padding-left: 0.75rem !important;
+    /* px-3 */
+    padding-right: 0.75rem !important;
+    /* px-3 */
+    padding-top: 0.375rem !important;
+    /* py-1.5 */
+    padding-bottom: 0.375rem !important;
+    /* py-1.5 */
+    font-size: 0.75rem !important;
+    /* text-xs */
+    border-radius: 0.5rem !important;
+    /* rounded-lg */
   }
 }
 
@@ -410,7 +447,8 @@ html[dir="rtl"] select {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-top: 1px solid rgba(203, 213, 225, 0.9);
-  color: #475569; /* slate-600 */
+  color: #475569;
+  /* slate-600 */
 }
 
 .dark .glass-footer {
@@ -418,13 +456,15 @@ html[dir="rtl"] select {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-top: 1px solid rgba(255, 255, 255, 0.08);
-  color: #a89060; /* warm amber-slate */
+  color: #a89060;
+  /* warm amber-slate */
 }
 
 /* Footer headings */
 .glass-footer h4 {
   color: #0f172a !important;
 }
+
 .dark .glass-footer h4 {
   color: #f8fafc !important;
 }
@@ -433,6 +473,7 @@ html[dir="rtl"] select {
 .glass-footer .footer-brand-name {
   color: #0f172a !important;
 }
+
 .dark .glass-footer .footer-brand-name {
   color: #f8fafc !important;
 }
@@ -441,12 +482,15 @@ html[dir="rtl"] select {
 .glass-footer a {
   color: #64748b;
 }
+
 .glass-footer a:hover {
   color: #c8892a;
 }
+
 .dark .glass-footer a {
   color: #94a3b8;
 }
+
 .dark .glass-footer a:hover {
   color: #e0a84a;
 }
@@ -461,6 +505,7 @@ html[dir="rtl"] select {
 .glass-footer ul li span {
   color: #64748b;
 }
+
 .dark .glass-footer ul li,
 .dark .glass-footer ul li span {
   color: #94a3b8;
@@ -470,6 +515,7 @@ html[dir="rtl"] select {
 .glass-footer p {
   color: #64748b;
 }
+
 .dark .glass-footer p {
   color: #94a3b8;
 }
@@ -479,6 +525,7 @@ html[dir="rtl"] select {
   border-top-color: rgba(203, 213, 225, 0.8) !important;
   color: #64748b;
 }
+
 .dark .glass-footer .footer-copyright {
   border-top-color: rgba(51, 65, 85, 0.8) !important;
   color: #94a3b8;
@@ -504,16 +551,20 @@ details.faq-item summary:hover {
   background-color: rgba(200, 137, 42, 0.06);
   border-radius: 1rem;
 }
+
 details.faq-item[open] summary {
   border-radius: 1rem 1rem 0 0;
 }
+
 details.faq-item summary .faq-chevron {
   transition: transform 0.3s ease, background-color 0.2s ease, color 0.2s ease;
 }
+
 details.faq-item summary:hover .faq-chevron {
   background-color: #c8892a;
   color: #fff;
 }
+
 details.faq-item[open] summary .faq-chevron {
   transform: rotate(180deg);
 }

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Gifted Pantry - Customize Your Gift Basket</title>
-  <meta name="description" content="Create the perfect personalized gourmet gift basket. Choose your occasion, contents, packaging, and personal message. Fully customizable gifting made easy with The Gifted Pantry.">
-  
+  <meta name="description"
+    content="Create the perfect personalized gourmet gift basket. Choose your occasion, contents, packaging, and personal message. Fully customizable gifting made easy with The Gifted Pantry.">
+
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="index.css">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -18,7 +20,7 @@
             brand: {
               light: '#fdf8ef', dark: '#1a1207',
               primary: '#c8892a', primaryHover: '#a36d1a',
-              secondary: '#2d6a4f', secondaryHover: '#1f4f3a',
+              secondary: '#d9a752', secondaryHover: '#a36d1a', navy: '#2a1c0b',
               accent: '#e0a84a', navy: '#1a3a2a',
             },
             slate: {
@@ -35,14 +37,17 @@
   </script>
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 min-h-screen flex flex-col">
+
+<body
+  class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 min-h-screen flex flex-col">
 
   <!-- ================= NAVBAR ================= -->
   <nav class="glass-nav fixed top-0 left-0 right-0 z-50 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         <a href="index.html" class="flex items-center space-x-2 rtl:space-x-reverse group">
-          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-primary to-brand-accent flex items-center justify-center text-white shadow-md shadow-amber-500/20 animate-bounce">
+          <div
+            class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-primary to-brand-accent flex items-center justify-center text-white shadow-md shadow-amber-500/20 animate-bounce">
             <i data-lucide="gift" class="w-6 h-6"></i>
           </div>
           <span class="font-outfit text-2xl font-bold tracking-tight text-slate-900 dark:text-white">
@@ -50,45 +55,80 @@
           </span>
         </a>
         <div class="hidden lg:flex items-center space-x-1 rtl:space-x-reverse">
-          <a href="index.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Home</a>
-          <a href="home2.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Home 2</a>
-          <a href="services.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Our Baskets</a>
-          <a href="gallery.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Corporate Gifting</a>
-          <a href="blog.html" class="px-3 py-2 rounded-lg text-sm font-semibold transition-colors text-brand-primary dark:text-amber-400">Customization</a>
-          <a href="about.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-amber-400 transition-colors">About Us</a>
-          <a href="contact.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Contact</a>
+          <a href="index.html"
+            class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Home</a>
+          <a href="home2.html"
+            class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Home
+            2</a>
+          <a href="services.html"
+            class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Our
+            Baskets</a>
+          <a href="gallery.html"
+            class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Corporate
+            Gifting</a>
+          <a href="blog.html"
+            class="px-3 py-2 rounded-lg text-sm font-semibold transition-colors text-brand-primary dark:text-amber-400">Customization</a>
+          <a href="about.html"
+            class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-amber-400 transition-colors">About
+            Us</a>
+          <a href="contact.html"
+            class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-amber-400 transition-colors">Contact</a>
         </div>
         <div class="hidden lg:flex items-center space-x-4 rtl:space-x-reverse">
-          <button class="rtl-toggle w-10 h-10 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center" aria-label="Toggle Direction">
+          <button
+            class="rtl-toggle w-10 h-10 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center"
+            aria-label="Toggle Direction">
             <i data-lucide="arrow-left-right" class="w-4 h-4"></i>
           </button>
-          <button class="theme-toggle w-10 h-10 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center" aria-label="Toggle Theme">
+          <button
+            class="theme-toggle w-10 h-10 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center"
+            aria-label="Toggle Theme">
             <i data-lucide="sun" class="sun-icon w-5 h-5 hidden"></i>
             <i data-lucide="moon" class="moon-icon w-5 h-5"></i>
           </button>
-          <a href="quote.html" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-primary to-brand-accent text-white text-sm font-semibold hover:shadow-lg hover:shadow-amber-500/25 transition-all transform hover:-translate-y-0.5">Get a Quote</a>
+          <a href="quote.html"
+            class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-primary to-brand-accent text-white text-sm font-semibold hover:shadow-lg hover:shadow-amber-500/25 transition-all transform hover:-translate-y-0.5">Get
+            a Quote</a>
         </div>
         <div class="flex items-center space-x-3 lg:hidden rtl:space-x-reverse">
-          <button id="mobile-menu-btn" class="p-2 rounded-lg border border-slate-200 dark:border-slate-800 text-slate-650 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="Open Menu">
+          <button id="mobile-menu-btn"
+            class="p-2 rounded-lg border border-slate-200 dark:border-slate-800 text-slate-650 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+            aria-label="Open Menu">
             <i data-lucide="menu" class="w-6 h-6"></i>
           </button>
         </div>
       </div>
     </div>
-    <div id="mobile-menu" class="hidden absolute top-20 left-0 right-0 glass-nav shadow-lg flex-col px-4 pt-4 pb-6 space-y-3 transition-all duration-300 transform opacity-0 -translate-y-4">
-      <a href="index.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-655 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Home</a>
-      <a href="home2.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-655 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Home 2</a>
-      <a href="services.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-655 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Our Baskets</a>
-      <a href="gallery.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-655 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Corporate Gifting</a>
-      <a href="blog.html" class="px-3 py-2 rounded-lg text-base font-semibold text-brand-primary bg-amber-50/50 dark:bg-amber-950/20">Customization</a>
-      <a href="about.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-655 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">About Us</a>
-      <a href="contact.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-650 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Contact</a>
+    <div id="mobile-menu"
+      class="hidden absolute top-20 left-0 right-0 glass-nav shadow-lg flex-col px-4 pt-4 pb-6 space-y-3 transition-all duration-300 transform opacity-0 -translate-y-4">
+      <a href="index.html"
+        class="px-3 py-2 rounded-lg text-base font-medium text-slate-655 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Home</a>
+      <a href="home2.html"
+        class="px-3 py-2 rounded-lg text-base font-medium text-slate-655 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Home
+        2</a>
+      <a href="services.html"
+        class="px-3 py-2 rounded-lg text-base font-medium text-slate-655 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Our
+        Baskets</a>
+      <a href="gallery.html"
+        class="px-3 py-2 rounded-lg text-base font-medium text-slate-655 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Corporate
+        Gifting</a>
+      <a href="blog.html"
+        class="px-3 py-2 rounded-lg text-base font-semibold text-brand-primary bg-amber-50/50 dark:bg-amber-950/20">Customization</a>
+      <a href="about.html"
+        class="px-3 py-2 rounded-lg text-base font-medium text-slate-655 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">About
+        Us</a>
+      <a href="contact.html"
+        class="px-3 py-2 rounded-lg text-base font-medium text-slate-650 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Contact</a>
       <div class="h-[1px] bg-slate-200 dark:bg-slate-800 my-2"></div>
       <div class="flex items-center justify-between space-x-3 rtl:space-x-reverse pt-1 pb-2">
-        <button class="rtl-toggle flex-1 h-10 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-650 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center bg-white dark:bg-slate-900" aria-label="Toggle Direction">
+        <button
+          class="rtl-toggle flex-1 h-10 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-650 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center bg-white dark:bg-slate-900"
+          aria-label="Toggle Direction">
           <i data-lucide="arrow-left-right" class="w-4 h-4"></i>
         </button>
-        <button class="theme-toggle flex-1 h-10 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-655 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center space-x-2 bg-white dark:bg-slate-900" aria-label="Toggle Theme">
+        <button
+          class="theme-toggle flex-1 h-10 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-655 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center space-x-2 bg-white dark:bg-slate-900"
+          aria-label="Toggle Theme">
           <i data-lucide="sun" class="sun-icon w-4 h-4 hidden"></i>
           <i data-lucide="moon" class="moon-icon w-4 h-4"></i>
           <span class="text-xs font-bold tracking-wider dark:hidden">Dark Mode</span>
@@ -96,9 +136,12 @@
         </button>
       </div>
       <div class="flex flex-col space-y-2.5">
-        <a href="quote.html" class="text-center px-4 py-2.5 rounded-xl bg-gradient-to-r from-brand-primary to-brand-accent text-white text-sm font-semibold shadow-md shadow-amber-500/20">Get a Quote</a>
+        <a href="quote.html"
+          class="text-center px-4 py-2.5 rounded-xl bg-gradient-to-r from-brand-primary to-brand-accent text-white text-sm font-semibold shadow-md shadow-amber-500/20">Get
+          a Quote</a>
       </div>
-      <button id="mobile-menu-close" class="absolute top-2 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-white">
+      <button id="mobile-menu-close"
+        class="absolute top-2 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-white">
         <i data-lucide="x" class="w-5 h-5"></i>
       </button>
     </div>
@@ -106,21 +149,25 @@
 
   <!-- ================= MAIN CONTENT ================= -->
   <main class="flex-grow pt-20">
-    
+
     <!-- 1. Hero Section -->
     <section class="relative py-20 md:py-28 overflow-hidden text-white bg-slate-950 page-hero">
-      <img src="https://images.unsplash.com/photo-1549439602-43ebca2327af?auto=format&fit=crop&q=80&w=1600" 
-           alt="Customizable Gourmet Gift Basket" 
-           class="absolute inset-0 w-full h-full object-cover opacity-60">
-      <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/55 to-slate-900/25 z-0"></div>
-      
+      <img
+        src="https://www.mcevoyranch.com/cdn/shop/articles/CharcuterieGiftSet_Enviro_Alt_1-8966595-8083971_39c7147d-897d-46cf-887e-1480f7929107-2066702.jpg?v=1779818311"
+        alt="Customizable Gourmet Gift Basket" class="absolute inset-0 w-full h-full object-cover opacity-90 dark:opacity-90">
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-slate-950/45 to-slate-950/25 z-0"></div>
+
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4 relative z-10 animate-fade-in-up">
-        <span class="text-amber-300 font-semibold uppercase tracking-wider text-xs sm:text-sm">Make It Personal</span>
-        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-outfit text-white leading-tight">
+        <div class="inline-flex items-center space-x-2 rtl:space-x-reverse px-3.5 py-1.5 rounded-full bg-slate-950/80 border border-white/20 text-amber-300 font-bold text-xs sm:text-sm tracking-wider uppercase backdrop-blur-md shadow-lg">
+          <i data-lucide="sliders" class="w-4 h-4 text-amber-400"></i>
+          <span>Make It Personal</span>
+        </div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-outfit text-white leading-tight drop-shadow-md">
           Customize Your Perfect Gift Basket
         </h1>
-        <p class="text-slate-200 max-w-xl mx-auto text-xs sm:text-sm md:text-base font-normal leading-relaxed">
-          From selecting the finest gourmet contents to choosing your packaging style, message, and ribbon color — every detail of your basket can be tailored exactly to your vision.
+        <p class="text-slate-100 max-w-xl mx-auto text-xs sm:text-sm md:text-base font-medium leading-relaxed drop-shadow-md">
+          From selecting the finest gourmet contents to choosing your packaging style, message, and ribbon color — every
+          detail of your basket can be tailored exactly to your vision.
         </p>
       </div>
     </section>
@@ -128,62 +175,74 @@
     <!-- 2. Customization Options Section -->
     <section class="py-16 bg-white dark:bg-slate-900">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          
+
           <!-- Gourmet Contents -->
-          <div class="glass-card rounded-2xl border border-slate-100 dark:border-slate-800 overflow-hidden shadow-lg flex flex-col h-full hover:shadow-xl transition-all">
-            <img src="https://images.unsplash.com/photo-1549007953-2f2dc0b24019?auto=format&fit=crop&q=80&w=600" 
-                 alt="Gourmet Food Contents Selection" 
-                 class="h-60 w-full object-cover">
+          <div
+            class="glass-card rounded-2xl border border-slate-100 dark:border-slate-800 overflow-hidden shadow-lg flex flex-col h-full hover:shadow-xl transition-all">
+            <img src="https://deluca.ca/wp-content/uploads/2026/05/delucas-gift-baskets-vertical-bottom-3.jpg"
+              alt="Gourmet Food Contents Selection" class="h-72 sm:h-80 lg:h-60 xl:h-80 w-full object-cover">
             <div class="p-6 flex flex-col flex-grow text-left ltr:text-left rtl:text-right">
               <h3 class="font-bold text-slate-900 dark:text-white text-lg mb-2">Gourmet Contents</h3>
               <p class="text-xs sm:text-sm text-slate-650 dark:text-slate-300 font-normal leading-relaxed flex-grow">
-                Hand-pick from 100+ premium artisan items — aged cheeses, single-origin chocolates, fine wines, gourmet crackers, artisan jams, flavored nuts, and more.
+                Hand-pick from 100+ premium artisan items — aged cheeses, single-origin chocolates, fine wines, gourmet
+                crackers, artisan jams, flavored nuts, and more.
               </p>
-              <div class="mt-4 pt-4 border-t border-slate-100 dark:border-slate-800 text-xs text-slate-600 dark:text-slate-350 font-bold uppercase tracking-wider">100+ Items to Choose</div>
+              <div
+                class="mt-4 pt-4 border-t border-slate-100 dark:border-slate-800 text-xs text-slate-600 dark:text-slate-350 font-bold uppercase tracking-wider">
+                100+ Items to Choose</div>
             </div>
           </div>
 
           <!-- Packaging Style -->
-          <div class="glass-card rounded-2xl border border-slate-100 dark:border-slate-800 overflow-hidden shadow-lg flex flex-col h-full hover:shadow-xl transition-all">
-            <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?auto=format&fit=crop&q=80&w=600" 
-                 alt="Premium Packaging and Basket Styles" 
-                 class="h-60 w-full object-cover">
+          <div
+            class="glass-card rounded-2xl border border-slate-100 dark:border-slate-800 overflow-hidden shadow-lg flex flex-col h-full hover:shadow-xl transition-all">
+            <img src="https://m.media-amazon.com/images/I/617Zi7S8Q8L._AC_UF894,1000_QL80_.jpg"
+              alt="Premium Packaging and Basket Styles" class="h-72 sm:h-80 lg:h-60 xl:h-80 w-full object-cover">
             <div class="p-6 flex flex-col flex-grow text-left ltr:text-left rtl:text-right">
               <h3 class="font-bold text-slate-900 dark:text-white text-lg mb-2">Packaging Style</h3>
               <p class="text-xs sm:text-sm text-slate-655 dark:text-slate-300 font-normal leading-relaxed flex-grow">
-                Choose your vessel — natural wicker baskets, premium wooden crates, elegant keepsake boxes, or branded corrugated gift sets — each beautifully lined and finished.
+                Choose your vessel — natural wicker baskets, premium wooden crates, elegant keepsake boxes, or branded
+                corrugated gift sets — each beautifully lined and finished.
               </p>
-              <div class="mt-4 pt-4 border-t border-slate-100 dark:border-slate-800 text-xs text-slate-600 dark:text-slate-350 font-bold uppercase tracking-wider">5 Packaging Styles</div>
+              <div
+                class="mt-4 pt-4 border-t border-slate-100 dark:border-slate-800 text-xs text-slate-600 dark:text-slate-350 font-bold uppercase tracking-wider">
+                5 Packaging Styles</div>
             </div>
           </div>
 
           <!-- Ribbon & Wrapping -->
-          <div class="glass-card rounded-2xl border border-slate-100 dark:border-slate-800 overflow-hidden shadow-lg flex flex-col h-full hover:shadow-xl transition-all">
-            <img src="https://images.unsplash.com/photo-1481391032119-d89fee407e44?auto=format&fit=crop&q=80&w=600" 
-                 alt="Ribbon and Wrapping Customization" 
-                 class="h-60 w-full object-cover">
+          <div
+            class="glass-card rounded-2xl border border-slate-100 dark:border-slate-800 overflow-hidden shadow-lg flex flex-col h-full hover:shadow-xl transition-all">
+            <img src="https://cdn.shopify.com/s/files/1/0381/6997/files/Screenshot_2023-11-23_at_8.06.06_PM_480x480.png?v=1700788008"
+              alt="Ribbon and Wrapping Customization" class="h-72 sm:h-80 lg:h-60 xl:h-80 w-full object-cover">
             <div class="p-6 flex flex-col flex-grow text-left ltr:text-left rtl:text-right">
               <h3 class="font-bold text-slate-900 dark:text-white text-lg mb-2">Ribbon &amp; Wrapping</h3>
               <p class="text-xs sm:text-sm text-slate-655 dark:text-slate-300 font-normal leading-relaxed flex-grow">
-                Select from our premium ribbon palette — satin, velvet, or organza in over 20 colors. Add complementary tissue paper, shredded filler, and decorative accents.
+                Select from our premium ribbon palette — satin, velvet, or organza in over 20 colors. Add complementary
+                tissue paper, shredded filler, and decorative accents.
               </p>
-              <div class="mt-4 pt-4 border-t border-slate-100 dark:border-slate-800 text-xs text-slate-600 dark:text-slate-350 font-bold uppercase tracking-wider">20+ Ribbon Colors</div>
+              <div
+                class="mt-4 pt-4 border-t border-slate-100 dark:border-slate-800 text-xs text-slate-600 dark:text-slate-350 font-bold uppercase tracking-wider">
+                20+ Ribbon Colors</div>
             </div>
           </div>
 
           <!-- Personal Message -->
-          <div class="glass-card rounded-2xl border border-slate-100 dark:border-slate-800 overflow-hidden shadow-lg flex flex-col h-full hover:shadow-xl transition-all">
-            <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&q=80&w=600" 
-                 alt="Personal Message Card and Note" 
-                 class="h-60 w-full object-cover">
+          <div
+            class="glass-card rounded-2xl border border-slate-100 dark:border-slate-800 overflow-hidden shadow-lg flex flex-col h-full hover:shadow-xl transition-all">
+            <img src="https://cdn.prod.website-files.com/69d7f8e2c7baeb60bf954e2c/69d7f8e2c7baeb60bf954eaf_fb-c1-giftable.webp"
+              alt="Personal Message Card and Note" class="h-72 sm:h-80 lg:h-60 xl:h-80 w-full object-cover">
             <div class="p-6 flex flex-col flex-grow text-left ltr:text-left rtl:text-right">
               <h3 class="font-bold text-slate-900 dark:text-white text-lg mb-2">Personal Message</h3>
               <p class="text-xs sm:text-sm text-slate-655 dark:text-slate-300 font-normal leading-relaxed flex-grow">
-                Add a heartfelt handwritten message on premium card stock, or opt for a custom-designed calligraphy note. Corporate clients can include printed branded inserts.
+                Add a heartfelt handwritten message on premium card stock, or opt for a custom-designed calligraphy
+                note. Corporate clients can include printed branded inserts.
               </p>
-              <div class="mt-4 pt-4 border-t border-slate-100 dark:border-slate-800 text-xs text-slate-600 dark:text-slate-350 font-bold uppercase tracking-wider">Handwritten Cards</div>
+              <div
+                class="mt-4 pt-4 border-t border-slate-100 dark:border-slate-800 text-xs text-slate-600 dark:text-slate-350 font-bold uppercase tracking-wider">
+                Handwritten Cards</div>
             </div>
           </div>
 
@@ -195,45 +254,53 @@
     <!-- 3. Customization Categories -->
     <section class="py-16 bg-slate-50 dark:bg-slate-950 relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <span class="text-brand-secondary font-semibold uppercase tracking-wider text-sm">Dietary &amp; Lifestyle</span>
+          <span class="text-brand-secondary font-semibold uppercase tracking-wider text-sm">Dietary &amp;
+            Lifestyle</span>
           <h2 class="text-2xl sm:text-3xl font-bold font-outfit text-slate-900 dark:text-white">
             Customize for Every Dietary Need
           </h2>
           <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm font-normal">
-            We believe everyone deserves a thoughtful, delicious gift. Our customization options ensure every basket can be tailored to specific dietary preferences and lifestyles.
+            We believe everyone deserves a thoughtful, delicious gift. Our customization options ensure every basket can
+            be tailored to specific dietary preferences and lifestyles.
           </p>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div class="p-8 bg-white dark:bg-slate-900 rounded-3xl shadow-md space-y-4">
-            <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-green-50 dark:bg-green-950/30 text-brand-secondary">
+            <div
+              class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-amber-50 dark:bg-amber-950/30 text-brand-primary font-bold">
               <i data-lucide="leaf" class="w-6 h-6"></i>
             </div>
             <h3 class="font-bold text-slate-900 dark:text-white text-lg">Vegan &amp; Plant-Based</h3>
             <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal leading-relaxed">
-              Fully vegan baskets featuring plant-based chocolates, vegan cheeses, organic fruit preserves, artisan nut butters, and cruelty-free specialty snacks — all beautifully curated.
+              Fully vegan baskets featuring plant-based chocolates, vegan cheeses, organic fruit preserves, artisan nut
+              butters, and cruelty-free specialty snacks — all beautifully curated.
             </p>
           </div>
 
           <div class="p-8 bg-white dark:bg-slate-900 rounded-3xl shadow-md space-y-4">
-            <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-amber-50 dark:bg-amber-950/30 text-brand-primary">
+            <div
+              class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-amber-50 dark:bg-amber-950/30 text-brand-primary">
               <i data-lucide="wheat-off" class="w-6 h-6"></i>
             </div>
             <h3 class="font-bold text-slate-900 dark:text-white text-lg">Gluten-Free Options</h3>
             <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal leading-relaxed">
-              Carefully selected gluten-free artisan crackers, pure chocolate confections, premium dried fruits, gourmet nuts, and specialty preserved foods — clearly labeled for peace of mind.
+              Carefully selected gluten-free artisan crackers, pure chocolate confections, premium dried fruits, gourmet
+              nuts, and specialty preserved foods — clearly labeled for peace of mind.
             </p>
           </div>
 
           <div class="p-8 bg-white dark:bg-slate-900 rounded-3xl shadow-md space-y-4">
-            <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-rose-50 dark:bg-rose-950/30 text-rose-500">
+            <div
+              class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-rose-50 dark:bg-rose-950/30 text-rose-500">
               <i data-lucide="heart" class="w-6 h-6"></i>
             </div>
             <h3 class="font-bold text-slate-900 dark:text-white text-lg">Kosher &amp; Halal Certified</h3>
             <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal leading-relaxed">
-              Respectful, religiously-certified gifting options. We stock a wide range of kosher and halal-certified premium gourmet foods to ensure everyone receives a thoughtful, appropriate gift.
+              Respectful, religiously-certified gifting options. We stock a wide range of kosher and halal-certified
+              premium gourmet foods to ensure everyone receives a thoughtful, appropriate gift.
             </p>
           </div>
         </div>
@@ -245,33 +312,42 @@
     <section class="py-16 bg-white dark:bg-slate-900">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
+
           <div class="lg:col-span-5 relative">
-            <div class="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-brand-primary to-brand-accent opacity-10 blur-xl dark:opacity-20"></div>
+            <div
+              class="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-brand-primary to-brand-accent opacity-10 blur-xl dark:opacity-20">
+            </div>
             <div class="relative glass-card p-3 rounded-3xl shadow-xl">
-              <img src="https://images.unsplash.com/photo-1606787364406-a3cdf06c6d0c?auto=format&fit=crop&q=80&w=600" 
-                   alt="Custom curated gift basket assembly" 
-                   class="rounded-2xl w-full h-auto aspect-[4/3] lg:h-[340px] lg:aspect-auto object-cover object-center">
+              <img src="https://i.ytimg.com/vi/477iUn9BXFY/maxresdefault.jpg"
+                alt="Custom curated gift basket assembly"
+                class="rounded-2xl w-full h-auto aspect-[4/3] lg:h-[340px] lg:aspect-auto object-cover object-center">
             </div>
           </div>
 
           <div class="lg:col-span-7 space-y-6 text-left ltr:text-left rtl:text-right">
-            <span class="text-brand-secondary font-semibold uppercase tracking-wider text-sm">Our Approach to Customization</span>
+            <span class="text-brand-secondary font-semibold uppercase tracking-wider text-sm">Our Approach to
+              Customization</span>
             <h2 class="text-2xl sm:text-3xl font-bold font-outfit text-slate-900 dark:text-white leading-snug">
               Every Basket, Uniquely Yours
             </h2>
             <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
-              We believe the best gifts are the ones that feel personal. Our customization service goes far beyond picking a size — we work with you to understand the recipient, the occasion, and the emotion you want to convey, then build a basket that perfectly reflects that.
+              We believe the best gifts are the ones that feel personal. Our customization service goes far beyond
+              picking a size — we work with you to understand the recipient, the occasion, and the emotion you want to
+              convey, then build a basket that perfectly reflects that.
             </p>
             <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
-              Whether you're sending a congratulations to a colleague, a thank-you to a client, a housewarming to a friend, or a seasonal greeting to a whole company — our team curates each basket to feel genuinely thoughtful, not just off-the-shelf.
+              Whether you're sending a congratulations to a colleague, a thank-you to a client, a housewarming to a
+              friend, or a seasonal greeting to a whole company — our team curates each basket to feel genuinely
+              thoughtful, not just off-the-shelf.
             </p>
-            
+
             <div class="flex flex-col sm:flex-row gap-3 pt-2">
-              <a href="contact.html" class="px-6 py-3 rounded-xl bg-brand-primary hover:bg-brand-primaryHover text-white font-semibold shadow-md shadow-amber-500/20 transition-colors whitespace-nowrap text-center">
+              <a href="contact.html"
+                class="px-6 py-3 rounded-xl bg-brand-primary hover:bg-brand-primaryHover text-white font-semibold shadow-md shadow-amber-500/20 transition-colors whitespace-nowrap text-center">
                 Start Customizing
               </a>
-              <a href="services.html" class="px-6 py-3 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-200 font-semibold hover:bg-amber-50 hover:text-brand-primary hover:border-brand-primary dark:hover:bg-slate-800 dark:hover:text-white transition-all duration-300 whitespace-nowrap text-center">
+              <a href="services.html"
+                class="px-6 py-3 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-200 font-semibold hover:bg-amber-50 hover:text-brand-primary hover:border-brand-primary dark:hover:bg-slate-800 dark:hover:text-white transition-all duration-300 whitespace-nowrap text-center">
                 Browse Collections
               </a>
             </div>
@@ -282,50 +358,61 @@
     </section>
 
     <!-- 5. The Gifting Commitment -->
-    <section class="py-16 bg-slate-900 dark:bg-slate-950 text-white relative overflow-hidden">
+    <section class="py-16 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-white relative overflow-hidden">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div class="lg:col-span-7 space-y-6 text-left ltr:text-left rtl:text-right">
-            <span class="text-brand-secondary font-semibold uppercase tracking-wider text-sm">Why Customize</span>
-            <h2 class="text-2xl sm:text-3xl font-bold font-outfit text-white leading-snug">
+            <span class="text-brand-primary font-semibold uppercase tracking-wider text-sm font-outfit">Why
+              Customize</span>
+            <h2 class="text-2xl sm:text-3xl font-bold font-outfit text-slate-900 dark:text-white leading-snug">
               Personalization is the Heart of Exceptional Gifting
             </h2>
-            <p class="text-sm text-slate-300 leading-relaxed font-normal">
-              A truly memorable gift isn't measured by its price — it's measured by how thoughtfully it reflects the recipient. Customization turns a beautiful basket into a statement that says: "I thought of you specifically."
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
+              A truly memorable gift isn't measured by its price — it's measured by how thoughtfully it reflects the
+              recipient. Customization turns a beautiful basket into a statement that says: "I thought of you
+              specifically."
             </p>
-            
+
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
               <div class="flex items-start space-x-3.5 rtl:space-x-reverse">
-                <div class="p-2.5 bg-slate-800 rounded-xl text-brand-secondary flex-shrink-0">
+                <div
+                  class="p-2.5 bg-white dark:bg-slate-800 rounded-xl text-brand-primary shadow-sm border border-slate-100 dark:border-slate-700 flex-shrink-0">
                   <i data-lucide="pen-line" class="w-5 h-5"></i>
                 </div>
                 <div>
-                  <h3 class="font-bold text-white text-base">Personal Touch</h3>
-                  <p class="text-xs text-slate-400 mt-1 leading-relaxed">Handwritten notes, calligraphy cards, and personalized ribbon make the difference between a gift and a memory.</p>
+                  <h3 class="font-bold text-slate-900 dark:text-white text-base">Personal Touch</h3>
+                  <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 leading-relaxed">Handwritten notes,
+                    calligraphy cards, and personalized ribbon make the difference between a gift and a memory.</p>
                 </div>
               </div>
-              
+
               <div class="flex items-start space-x-3.5 rtl:space-x-reverse">
-                <div class="p-2.5 bg-slate-800 rounded-xl text-brand-primary flex-shrink-0">
+                <div
+                  class="p-2.5 bg-white dark:bg-slate-800 rounded-xl text-brand-primary shadow-sm border border-slate-100 dark:border-slate-700 flex-shrink-0">
                   <i data-lucide="package-check" class="w-5 h-5"></i>
                 </div>
                 <div>
-                  <h3 class="font-bold text-white text-base">Premium Assembly</h3>
-                  <p class="text-xs text-slate-400 mt-1 leading-relaxed">Our team hand-assembles every customized basket with precision, care, and an eye for visual elegance.</p>
+                  <h3 class="font-bold text-slate-900 dark:text-white text-base">Premium Assembly</h3>
+                  <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 leading-relaxed">Our team hand-assembles
+                    every customized basket with precision, care, and an eye for visual elegance.</p>
                 </div>
               </div>
             </div>
           </div>
 
           <div class="lg:col-span-5 relative">
-            <div class="relative glass-card p-8 rounded-3xl border border-slate-700 bg-slate-800/40 text-left ltr:text-left rtl:text-right space-y-6">
-              <h3 class="text-xl font-bold font-outfit text-white">Customization Popularity</h3>
-              <p class="text-xs text-slate-300 leading-relaxed font-normal">
-                Over 78% of our orders include at least one personalization element — and customers who customize report a 40% higher recipient satisfaction rate.
+            <div
+              class="relative glass-card p-8 rounded-3xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/60 shadow-lg text-left ltr:text-left rtl:text-right space-y-6">
+              <h3 class="text-xl font-bold font-outfit text-slate-900 dark:text-white">Customization Popularity</h3>
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
+                Over 78% of our orders include at least one personalization element — and customers who customize report
+                a 40% higher recipient satisfaction rate.
               </p>
-              <div class="flex items-center space-x-4 rtl:space-x-reverse bg-slate-900/60 p-4 rounded-2xl border border-slate-700/50">
-                <div class="text-3xl font-extrabold text-brand-secondary">78%</div>
-                <div class="text-[11px] text-slate-400 font-semibold uppercase tracking-wider leading-snug">
+              <div
+                class="flex items-center space-x-4 rtl:space-x-reverse bg-slate-100/80 dark:bg-slate-900/80 p-4 rounded-2xl border border-slate-200 dark:border-slate-700/50">
+                <div class="text-3xl font-extrabold text-brand-primary">78%</div>
+                <div
+                  class="text-[11px] text-slate-500 dark:text-slate-400 font-semibold uppercase tracking-wider leading-snug">
                   Of customers personalize their basket with a custom message or selection
                 </div>
               </div>
@@ -338,7 +425,7 @@
     <!-- 6. FAQ Section -->
     <section class="py-16 bg-white dark:bg-slate-900">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <span class="text-brand-primary font-semibold uppercase tracking-wider text-sm">FAQ</span>
           <h2 class="text-2xl sm:text-3xl font-bold font-outfit text-slate-900 dark:text-white">
@@ -347,52 +434,65 @@
         </div>
 
         <div class="max-w-3xl mx-auto space-y-4">
-          
+
           <details class="faq-item group border border-slate-100 dark:border-slate-800 rounded-2xl overflow-hidden">
-            <summary class="flex items-center justify-between p-5 cursor-pointer text-slate-900 dark:text-white font-semibold text-sm">
+            <summary
+              class="flex items-center justify-between p-5 cursor-pointer text-slate-900 dark:text-white font-semibold text-sm">
               Can I completely design my own basket from scratch?
-              <span class="faq-chevron p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-400 flex-shrink-0 ml-3">
+              <span
+                class="faq-chevron p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-400 flex-shrink-0 ml-3">
                 <i data-lucide="chevron-down" class="w-4 h-4"></i>
               </span>
             </summary>
             <div class="px-5 pb-5 text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal leading-relaxed">
-              Absolutely! Our fully bespoke service lets you select every item, choose your packaging, pick your ribbon color, and write your personal message. Simply use our contact form or speak with our gifting specialists to start building your custom basket.
+              Absolutely! Our fully bespoke service lets you select every item, choose your packaging, pick your ribbon
+              color, and write your personal message. Simply use our contact form or speak with our gifting specialists
+              to start building your custom basket.
             </div>
           </details>
 
           <details class="faq-item group border border-slate-100 dark:border-slate-800 rounded-2xl overflow-hidden">
-            <summary class="flex items-center justify-between p-5 cursor-pointer text-slate-900 dark:text-white font-semibold text-sm">
+            <summary
+              class="flex items-center justify-between p-5 cursor-pointer text-slate-900 dark:text-white font-semibold text-sm">
               Is there a minimum order for customized baskets?
-              <span class="faq-chevron p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-400 flex-shrink-0 ml-3">
+              <span
+                class="faq-chevron p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-400 flex-shrink-0 ml-3">
                 <i data-lucide="chevron-down" class="w-4 h-4"></i>
               </span>
             </summary>
             <div class="px-5 pb-5 text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal leading-relaxed">
-              There's no minimum for personal customized orders — a single bespoke basket is welcome! For corporate and bulk customized orders with logo branding, we recommend a minimum of 10 units for most branding options.
+              There's no minimum for personal customized orders — a single bespoke basket is welcome! For corporate and
+              bulk customized orders with logo branding, we recommend a minimum of 10 units for most branding options.
             </div>
           </details>
 
           <details class="faq-item group border border-slate-100 dark:border-slate-800 rounded-2xl overflow-hidden">
-            <summary class="flex items-center justify-between p-5 cursor-pointer text-slate-900 dark:text-white font-semibold text-sm">
+            <summary
+              class="flex items-center justify-between p-5 cursor-pointer text-slate-900 dark:text-white font-semibold text-sm">
               How much notice do I need to give for custom orders?
-              <span class="faq-chevron p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-400 flex-shrink-0 ml-3">
+              <span
+                class="faq-chevron p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-400 flex-shrink-0 ml-3">
                 <i data-lucide="chevron-down" class="w-4 h-4"></i>
               </span>
             </summary>
             <div class="px-5 pb-5 text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal leading-relaxed">
-              We recommend 3–5 business days for personal custom baskets, and 2–4 weeks for large corporate customized orders. Rush orders may be available — please contact us to discuss.
+              We recommend 3–5 business days for personal custom baskets, and 2–4 weeks for large corporate customized
+              orders. Rush orders may be available — please contact us to discuss.
             </div>
           </details>
 
           <details class="faq-item group border border-slate-100 dark:border-slate-800 rounded-2xl overflow-hidden">
-            <summary class="flex items-center justify-between p-5 cursor-pointer text-slate-900 dark:text-white font-semibold text-sm">
+            <summary
+              class="flex items-center justify-between p-5 cursor-pointer text-slate-900 dark:text-white font-semibold text-sm">
               Can you accommodate multiple dietary restrictions in one basket?
-              <span class="faq-chevron p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-400 flex-shrink-0 ml-3">
+              <span
+                class="faq-chevron p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-400 flex-shrink-0 ml-3">
                 <i data-lucide="chevron-down" class="w-4 h-4"></i>
               </span>
             </summary>
             <div class="px-5 pb-5 text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal leading-relaxed">
-              Yes! We can curate baskets that are simultaneously vegan, gluten-free, and nut-free where needed. Just share all dietary requirements with our team and we'll ensure every selected item complies.
+              Yes! We can curate baskets that are simultaneously vegan, gluten-free, and nut-free where needed. Just
+              share all dietary requirements with our team and we'll ensure every selected item complies.
             </div>
           </details>
 
@@ -408,7 +508,8 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 mb-12">
         <div class="md:col-span-1 lg:col-span-4 space-y-4 text-left rtl:text-right">
           <a href="index.html" class="flex items-center space-x-2 rtl:space-x-reverse">
-            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-primary to-brand-accent flex items-center justify-center text-white shadow-md shadow-amber-500/20">
+            <div
+              class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-primary to-brand-accent flex items-center justify-center text-white shadow-md shadow-amber-500/20">
               <i data-lucide="gift" class="w-5 h-5"></i>
             </div>
             <span class="font-outfit text-2xl font-bold tracking-tight footer-brand-name">
@@ -416,27 +517,50 @@
             </span>
           </a>
           <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-normal">
-            Premium gourmet food gift baskets for every occasion. Artisan cheeses, fine chocolates, curated wines, and seasonal delicacies, beautifully packaged and delivered with care.
+            Premium gourmet food gift baskets for every occasion. Artisan cheeses, fine chocolates, curated wines, and
+            seasonal delicacies, beautifully packaged and delivered with care.
           </p>
           <div class="flex items-center space-x-3 rtl:space-x-reverse pt-2">
-            <a href="#" class="w-9 h-9 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-brand-primary hover:text-white transition-all duration-300" aria-label="Facebook">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            <a href="#"
+              class="w-9 h-9 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-brand-primary hover:text-white transition-all duration-300"
+              aria-label="Facebook">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
             </a>
-            <a href="#" class="w-9 h-9 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-brand-primary hover:text-white transition-all duration-300" aria-label="Instagram">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            <a href="#"
+              class="w-9 h-9 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-brand-primary hover:text-white transition-all duration-300"
+              aria-label="Instagram">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
             </a>
-            <a href="#" class="w-9 h-9 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-brand-primary hover:text-white transition-all duration-300" aria-label="LinkedIn">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            <a href="#"
+              class="w-9 h-9 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-brand-primary hover:text-white transition-all duration-300"
+              aria-label="LinkedIn">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
             </a>
           </div>
         </div>
         <div class="md:col-span-1 lg:col-span-2 space-y-4 text-left rtl:text-right">
           <h4 class="text-white font-bold text-sm uppercase tracking-wider">Collections</h4>
           <ul class="space-y-2.5 text-sm font-medium">
-            <li><a href="services.html" class="hover:text-brand-primary transition-colors">Cheese &amp; Charcuterie</a></li>
-            <li><a href="services.html" class="hover:text-brand-primary transition-colors">Chocolates &amp; Sweets</a></li>
+            <li><a href="services.html" class="hover:text-brand-primary transition-colors">Cheese &amp; Charcuterie</a>
+            </li>
+            <li><a href="services.html" class="hover:text-brand-primary transition-colors">Chocolates &amp; Sweets</a>
+            </li>
             <li><a href="services.html" class="hover:text-brand-primary transition-colors">Wine &amp; Gourmet</a></li>
-            <li><a href="services.html" class="hover:text-brand-primary transition-colors">Seasonal &amp; Holiday</a></li>
+            <li><a href="services.html" class="hover:text-brand-primary transition-colors">Seasonal &amp; Holiday</a>
+            </li>
           </ul>
         </div>
         <div class="md:col-span-1 lg:col-span-2 space-y-4 text-left rtl:text-right">
@@ -466,7 +590,8 @@
           </ul>
         </div>
       </div>
-      <div class="footer-copyright pt-8 border-t flex flex-col sm:flex-row items-center justify-between text-xs sm:text-sm font-medium">
+      <div
+        class="footer-copyright pt-8 border-t flex flex-col sm:flex-row items-center justify-between text-xs sm:text-sm font-medium">
         <p>&copy; 2026 The Gifted Pantry. All rights reserved.</p>
         <div class="flex items-center space-x-4 rtl:space-x-reverse mt-4 sm:mt-0">
           <a href="#" class="hover:text-slate-900 dark:text-white transition-colors">Privacy Policy</a>
@@ -478,4 +603,5 @@
 
   <script src="main.js"></script>
 </body>
+
 </html>
